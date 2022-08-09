@@ -10,6 +10,7 @@
 ##
 **Objective**
 
+**Draft**
 ### The 3 overarching goals from the White House meeting
 - Securing OSS Production: focus on preventing security defects and
   vulnerabilities in code and open source packages in the first place
@@ -30,7 +31,37 @@
 ##
 **Scope**
 
-- TODO: Add scope
+**Draft**
+The mobilization plan defines scope as
+_By focusing on tools and advocacy, we can remove the barriers to
+generation, consumption, and overall adoption of SBOMs everywhere, we can
+improve the security posture of the entire open source ecosystem:
+producers, consumers, and maintainers._
+
+This group's interpretation is
+- [Use cases](https://docs.google.com/document/d/15X0TspuxUg19YScqNK1tl5kYpJV2xOrcuSx6CwanYZ0/edit#)
+- Defining types of SBOMs
+  - Source
+  - Binary analysis
+  - Build
+  - Deploy Runtime
+- Generation
+  - Formats - clearly define expectations
+- Consumption
+  - How do we track and encourage the consumption of the artifacts
+  - something about tools
+- Adoption (how do we encourage others to create and use SBOMs)
+  - Something about producers, consumers, and maintainers
+  - Where does the burden lie on accountability and enforcement?
+  - something about tools
+    - Tools are everywhere, what do we do with this?
+  - something about advocacy
+- Attestation?
+  - Not part of tooling, this needs to be a policy decision in these
+    conversations, don't worry about the technical details (yet)
+  - Where does this fit in? Producers, consumers, ???
+  - https://github.com/in-toto/attestation
+
 
 
 ##
