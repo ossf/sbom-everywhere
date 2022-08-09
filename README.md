@@ -10,7 +10,12 @@
 ##
 **Objective**
 
-- TODO: Add objective
+- The requirements needed to build use cases using SBOMs are clearly
+  understood, documented and implemented in current SBOM specifications
+- There are “friction free” open source tools that generate SBOMs that meet
+  these requirements
+- There is readily accessible education, awareness and implementation
+  guidance and 3rd party support
 
 
 ##
