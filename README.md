@@ -10,6 +10,15 @@
 ##
 **Objective**
 
+### The 3 overarching goals from the White House meeting
+- Securing OSS Production: focus on preventing security defects and
+  vulnerabilities in code and open source packages in the first place
+- Improving Vulnerability Discovery & Remediation: improving the process
+  for finding defects and fixing them
+- Shorten Ecosystem Patching Response Time: Shorten the response time for
+  distributing and implementing fixes.
+
+### The goals for this group as defined in the mobilization plan
 - The requirements needed to build use cases using SBOMs are clearly
   understood, documented and implemented in current SBOM specifications
 - There are “friction free” open source tools that generate SBOMs that meet
