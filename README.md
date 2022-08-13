@@ -28,6 +28,8 @@
   guidance and 3rd party support
 
 
+
+
 ##
 **Scope**
 
@@ -37,6 +39,17 @@ _By focusing on tools and advocacy, we can remove the barriers to
 generation, consumption, and overall adoption of SBOMs everywhere, we can
 improve the security posture of the entire open source ecosystem:
 producers, consumers, and maintainers._
+
+
+
+###
+Formatting Specifications
+
+For the purposes of establishing ubiquity to ensure sustainability for SBOM related tooling, and future solutions for consumption, “supported” formats must be defined. At this time there are two supported formats that will be in scope for the purposes of this group: [CycloneDX](https://cyclonedx.org) and [SPDX](https://spdx.dev).  
+
+Utilization of these specifications would likely be discretionary and interchangeable depending on the use case and SBOM type and the requirements of individual organizations and internal tooling.
+
+
 
 This group's interpretation is
 - [Use cases](https://docs.google.com/document/d/15X0TspuxUg19YScqNK1tl5kYpJV2xOrcuSx6CwanYZ0/edit#)
@@ -71,7 +84,7 @@ This group's interpretation is
 - [Software Bill of Materials Elements and Considerations](https://www.regulations.gov/docket/NTIA-2021-0001/document)
 - [Plan to Congress on Declassification and Clearances related to The Communications Supply Chain Risk Information Partnership](https://ntia.gov/files/ntia/publications/ntia_plan_on_declassification_and_clearances_re_c-scrip.pdf)
 
-NTIA's legwork has been a guiding source haven done the most comprehensive research to date.
+NTIA's legwork has been a guiding source having done the most comprehensive research to date.
 
 ### CISA
  - [CISA SBOM Resources](https://www.cisa.gov/sbom)
