@@ -5,7 +5,7 @@
 ##
 **Motivation**
 
-- The initial motivation for the formation of the OSSF SBOM Everywhere SIG is born from OpenSSF's [The Open Source Software Security Mobilization Plan](mobilization_plan.pdf).  SBOM standardization and consensus from within the open source community is integral to adoption of universal constructs that reveal themselves via the exploration of use cases beyond a compliance check box.  [Executive Order ]
+- The initial motivation for the formation of the OSSF SBOM Everywhere SIG is born from OpenSSF's [The Open Source Software Security Mobilization Plan](reference/mobilization_plan.pdf).  SBOM standardization and consensus from within the open source community is integral to adoption of universal constructs that reveal themselves via the exploration of use cases beyond a compliance check box.  [Executive Order ]
 
 ##
 **Objective**
@@ -45,7 +45,7 @@ producers, consumers, and maintainers._
 ###
 Formatting Specifications
 
-For the purposes of establishing ubiquity to ensure sustainability for SBOM related tooling, and future solutions for consumption, “supported” formats must be defined. At this time there are two supported formats that will be in scope for the purposes of this group: [CycloneDX](https://cyclonedx.org) and [SPDX](https://spdx.dev).  
+For the purposes of establishing ubiquity to ensure sustainability for SBOM related tooling, and future solutions for consumption, “supported” formats must be defined. At this time there are two supported formats that will be in scope for the purposes of this group: [CycloneDX](https://cyclonedx.org) and [SPDX](https://spdx.dev).
 
 Utilization of these specifications would likely be discretionary and interchangeable depending on the use case and SBOM type and the requirements of individual organizations and internal tooling.
 
@@ -74,7 +74,13 @@ This group's interpretation is
     conversations, don't worry about the technical details (yet)
   - Where does this fit in? Producers, consumers, ???
   - https://github.com/in-toto/attestation
+- Compliance (regulated industry)
 
+The Federal Government exists at every point of the Software Delivery Lifecycle, hence their minimum requirements are good guides to establish a baseline scope.
+  - Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations [NIST SP 800-161 Rev. 1](https://csrc.nist.gov/publications/detail/sp/800-161/rev-1/final)
+  - [Executive Order 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains)
+  - ![](https://www.nist.gov/sites/default/files/styles/2800_x_2800_limit/public/images/2021/07/09/software-verification-timeline.png)
+  - [Minimum Standards for Federal Government End Users](https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/recommended-minimum-standard-vendor-or-developer)
 
 
 ##
