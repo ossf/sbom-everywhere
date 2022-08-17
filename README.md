@@ -95,6 +95,15 @@ NTIA's legwork has been a guiding source having done the most comprehensive rese
 ### CISA
  - [CISA SBOM Resources](https://www.cisa.gov/sbom)
 
+### OSWAP SCVS
+ - [OSWAP SCVS Resources](https://oswap.org/scvs)
+
+  #### Tickets related to BOM Maturity model:
+  - [OWASP/Software-Component-Verification-Standard#34](https://github.com/OWASP/Software-Component-Verification-Standard/issues/34)
+  - [OWASP/Software-Component-Verification-Standard#35](https://github.com/OWASP/Software-Component-Verification-Standard/issues/35)
+  - [OWASP/Software-Component-Verification-Standard#36](https://github.com/OWASP/Software-Component-Verification-Standard/issues/36)
+    
+
 #
 **Get Involved**
 
