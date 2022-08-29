@@ -1,6 +1,6 @@
 # Technical Charter for Open Source Security Foundation
 
-[COMMUNITY NAME - Working Group | Technical Initiative]
+[OpenSSF - Working Group | Stream 9: SBOM EVERYWHERE SIG]
 
 Adopted [DATE]
 
@@ -8,7 +8,16 @@ This Technical Charter sets forth the responsibilities and procedures for techni
 
 #### 1. Mission and Scope of the Technical Initiative
 
-- a. The mission of the Technical Initiative is to [MISSION STATEMENT].
+- a. The mission of the Technical Initiative is to ensure the adoptability of SBOMs across open soruce software is of a sound, vetted and accessible process.  This includes the following:
+   - automation hosting
+      - pipelines with the proper tooling, technical composition, transparency and provenance ought be provided for use by all open source software projects in order to achieve:
+         a. consistent generation of SBOMs
+         b. consistent data representation and analysis
+         c. consistent and reproducible analysis of vulnerabilities
+         d. consistent and reproducible analysis of exploitability
+         e. consistent and reproducible analysis of security impact
+         f. consistent and reproducible analysis of security risk
+         g. consistent and reproducible analysis of security cost.
 
 - b. The scope of the Technical Initiative includes collaborative development under the Technical Initiative License (as defined herein) supporting the mission, including organizing collaboration activities, defining best practices, documentation, testing, integration, and the creation of other artifacts that support the mission.
 
