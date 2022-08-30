@@ -82,6 +82,15 @@ The Federal Government exists at every point of the Software Delivery Lifecycle,
   - ![](https://www.nist.gov/sites/default/files/styles/2800_x_2800_limit/public/images/2021/07/09/software-verification-timeline.png)
   - [Minimum Standards for Federal Government End Users](https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/recommended-minimum-standard-vendor-or-developer)
 
+## Current Barriers to Adoption
+
+- Community Adoption
+  - Every single software supplier must provide a comprehensive, accurate, and up-to-date SBOM for every single software product they offer, commercial or open-source. If a supplier does not provide a complete, accurate, and up-to-date SBOM; then downstream consumers will have a harder time meeting SBOM requirements and identifying vulnerabilities in their software.
+- Standards Diversion
+  - There are many different standards for SBOMs and vendors who are free to choose the best one that fits their use case. In most scenarios, there are 3 different commonly identified End Users with different user requirements cited. This can cause certain interoperability issues between certain formats, depending on the situation.
+- SBOM Security
+  - SBOMs need to be secured from tampering and tampering attacks. Most SBOM generation pipelines are integrated into DevSecOps tooling, performing integration checking and digital signature verification. Currently, there are numerous product options availible, however, there is limited guidance available to ensure that SBOMs are available securely.
+  - Few large-scale working examples of SBOM configurations and deployments.
 
 ##
 **Prior Work**
