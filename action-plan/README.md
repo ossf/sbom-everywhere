@@ -5,7 +5,7 @@ to shorten ecosystem patching response time. One such activity stream
 is to improve Software Bill of Materials (SBOM) tooling and training 
 to drive adoption for the ecosystem (producers, consumers, and maintainers).
 Today, there are barriers to generation, consumption, and overall adoption
-of SBOMs everywhere. The mobilization plan identifies three areas to remove
+of SBOMs everywhere. This mobilization plan identifies three areas to remove
 those barriers.
 * Resource a team of developers to improve tooling and bake it into the
 most popular software build tooling and infrastructure across all major
