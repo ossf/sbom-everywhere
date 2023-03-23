@@ -1,6 +1,6 @@
 # Action Plan - DRAFT - 23 March 2023
 
-The Software Security Mobilization Plan documents necessary activities
+The [Software Security Mobilization Plan](https://openssf.org/oss-security-mobilization-plan/) documents necessary activities
 to shorten ecosystem patching response time. One such activity stream 
 is to improve Software Bill of Materials (SBOM) tooling and training 
 to drive adoption for the ecosystem (producers, consumers, and maintainers).
