@@ -1,4 +1,4 @@
-# Action Plan - DRAFT - 21 March 2023
+# Action Plan - DRAFT - 23 March 2023
 
 The Software Security Mobilization Plan documents necessary activities
 to shorten ecosystem patching response time. One such activity stream 
