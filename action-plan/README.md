@@ -60,7 +60,7 @@ community to create and maintain SBOMs
 * Best practices for aligning with stakeholders
 * Uses that SBOMs can be put to (link to user needs)
 * Document a journey
-  *Extend sbom-scorecards and/or scorecards to provide clear
+  * Extend sbom-scorecards and/or scorecards to provide clear
   evaluations of data present/absent, and quality of the SBOMs
   * This aligns with Software Security Mobilization Plan Goal 1 workstream 3:
   Develop digital, risk-based metrics dashboard.
