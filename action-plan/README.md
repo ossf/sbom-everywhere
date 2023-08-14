@@ -26,7 +26,7 @@ Plan.
 stream deliverables). [OpenSSF Diagrammers Society](https://github.com/ossf/diagrammers-society)
   * Tools  ([Tooling Landscape Quotation - Google Docs](https://docs.google.com/document/d/1gLSMHJ-l09r73aBDAIG4ld4pbC85D5UgTaICKqmKXKg/edit)). 
   * Standards: SPDX, CycloneDX, SWID, new OWASP standards, (PURL?)
-  * [Document SBOM user needs](https://docs.google.com/document/d/1vTTewezRcboak5r5ahPMwEzwUT3K_SFB3lMGthqZ4Zc/edit?pli=1) at a higher, feature level.
+  * Document [SBOM user needs](https://docs.google.com/document/d/15X0TspuxUg19YScqNK1tl5kYpJV2xOrcuSx6CwanYZ0/edit) at a higher, feature level.
 (IBM has been creating use cases, OWASP above.)
 Use the combination of user needs, existing tooling and desired
 outcomes to create a matrix of scenarios for SBOM creator and SBOM
@@ -37,20 +37,22 @@ what technology exists in the SBOM user needs matrix.
   various identified needs
   * These tools can be consumed broadly and assist with tech
   standardisation when possible
+* Documenting use cases for restricting access to SBOMs or to information within SBOMs
+  * Mapping landscape of existing tools and resources available on this topic
 ## Establish an OpenSSF Tool Chain for SBOMs
 * Based on the landscape, and use cases above, this goal evaluates
-of tools, especially libraries, focusing on SBOM generators, SBOM parsers
+  of tools, especially libraries, focusing on SBOM generators, SBOM parsers
   * “[Evaluation of OSS SBOM Generators](https://docs.google.com/document/d/1UeV0BhZHKBIJY8fi40hAly3jP_dH9u7Nao4Alw8fY0Y/edit#)” 
   * CISA defined SBOM types for the SBOM LifeCycle. https://docs.google.com/document/d/1PsUhUQ_L-lNymD9p613zP0_MiT1Boag68TP3aiwZ4R8/edit#
-* Evaluate how SBOM tooling fits into the larger “Sterling Toolchain”
-OpenSSF goals. Identify existing tools that OpenSSF member companies
-can contribute to this effort?
+* Evaluate how SBOM tooling fits into the larger OpenSSF tool chain landscape
+  Identify existing tools that OpenSSF member companies
+  can contribute to this effort?
 * To simplify generating SBOMs at different phases of the SBOM
-lifecycle, extend/improve existing OSS tools to generate SBOMs
-throughout the lifecycle. These tools can then be used as a starting
-point for SBOM generators and for SBOM consumers.
+  lifecycle, extend/improve existing OSS tools to generate SBOMs
+  throughout the lifecycle. These tools can then be used as a starting
+  point for SBOM generators and for SBOM consumers.
 * Identify OpenSSF member companies that can dedicate resources to
-working with open source communities to create and maintain SBOMs
+  working with open source communities to create and maintain SBOMs
 ## Establishing SBOM Best Practices
 See [best-practices/README.md](best-practices/README.md)
 
