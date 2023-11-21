@@ -1,31 +1,47 @@
 # Best Practices for Naming and Directory Conventions for SBOMs (Software Bill of Materials) in Open Source Projects
 
-Software Bill of Materials (SBOM) plays an essential role in software supply chain transparency. Using SBOM standards such as CycloneDX and SPDX ensures interoperability, accurate dependency tracking, and efficient vulnerability management. Here are some best practices for naming and directory conventions when creating and managing SBOMs.
+The Software Bill of Materials (SBOM) plays a vital role in providing visibility & transparency into the software supply chain. Using SBOM standards such as CycloneDX and SPDX ensures interoperability, accurate dependency tracking, and efficient vulnerability management. Here are some best practices for naming and directory conventions when creating and managing SBOMs.
 
-**1. Consistent Naming Conventions:**
+## Scope
 
-- Use clear, descriptive names that reflect the content of the SBOM. Include the project name, version number, and the SBOM format (CycloneDX or SPDX). For example, `sbom.projectname_v1.2.3_spdx.json` or `sbom.projectname_v1.2.3_cyclonedx.xml`.
+This document only covers [SBOMs of Type Source and Build](https://www.cisa.gov/sites/default/files/2023-04/sbom-types-document-508c.pdf) as SBOMs of other types are typically not curated by the maintainers of Open Source software but instead by consumers of Open Source software. The audience for this document is open source projects distributing artifacts directly rather than distributing artifacts via an ecosystem such as Maven or NPM.
 
-- When dealing with multiple SBOMs from different branches or versions of a project, include this detail in the file name. For instance, `sbom.projectname_v1.2.3_beta_cyclonedx.json`.
+For Source and Build SBOMs, the contents of the SBOM describing the artifact will only include what is being distributed and will not contain information about prospective uses of the software during or after installation or running of the software. That information is captured in separate SBOM types (ie Deployment, Runtime).
 
-**2. Directory Structure:**
+In the context of this document, the “source” is defined as a snapshot of the source code made available to download, such as in a tgz archive.
 
-- Store SBOM files in a dedicated directory, separate from the source code. This might be a top-level directory in the repository named something like `SBOMs`.
+The “build” is the artifacts that are built by the project and released. These could be tgz archives, but also other artifacts such as rpm, deb, or zip.
 
-**4. Versioning:**
+This document does not prescribe best practices to specific software ecosystems (Maven, PyPI, etc) which are likely to have specific requirements about how to distribute accompanying metadata alongside software distributions, however this should not preclude the use of all or part of this guidance for this use-case.
 
-- SBOMs should be version controlled just like source code. Each new release of the software should have a corresponding SBOM.
+There may be instances where a release is also uploaded to an ecosystem. It is not expected that the SBOM generated for the releases would be uploaded to those ecosystems.
 
-- To keep track of changes over time, it is good practice to include the version number in both the SBOM filename and inside the SBOM document itself. 
+## Consistent Naming Conventions
 
-**5. Documentation:**
+For SBOMs which are distributed with source tarballs or pre-built binaries as a part of a defined release of the software, the requirements for “release” files is typically a flat list of files without directories (think GitHub or GitLab Release artifacts). To meet these requirements, no directory structures should be used.
 
-- Clearly document your naming and directory conventions in the project's README file. 
+Following [guidance](https://slsa.dev/spec/v1.0/provenance) from SLSA provenance attestations of appending a corresponding extension to the filename of the artifact that is being described. For the [CycloneDX](https://cyclonedx.org/specification/overview/) and [SPDX](https://spdx.github.io/spdx-spec/v2.3/conformance/#44-standard-data-format-requirements) SBOM standards and their file extension formats the guidance is as follows:
 
-- The documentation should explain how to interpret SBOM file names, the directory structure, and how to find SBOMs for different versions or branches of the project.
+| Standard + Format | Artifact Filename | SBOM Filename |
+|-------------------|-------------------|---------------|
+| CycloneDX JSON    | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.cdx.json|
+| CycloneDX XML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.cdx.xml |
+| SPDX TAG:VALUE | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx |
+| SPDX JSON | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.json |
+| SPDX XML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.xml |
+| SPDX YAML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.yml (or .yaml) |
+| SPDX RDF XML | artifact-1.0.0.tar.gz | Artifact-1.0.0.tar.gz.spdx.rdf (or .rdf.xml)
 
-**6. Automation:**
+The .spdx.* and .cdx.* extensions are sourced from the CycloneDX and SPDX guidance on filename extensions for SBOM documents of the corresponding standard and format.
 
-- Incorporate the generation and management of SBOMs into your continuous integration/continuous deployment (CI/CD) pipeline. 
+The JSON format files should be considered a mandatory requirement and are always available. The tool support for JSON documents is considered to be better than the other file format options. If other formats are desired, also including the JSON SBOM is optional.
 
-- Automating these processes can help ensure that every new build or release of the software has an up-to-date, correctly named and placed SBOM.
+## Acknowledgements
+
+The following community members helped contribute to this guidance
+
+- Josh Bressers, Anchore
+- Marius Biebel. hm.edu
+- Ian Dunbar-Hall, Lockheed Martin
+- Maximilian Huber, TNG Technology Consulting
+- Dan Appelquist, Independent (formerly, Snyk)
