@@ -20,7 +20,7 @@ There may be instances where a release is also uploaded to an ecosystem. It is n
 
 For SBOMs which are distributed with source tarballs or pre-built binaries as a part of a defined release of the software, the requirements for “release” files is typically a flat list of files without directories (think GitHub or GitLab Release artifacts). To meet these requirements, no directory structures should be used.
 
-Following [guidance](https://slsa.dev/spec/v1.0/provenance) from SLSA provenance attestations of appending a corresponding extension to the filename of the artifact that is being described. For the [CycloneDX](https://cyclonedx.org/specification/overview/) and [SPDX](https://spdx.github.io/spdx-spec/v2.3/conformance/#44-standard-data-format-requirements) SBOM standards and their file extension formats the guidance is as follows:
+Following [guidance](https://slsa.dev/spec/v1.0/distributing-provenance#relationship-between-artifacts-and-attestations) from SLSA provenance attestations of appending a corresponding extension to the filename of the artifact that is being described. For the [CycloneDX](https://cyclonedx.org/specification/overview/) and [SPDX](https://spdx.github.io/spdx-spec/v2.3/conformance/#44-standard-data-format-requirements) SBOM standards and their file extension formats the guidance is as follows:
 
 | Standard + Format | Artifact Filename | SBOM Filename |
 |-------------------|-------------------|---------------|
