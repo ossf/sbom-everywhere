@@ -44,5 +44,5 @@ The following community members helped contribute to this guidance
 - Marius Biebel. hm.edu
 - Ian Dunbar-Hall, Lockheed Martin
 - Maximilian Huber, TNG Technology Consulting
-- Dan Appelquist, Independent (formerly, Snyk)
+- Dan Appelquist, Samsung (formerly, Snyk)
 - Seth Larson, Python Software Foundation
