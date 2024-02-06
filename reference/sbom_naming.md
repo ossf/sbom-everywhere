@@ -34,7 +34,7 @@ Following [guidance](https://slsa.dev/spec/v1.0/distributing-provenance#relation
 
 The .spdx.* and .cdx.* extensions are sourced from the [CycloneDX](https://cyclonedx.org/guides/sbom/extensibility/) and [SPDX](https://spdx.github.io/spdx-ntia-sbom-howto/) guidance on filename extensions for SBOM documents of the corresponding standard and format.
 
-The JSON format files should be considered a mandatory requirement and are always available. The tool support for JSON documents is considered to be better than the other file format options. If other formats are desired, also including the JSON SBOM is optional.
+The JSON format files should be considered a mandatory requirement and are always available. The tool support for JSON documents is considered to be better than the other file format options. If other formats are desired, the JSON SBOM should also be available.
 
 ## Acknowledgements
 
