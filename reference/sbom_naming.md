@@ -1,6 +1,6 @@
 # Best Practices for Naming and Directory Conventions for SBOMs (Software Bill of Materials) in Open Source Projects
 
-The Software Bill of Materials (SBOM) plays a vital role in providing visibility & transparency into the software supply chain. Using SBOM standards such as CycloneDX and SPDX ensures interoperability, accurate dependency tracking, and efficient vulnerability management. Here are some best practices for naming and directory conventions when creating and managing SBOMs.
+The [Software Bill of Materials (SBOM)}(https://www.cisa.gov/sbom) plays a vital role in providing visibility & transparency into the software supply chain. Using SBOM standards such as [CycloneDX](https://cyclonedx.org/) and [SPDX](https://spdx.dev/) ensures interoperability, accurate dependency tracking, and efficient vulnerability management. Here are some best practices for naming and directory conventions when creating and managing SBOMs.
 
 ## Scope
 
@@ -32,7 +32,7 @@ Following [guidance](https://slsa.dev/spec/v1.0/provenance) from SLSA provenance
 | SPDX YAML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.yml (or .yaml) |
 | SPDX RDF XML | artifact-1.0.0.tar.gz | Artifact-1.0.0.tar.gz.spdx.rdf (or .rdf.xml)
 
-The .spdx.* and .cdx.* extensions are sourced from the CycloneDX and SPDX guidance on filename extensions for SBOM documents of the corresponding standard and format.
+The .spdx.* and .cdx.* extensions are sourced from the [CycloneDX](https://cyclonedx.org/guides/sbom/extensibility/) and [SPDX](https://spdx.github.io/spdx-ntia-sbom-howto/) guidance on filename extensions for SBOM documents of the corresponding standard and format.
 
 The JSON format files should be considered a mandatory requirement and are always available. The tool support for JSON documents is considered to be better than the other file format options. If other formats are desired, also including the JSON SBOM is optional.
 
