@@ -54,26 +54,8 @@ what technology exists in the SBOM user needs matrix.
 * Identify OpenSSF member companies that can dedicate resources to
   working with open source communities to create and maintain SBOMs
 ## Establishing SBOM Best Practices
-* Capture the best practices around use of SBOMs in the ecosystem for
-various users/use cases. Leverage the SBOM Use cases from the
-Landscape and lessons learned from working with the open source
-community to create and maintain SBOMs
-* High quality SBOMs best practices
-* Best practices for aligning with stakeholders
-* Uses that SBOMs can be put to (link to user needs)
-* Naming conventions for SBOMs, especially with regard to open source projects
-  * Common ways in whcih SBOMs are named
-  * Risks with not following naming conventions for SBOMs 
-* Document a journey
-  * Extend sbom-scorecards and/or scorecards to provide clear
-  evaluations of data present/absent, and quality of the SBOMs
-  * This aligns with Software Security Mobilization Plan Goal 1 workstream 3:
-  Develop digital, risk-based metrics dashboard.
-  The dashboard should include for each open source project the associated SBOM quality.
-  This will require defining SBOM quality in a quantifiable way that can be
-  translated to machine readable scorecard elements.
-  The Best Practices working group will enable the digital,
-  risk-based metrics dashboard (leveraging the scorecards project).
+See [best-practices/README.md](best-practices/README.md)
+
 ## SBOM Education
 *  Develop, adapt or link to an SBOM primer aimed at developers
 and decision makers who don’t know what we’re talking about
