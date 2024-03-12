@@ -1,16 +1,24 @@
-# **OSSF SBOM Everywhere SIG**
+# OSSF SBOM Everywhere SIG
 
-- TODO: Add Description
+Home of the OpenSSF SBOM Everywhere SIG. We're glad you're here!
 
-##
-**Motivation**
+## Get Involved
 
-- The initial motivation for the formation of the OSSF SBOM Everywhere SIG is born from OpenSSF's [The Open Source Software Security Mobilization Plan](reference/mobilization_plan.pdf).  SBOM standardization and consensus from within the open source community is integral to adoption of universal constructs that reveal themselves via the exploration of use cases beyond a compliance check box.  [Executive Order ]
+*   Official communications occur on the [openssf-sig-sbom](https://lists.openssf.org/g/openssf-sig-sbom) mailing list
+    * [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups)
+*   We have a [Slack Channel](https://openssf.slack.com/archives/C03GKSYFRC0) for discussion various SBOM related activities
 
-##
-**Objective**
+### Meeting times
 
-**Draft**
+*   Every other Tuesday @ 11:05am EST. The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+*   [Meeting Minutes](https://docs.google.com/document/d/193ODRga1F49WKPYYR79SNi9b27mChBqpOf5iiWJcMso/edit#heading=h.xqitfd6hs1gc) can be found in this Google Document. Feel free to add agenda items, please put your name next to items you add.
+
+## Motivation
+
+- The initial motivation for the formation of the OSSF SBOM Everywhere SIG is born from OpenSSF's [The Open Source Software Security Mobilization Plan](reference/mobilization_plan.pdf).  SBOM standardization and consensus from within the open source community is integral to adoption of universal constructs that reveal themselves via the exploration of use cases beyond a compliance check box.
+
+## Objective
+
 ### The 3 overarching goals from the White House meeting
 - Securing OSS Production: focus on preventing security defects and
   vulnerabilities in code and open source packages in the first place
@@ -30,10 +38,8 @@
 
 
 
-##
-**Scope**
+## Scope
 
-**Draft**
 The mobilization plan defines scope as
 _By focusing on tools and advocacy, we can remove the barriers to
 generation, consumption, and overall adoption of SBOMs everywhere, we can
@@ -42,14 +48,11 @@ producers, consumers, and maintainers._
 
 
 
-###
-Formatting Specifications
+### Formatting Specifications
 
 For the purposes of establishing ubiquity to ensure sustainability for SBOM related tooling, and future solutions for consumption, “supported” formats must be defined. At this time there are two supported formats that will be in scope for the purposes of this group: [CycloneDX](https://cyclonedx.org) and [SPDX](https://spdx.dev).
 
 Utilization of these specifications would likely be discretionary and interchangeable depending on the use case and SBOM type and the requirements of individual organizations and internal tooling.
-
-
 
 This group's interpretation is
 - [Use cases](https://docs.google.com/document/d/15X0TspuxUg19YScqNK1tl5kYpJV2xOrcuSx6CwanYZ0/edit#)
@@ -83,8 +86,7 @@ The Federal Government exists at every point of the Software Delivery Lifecycle,
   - [Minimum Standards for Federal Government End Users](https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/recommended-minimum-standard-vendor-or-developer)
 
 
-##
-**Prior Work**
+## Prior Work
 ### NTIA
 - [NTIA SBOM Resources](https://ntia.gov/SBOM)
 - [Software Bill of Materials Elements and Considerations](https://www.regulations.gov/docket/NTIA-2021-0001/document)
@@ -102,41 +104,7 @@ NTIA's legwork has been a guiding source having done the most comprehensive rese
   - [OWASP/Software-Component-Verification-Standard#34](https://github.com/OWASP/Software-Component-Verification-Standard/issues/34)
   - [OWASP/Software-Component-Verification-Standard#35](https://github.com/OWASP/Software-Component-Verification-Standard/issues/35)
   - [OWASP/Software-Component-Verification-Standard#36](https://github.com/OWASP/Software-Component-Verification-Standard/issues/36)
-    
 
-#
-**Get Involved**
-
-*   Official communications occur on the [openssf-sig-sbom](https://lists.openssf.org/g/openssf-sig-sbom) mailing list
-    * [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups).
-*   [Slack Channel](https://openssf.slack.com/archives/C03GKSYFRC0)
-
-###
-Quick Start
-
-*   Areas that need contributions
-*   Build information if applicable
-*   Where to file issues
-*   Etc.
-
-##
-**Meeting times**
-
-We are currently holding our meetings during the Security Tooling WG
-meeting. Look for the "Security Tooling Working Group" entry in the
-calendar.
-
-*   Every other Tuesday @ 11:05am EST.  The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
-*   [Meeting Minutes](https://docs.google.com/document/d/1LS5PxWP4-dycCLCaZjf_DZtG-XJy2PUoq5jJQvDMQa8/edit#)
-
-#
-**Governance**
+## Governance
 
 The [CHARTER.md](CHARTER.md) outlines the scope and governance of our group activities.
-
-- TODO: Fill out charter
-
-##
-**Members**
-
-* [Cameron Banowsky](https://github.com/anoncam), [SHE BASH LLC](https://github.com/shebashio)
