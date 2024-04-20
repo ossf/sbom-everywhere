@@ -1,0 +1,7 @@
+**[Bomber](https://github.com/devops-kung-fu/bomber)** is an application designed to scan SBOMs for security vulnerabilities. This tool is vital for analyzing closed-source products provided in JSON format, particularly when assessing the security risks associated with the components listed in the SBOMs. It can read JSON or XML-based CycloneDX format, or JSON SPDX or Syft formatted SBOMs, to quickly identify any vulnerabilities.
+
+For installation on Mac, `bomber` can be installed via Homebrew or by downloading the latest release and using the `bomber` binary. In usage, `bomber` can scan an entire folder of SBOMs or an individual SBOM, with the default output being to STDOUT. It supports output in HTML or JSON formats for enhanced reporting and detailed vulnerability information.
+
+The tool provides features like ignoring specific vulnerabilities using the `--ignore-file` flag and filtering output based on severity levels. Additionally, it has experimental features for highest severity return codes. One of its notable features is data enrichment, where `bomber` enriches vulnerability data from providers. It uses the Exploit Prediction Scoring System (EPSS) to predict the probability of a vulnerability being exploited, aiding in prioritizing high-risk vulnerabilities.
+
+Contributions to `bomber` are welcomed, as outlined in its contributing guidelines on GitHub. The tool itself uses Syft to generate an SBOM every time a developer commits code to its repository, ensuring its own development process is transparent and secure.
