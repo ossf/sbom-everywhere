@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   release:
-    types: [created, published]
+    types: [published]
 
   workflow_dispatch:
 
@@ -24,11 +24,24 @@ jobs:
       - name: Run build
         run: cd SBOM-Catalog && npm run build
 
-      - name: Upload Pages Artifact
+      - name: Upload pages artifact to action workflow
         uses: actions/upload-artifact@v4
         with:
           name: pages-build-artifact
           path: SBOM-Catalog/dist
+
+      - name: Download artifact for release upload
+        uses: actions/download-artifact@v4
+        with:
+          name: pages-build-artifact
+
+      - name: Display structure of downloaded files
+        run: ls -R
+
+      - name: Upload pages release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Release.txt
 
       - name: Syft SPDX SBOM generation
         uses: anchore/sbom-action@v0
