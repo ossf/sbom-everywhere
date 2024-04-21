@@ -31,7 +31,7 @@ jobs:
         run: zip -r pages.zip SBOM-Catalog/dist
 
       - name: Upload Pages Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: pages-build-artifact
           path: pages.zip
@@ -40,13 +40,13 @@ jobs:
         uses: anchore/sbom-action@v0
         with:
           artifact-name: sbom-spdx
-          format: spdx-json
+          format: sbom-catalog-${{github.ref}}.spdx.json
 
       - name: Syft CycloneDx SBOM generation
         uses: anchore/sbom-action@v0
         with:
           artifact-name: sbom-cyclonedx
-          format: cyclonedx-json
+          format: sbom-catalog-${{github.ref}}.cdx.json
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
