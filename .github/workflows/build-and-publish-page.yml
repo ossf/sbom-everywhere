@@ -25,8 +25,21 @@ jobs:
       - name: Run build
         run: cd SBOM-Catalog && npm run build
 
+      - name: Syft SPDX SBOM generation
+        uses: anchore/sbom-action@v0
+        with:
+          artifact-name: sbom-spdx
+          format: spdx-json
+
+      - name: Syft CycloneDx SBOM generation
+        uses: anchore/sbom-action@v0
+        with:
+          artifact-name: sbom-cyclonedx
+          format: cylconedx-json
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: SBOM-Catalog/dist
           branch: gh-pages
+
