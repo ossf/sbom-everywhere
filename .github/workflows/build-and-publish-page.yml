@@ -4,8 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-    branches:
-      - main
 
   workflow_dispatch:
 
@@ -40,13 +38,13 @@ jobs:
         uses: anchore/sbom-action@v0
         with:
           artifact-name: sbom-spdx
-          format: sbom-catalog-${{github.ref}}.spdx.json
+          format: sbom-catalog-${{github.ref_name}}.spdx.json
 
       - name: Syft CycloneDx SBOM generation
         uses: anchore/sbom-action@v0
         with:
           artifact-name: sbom-cyclonedx
-          format: sbom-catalog-${{github.ref}}.cdx.json
+          format: sbom-catalog-${{github.ref_name}}.cdx.json
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
