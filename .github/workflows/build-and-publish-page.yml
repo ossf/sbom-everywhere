@@ -37,14 +37,14 @@ jobs:
       - name: Syft SPDX SBOM generation
         uses: anchore/sbom-action@v0
         with:
-          artifact-name: sbom-spdx
-          format: sbom-catalog-${{github.ref_name}}.spdx.json
+          artifact-name: sbom-catalog-${{github.ref_name}}.spdx.json
+          format: sbom-spdx
 
       - name: Syft CycloneDx SBOM generation
         uses: anchore/sbom-action@v0
         with:
-          artifact-name: sbom-cyclonedx
-          format: sbom-catalog-${{github.ref_name}}.cdx.json
+          artifact-name: sbom-catalog-${{github.ref_name}}.cdx.json
+          format: sbom-cyclonedx
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
