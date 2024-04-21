@@ -25,6 +25,9 @@ jobs:
       - name: Run build
         run: cd SBOM-Catalog && npm run build
 
+      - name: Zip artifacts
+        run: zip -r pages.zip SBOM-Catalog/dist
+
       - name: Syft SPDX SBOM generation
         uses: anchore/sbom-action@v0
         with:
@@ -43,3 +46,23 @@ jobs:
           folder: SBOM-Catalog/dist
           branch: gh-pages
 
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Page Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: pages.zip
+          asset_name: pages-${{github.ref}}.zip
+          asset_content_type: application/zip
