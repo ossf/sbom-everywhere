@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "typecheck": "vue-tsc --build"
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -25,6 +28,13 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@vitejs/plugin-vue": "^4.6.2",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@rushstack/eslint-patch": "^1.10.2",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-vue": "^9.25.0",
     "gh-pages": "^6.1.1",
     "typescript": "^5.4.3",
     "vite": "^5.2.2",
