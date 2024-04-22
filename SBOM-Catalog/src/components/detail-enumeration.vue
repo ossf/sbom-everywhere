@@ -32,12 +32,12 @@ watch(() => props.selected, (newVal) => {
       <div v-if="Array.isArray(value)">
         <b>{{ key }}:</b>
         <div class="flex-container">
-          <p-chip class="p-1 m-1" v-for="(item, index) in value" :key="index">{{ item }}</p-chip>
+          <PChip v-for="(item, index) in value" :key="index" class="p-1 m-1">{{ item }}</PChip>
         </div>
       </div>
     </div>
     <div class="m-1"/>
-    <p-divider/>
+    <PDivider/>
   </div>
 
 </template>

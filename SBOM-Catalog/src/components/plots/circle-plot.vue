@@ -2,13 +2,10 @@
 
 import {onMounted, ref, watch} from "vue";
 import * as d3 from 'd3';
-import data from '../../assets/data.json';
 
 const selected = ref()
-const props = defineProps(['data'])
+const props = defineProps(['dataList'])
 const emit = defineEmits(['update:selectedItem'])
-const activeView = ref(1)
-const scrollableDiv = ref(false)
 
 onMounted(() => {
   generateTreeObject()
@@ -22,17 +19,12 @@ watch(selected, (newSelection) => {
   emit('update:selectedItem', newSelection)
 })
 
-function onViewChange(view) {
-  activeView.value = view
-  generateTreeObject()
-}
-
 function generateTreeObject() {
   // Specify the chart’s dimensions.
   const rect = document.getElementById('workbench').getBoundingClientRect()
   const width = rect.width > rect.height ? rect.height : rect.width;
   const height = rect.height < rect.width ? rect.height : rect.width;
-  const data = JSON.parse(JSON.stringify(props.data))
+  const data = JSON.parse(JSON.stringify(props.dataList))
 
   // Make sure the plot is empty.
   d3.select("#plot").selectAll("*").remove();
@@ -112,7 +104,6 @@ const label = svg.append("g")
     .attr("paint-order", "stroke")
     .attr("stroke", "rgb(241,241,241)")
     .attr("fill", "currentColor")
-    .style("font-size", "30px")
     .attr("pointer-events", "none")
     .attr("text-anchor", "middle")
     .selectAll("text")
@@ -120,7 +111,8 @@ const label = svg.append("g")
     .join("text")
     .style("fill-opacity", d => d.parent === root ? 1 : 0)
     .style("display", d => d.parent === root ? "inline" : "none")
-    .text(d => d.data.name);
+    .text(d => d.data.name)
+    .style("font-size", d => (30 - d.data.name.length / 2) + "px"); // Making the font size dynamic so longer labels have a smaller font, so they fit better.
 
 
   // Create the zoom behavior and zoom immediately in to the initial focus node.

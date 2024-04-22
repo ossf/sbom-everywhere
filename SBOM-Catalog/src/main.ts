@@ -25,19 +25,19 @@ const app = createApp(App);
 
 app.use(PrimeVue)
 
-app.component('p-button', Button)
-app.component('p-buttonGroup', ButtonGroup)
-app.component("p-dataTable", DataTable)
-app.component("p-column", Column)
-app.component("p-chip", Chip)
-app.component("p-card", Card)
-app.component("p-inputSwitch", InputSwitch)
-app.component("p-divider", Divider)
-app.component('p-inputText', InputText)
-app.component('p-iconField', IconField)
-app.component('p-inputIcon', InputIcon)
+app.component('PButton', Button)
+app.component('PButtonGroup', ButtonGroup)
+app.component("PDataTable", DataTable)
+app.component("PColumn", Column)
+app.component("PChip", Chip)
+app.component("PCard", Card)
+app.component("PInputSwitch", InputSwitch)
+app.component("PDivider", Divider)
+app.component('PInputText', InputText)
+app.component('PIconField', IconField)
+app.component('PInputIcon', InputIcon)
 
-app.component('p-tag', Tag)
+app.component('PTag', Tag)
 
 app.directive('tooltip', Tooltip);
 

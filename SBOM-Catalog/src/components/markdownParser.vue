@@ -37,5 +37,8 @@ function loadMarkdown(newSelected: string) {
 </script>
 
 <template>
+<!--    This can trigger some Scanners for XSS injections. -->
+<!--    But the HTML that is loaded here is only influenced by the-->
+<!--    markdown files in public and comes from the server as static resource.-->
     <div v-html="mdres"/>
 </template>

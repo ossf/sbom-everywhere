@@ -45,12 +45,10 @@ onBeforeMount(() => {
 })
 
 function onViewChange(view: ViewMode) {
-  console.log("View changed: " + view)
   activeViewMode.value = view
 }
 
 function onAggregationModeChange(mode: AggregationModes) {
-  console.log("AggregationModeChange: " + mode)
   activeAggregationMode.value = mode
   recalculateAllData(filters, rawdata.value)
 }
@@ -66,7 +64,6 @@ function recalculateAllData(currentFilters: Filter[], currentRawData: Tool[]) {
   } else if (activeAggregationMode.value === AggregationModes.Aggregate) {
     formattedData.value = aggregateList(deepClone(currentRawData))
   }
-  console.log(formattedData.value)
   filteredTreeData.value = generateTreeObject(currentFilters, formattedData.value)
 }
 
@@ -85,66 +82,67 @@ watch(filters, (newFilters) => {
     <div class="flex-column flex col-2 surface-50 full-vue-heigth shadow-right scrollable-div">
 
       <div class="mb-2 w-full">
-        <p-buttonGroup>
-          <p-button label="Circle" rounded :outlined="activeViewMode !== ViewMode.Circle" :severity="activeViewMode === ViewMode.Circle ? '' : 'secondary'" @click="onViewChange(ViewMode.Circle)" class="w-4"/>
-          <p-button label="Tree" rounded :outlined="activeViewMode !== ViewMode.Tree" :severity="activeViewMode === ViewMode.Tree ? '' : 'secondary'" @click="onViewChange(ViewMode.Tree)" class="w-4"/>
-          <p-button label="List" rounded :outlined="activeViewMode !== ViewMode.List" :severity="activeViewMode === ViewMode.List ? '' : 'secondary'" @click="onViewChange(ViewMode.List)" class="w-4"/>
-        </p-buttonGroup>
+        <PButtonGroup>
+          <PButton label="Circle" rounded :outlined="activeViewMode !== ViewMode.Circle" :severity="activeViewMode === ViewMode.Circle ? '' : 'secondary'" class="w-4" @click="onViewChange(ViewMode.Circle)"/>
+          <PButton label="Tree" rounded :outlined="activeViewMode !== ViewMode.Tree" :severity="activeViewMode === ViewMode.Tree ? '' : 'secondary'" class="w-4" @click="onViewChange(ViewMode.Tree)"/>
+          <PButton label="List" rounded :outlined="activeViewMode !== ViewMode.List" :severity="activeViewMode === ViewMode.List ? '' : 'secondary'" class="w-4" @click="onViewChange(ViewMode.List)"/>
+        </PButtonGroup>
         </div>
 
-      <p-buttonGroup>
-        <p-button label="Normalize" rounded :outlined="activeAggregationMode !== AggregationModes.Normalize"
-                  :severity="activeAggregationMode === AggregationModes.Normalize ? '' : 'secondary'"
-                  @click="onAggregationModeChange(AggregationModes.Normalize)" class="w-6"
-                  v-tooltip="{ value: 'This mode displays each entry in its original form, without any grouping. This means that an entry can appear multiple times if it belongs to multiple categories. This is useful when you want to see all instances of an entry, regardless of its category.', showDelay: 750, hideDelay: 300 }"/>
-        <p-button label="Aggregate" rounded :outlined="activeAggregationMode !== AggregationModes.Aggregate"
-                  :severity="activeAggregationMode === AggregationModes.Aggregate ? '' : 'secondary'"
-                  @click="onAggregationModeChange(AggregationModes.Aggregate)" class="w-6"
-                  v-tooltip="{ value: 'This mode groups entries by their categories to reduce duplication. If an entry belongs to multiple categories, it will only be displayed once, under a group that represents those categories. This is useful when you want a simplified view of the data, without repeated entries.', showDelay: 750, hideDelay: 300 }"/>
-      </p-buttonGroup>
+      <PButtonGroup>
+        <PButton
+            v-tooltip="{ value: 'This mode displays each entry in its original form, without any grouping. This means that an entry can appear multiple times if it belongs to multiple categories. This is useful when you want to see all instances of an entry, regardless of its category.', showDelay: 750, hideDelay: 300 }" label="Normalize" rounded
+            :outlined="activeAggregationMode !== AggregationModes.Normalize"
+            :severity="activeAggregationMode === AggregationModes.Normalize ? '' : 'secondary'" class="w-6"
+            @click="onAggregationModeChange(AggregationModes.Normalize)"/>
+        <PButton
+            v-tooltip="{ value: 'This mode groups entries by their categories to reduce duplication. If an entry belongs to multiple categories, it will only be displayed once, under a group that represents those categories. This is useful when you want a simplified view of the data, without repeated entries.', showDelay: 750, hideDelay: 300 }" label="Aggregate" rounded
+            :outlined="activeAggregationMode !== AggregationModes.Aggregate"
+            :severity="activeAggregationMode === AggregationModes.Aggregate ? '' : 'secondary'" class="w-6"
+            @click="onAggregationModeChange(AggregationModes.Aggregate)"/>
+      </PButtonGroup>
 
-      <p-divider/>
+      <PDivider/>
 
-      <draggable v-model="filters" @end="updateFilters" itemKey="name">
+      <draggable v-model="filters" item-key="name" @end="updateFilters">
         <template #item="{element}">
           <div class='flex p-2 mb-2 justify-content-between not-draggable card w-full surface-200 cursor-move'>
             <h2 class="card-title">{{ element.name }}</h2>
             <div class="flex align-items-center">
-              <p-button v-tooltip="{ value: element.description, showDelay: 300, hideDelay: 300 }" text rounded icon="pi pi-question-circle" severity="secondary"/>
-              <p-inputSwitch v-model="element.enabled"/>
+              <PButton v-tooltip="{ value: element.description, showDelay: 300, hideDelay: 300 }" text rounded icon="pi pi-question-circle" severity="secondary"/>
+              <PInputSwitch v-model="element.enabled"/>
             </div>
           </div>
         </template>
       </draggable>
 
       <div style="margin-top: auto">
-        <a href="https://seclab.cs.hm.edu/imprint/" target="_blank" style="text-decoration: none">
-          <p class="text-300 hover:text-500">Imprint</p>
-        </a>
-        <a href="https://github.com/hm-seclab/SBOM-Landscape/" target="_blank">
-          <p-button label="Contribute on GitHub" icon="pi pi-github"
-                    rounded outlined severity="secondary" class="w-full"/>
+        <a href="https://github.com/ossf/sbom-everywhere" target="_blank">
+          <PButton
+              label="Contribute on GitHub" icon="pi pi-github"
+              rounded outlined severity="secondary" class="w-full"/>
         </a>
       </div>
     </div>
     <div id="workbench" class="flex-grow-1 flex col full-vue-heigth">
       <div v-if="filteredTreeData" class="flex-grow-1 flex col full-vue-heigth">
-        <circle-plot v-if="activeViewMode === ViewMode.Circle" :data="filteredTreeData" v-model:selected-item="selectedItem"/>
-        <tree-plot v-else-if="activeViewMode === ViewMode.Tree" :data="filteredTreeData" v-model:selected-item="selectedItem"/>
-        <list-plot v-else-if="activeViewMode === ViewMode.List" :data="rawdata" :filters="filters" v-model:selected-item="selectedItem"/>
+        <circle-plot v-if="activeViewMode === ViewMode.Circle" v-model:selected-item="selectedItem" :dataList="filteredTreeData"/>
+        <tree-plot v-else-if="activeViewMode === ViewMode.Tree" v-model:selected-item="selectedItem" :dataList="filteredTreeData"/>
+        <list-plot v-else-if="activeViewMode === ViewMode.List" v-model:selected-item="selectedItem" :dataList="rawdata" :filterList="filters"/>
       </div>
     </div>
 
     <div class="flex flex-column surface-50 col-2 full-vue-heigth shadow-left">
       <div class="flex justify-content-between align-items-center m-2">
         <h2 class="m-0">{{ selectedItem }}</h2>
-        <img :src="'logos/' + selectedItem + '.png'" style="display: none"
-             @error="event => event.target.style.display = 'none'"
-             @load="event => event.target.style.display = 'block'"
-             :alt="selectedItem"
-             class="responsive-image p-1"/>
+        <img
+            :src="'logos/' + selectedItem + '.png'" style="display: none"
+            :alt="selectedItem"
+            class="responsive-image p-1"
+            @error="event => event.target.style.display = 'none'"
+            @load="event => event.target.style.display = 'block'"/>
       </div>
-      <p-divider class="mt-2"/>
+      <PDivider class="mt-2"/>
       <div class="scrollable-div">
         <detail-enumeration :selected="selectedItem" :rawdata="rawdata"/>
         <markdown-parser :selected="selectedItem"/>

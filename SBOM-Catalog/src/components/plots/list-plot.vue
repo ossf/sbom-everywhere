@@ -1,16 +1,23 @@
 <script lang="ts" setup>
-import {onMounted, ref, watch} from "vue";
+import {onMounted, Ref, ref, watch} from "vue";
 import {FilterMatchMode} from "primevue/api";
+import {Tool} from "../../types/tool";
+import {Filter} from "../../types/filter";
 
-const selected = ref()
-const activeFilters = ref([])
-const metaKey = ref(true)
+interface listPlotProps {
+  dataList: Tool[]
+  filterList: Filter[]
+}
 
-const props = defineProps(['data', 'filters', 'selectedItem'])
+const props = defineProps<listPlotProps>()
 const emit = defineEmits(['update:selectedItem'])
 
+const selected = ref()
+const activeFilters: Ref<Filter[]> = ref([])
+const metaKey = ref(true)
+
 onMounted(() => {
-  onFilterChange(props.filters)
+  onFilterChange(props.filterList)
 })
 
 watch(selected, (newSelection) => {
@@ -18,10 +25,10 @@ watch(selected, (newSelection) => {
 })
 
 watch (props, (newProps) => {
-  onFilterChange(newProps.filters)
+  onFilterChange(newProps.filterList)
 })
 
-function onFilterChange(newProps) {
+function onFilterChange(newProps: Filter[]) {
   activeFilters.value.length = 0
   newProps.forEach(filter => {
     if (filter.enabled) {
@@ -37,18 +44,18 @@ const filters = ref({
 
 <template>
   <div class="w-12 scrollable-div">
-    <p-dataTable :value="props.data" v-model:selection="selected" v-model:filters="filters" selectionMode="single" dataKey="Name" :metaKeySelection="metaKey">
+    <PDataTable v-model:selection="selected" v-model:filters="filters" :value="props.dataList" selection-mode="single" data-key="Name" :meta-key-selection="metaKey">
       <template #header>
         <div class="flex justify-content-between align-items-center">
           <h2>List of all SBOM related Tools:</h2>
-          <p-iconField iconPosition="left">
-                <p-inputIcon class="pi pi-search"/>
-                <p-inputText v-model="filters['global'].value" placeholder="Search"/>
-          </p-iconField>
+          <PIconField icon-position="left">
+            <PInputIcon class="pi pi-search"/>
+            <PInputText v-model="filters['global'].value" placeholder="Search"/>
+          </PIconField>
         </div>
       </template>
 
-      <p-column v-for="col of activeFilters" :field="col.name" :header="col.name">
+      <PColumn v-for="col of activeFilters" :key="col.name" :field="col.name" :header="col.name">
         <template #body="slotProps">
           <div class="flex">
             <div v-if="typeof slotProps.data[col.name] === 'string'">
@@ -58,16 +65,16 @@ const filters = ref({
               </div>
             </div>
             <div v-else-if="Array.isArray(slotProps.data[col.name])">
-              <div class="flex">
-                <div v-for="item in slotProps.data[col.name]">
-                  <p-chip :label="item" class="m-1"/>
+              <div class="flex flex-wrap">
+                <div v-for="item in slotProps.data[col.name]" :key="item">
+                  <PChip :label="item" class="m-1"/>
                 </div>
               </div>
             </div>
           </div>
         </template>
-      </p-column>
-    </p-dataTable>
+      </PColumn>
+    </PDataTable>
   </div>
 
 </template>

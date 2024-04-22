@@ -16,7 +16,7 @@ export function generateTreeObject(filters: Filter[], tools: Tool[]): Tree {
 }
 
 function generateTreeObjectInternal(filters: Filter[], tools: Tool[]): Tree[] {
-    let result: Tree[] = []
+    const result: Tree[] = []
     let currentFilter: Filter
     let remainingFilters: Filter[] = filters
 
@@ -29,20 +29,20 @@ function generateTreeObjectInternal(filters: Filter[], tools: Tool[]): Tree[] {
         remainingFilters = remainingFilters.slice(1)
     } while (!currentFilter.enabled)
 
-    let distinctAttributes = retrieveDistinctAttributes(currentFilter, tools)
+    const distinctAttributes = retrieveDistinctAttributes(currentFilter, tools)
 
-    for (let item of distinctAttributes) {
+    for (const item of distinctAttributes) {
         // if you remove that filters that are null are bypassed in the tree, so they are also displayed to the end.
         if (item == null) continue;
 
-        let entry: Tree = {
+        const entry: Tree = {
             name: item,
             value: 1,
             children: []
         }
 
         if (remainingFilters.length !== 0) {
-            let subdata: Tool[] = filterAttributes(currentFilter, tools, item)
+            const subdata: Tool[] = filterAttributes(currentFilter, tools, item)
             entry.children = generateTreeObjectInternal(remainingFilters, subdata)
         }
 
@@ -53,9 +53,9 @@ function generateTreeObjectInternal(filters: Filter[], tools: Tool[]): Tree[] {
 }
 
 function filterAttributes(currentFilterPointer: Filter, tools: Tool[], currentFilter: String): Tool[] {
-    let values: Tool[] = []
+    const values: Tool[] = []
 
-    for (let item of tools) {
+    for (const item of tools) {
         let attributeValue: string
         if (Array.isArray(item[currentFilterPointer.name])){
             attributeValue = (item[currentFilterPointer.name] as Array<string>).join("-")
@@ -72,10 +72,10 @@ function filterAttributes(currentFilterPointer: Filter, tools: Tool[], currentFi
 }
 
 function retrieveDistinctAttributes(currentFilter: Filter, tools: Tool[]):Set<string> {
-    let distinctValues: Set<string> = new Set<string>()
+    const distinctValues: Set<string> = new Set<string>()
 
-    for (let item of tools) {
-        let attributeName: keyof Tool = currentFilter.name
+    for (const item of tools) {
+        const attributeName: keyof Tool = currentFilter.name
         let attributeValue: string
 
         if (Array.isArray(item[attributeName])){
@@ -94,18 +94,18 @@ function retrieveDistinctAttributes(currentFilter: Filter, tools: Tool[]):Set<st
 Normalise algorithm to get the data into the different Plots.
  */
 export function normaliseList(tools: Tool[]): Tool[] {
-    let result: Tool[] = []
+    const result: Tool[] = []
     let finishflag: boolean = true
 
-    for (let entry of tools) {
+    for (const entry of tools) {
         let noArray: boolean = true
-        for (let key in entry) {
+        for (const key in entry) {
             if (Array.isArray(entry[key as keyof Tool])) {
-                let itemList: string[] = entry[key as keyof Tool] as string[]
+                const itemList: string[] = entry[key as keyof Tool] as string[]
                 if (itemList.length != 1) {
                     noArray = false
-                    for (let item of itemList) {
-                        let clone: Tool = deepClone(entry)
+                    for (const item of itemList) {
+                        const clone: Tool = deepClone(entry)
 
                         // @ts-ignore
                         // This could only be checked at runtime. TypeScript works only up to Build Time
@@ -128,7 +128,6 @@ export function normaliseList(tools: Tool[]): Tool[] {
         return normaliseList(result)
     }
 
-    console.log(result)
     return result;
 }
 
@@ -136,10 +135,10 @@ export function normaliseList(tools: Tool[]): Tool[] {
 Aggregation algorithm to get the data into the different Plots.
  */
 export function aggregateList(tools: Tool[]): Tool[] {
-    for (let entry of tools) {
-        for (let key in entry) {
+    for (const entry of tools) {
+        for (const key in entry) {
             if (entry[key as keyof Tool] instanceof Array) {
-                let itemList: string[] = entry[key as keyof Tool] as string[]
+                const itemList: string[] = entry[key as keyof Tool] as string[]
 
                 // @ts-ignore
                 // This could only be checked at runtime. TypeScript works only up to Build Time

@@ -4,7 +4,7 @@ import {onMounted, ref, watch} from "vue";
 import * as d3 from "d3";
 
 const selected = ref()
-const props = defineProps(['data', 'selectedItem'])
+const props = defineProps(['dataList'])
 const emit = defineEmits(['update:selectedItem'])
 const activeView = ref(1)
 const scrollableDiv = ref(false)
@@ -55,7 +55,7 @@ function generateTreeObjectRound() {
       .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth);
 
   // Sort the tree and apply the layout.
-  const root = tree(d3.hierarchy(JSON.parse(JSON.stringify(props.data)))
+  const root = tree(d3.hierarchy(JSON.parse(JSON.stringify(props.dataList)))
       .sort((a, b) => d3.ascending(a.data.name, b.data.name)));
 
   // Creates the SVG container.
@@ -134,7 +134,7 @@ function generateTreeObjectFlat() {
   const rect = document.getElementById('workbench').getBoundingClientRect()
   const width = rect.width;
 
-  const root = d3.hierarchy(JSON.parse(JSON.stringify(props.data)));
+  const root = d3.hierarchy(JSON.parse(JSON.stringify(props.dataList)));
   const dx = 20;
   const dy = width / (root.height + 1);
 
@@ -226,10 +226,10 @@ function generateTreeObjectFlat() {
 
 <template>
   <div class="overlay">
-    <p-buttonGroup>
-      <p-button label="Round" rounded :outlined="activeView !== 0" :severity="activeView === 0 ? '' : 'secondary'" @click="onViewChange(0)"/>
-      <p-button label="Flat" rounded :outlined="activeView !== 1" :severity="activeView === 1 ? '' : 'secondary'" @click="onViewChange(1)"/>
-    </p-buttonGroup>
+    <PButtonGroup>
+      <PButton label="Round" rounded :outlined="activeView !== 0" :severity="activeView === 0 ? '' : 'secondary'" @click="onViewChange(0)"/>
+      <PButton label="Flat" rounded :outlined="activeView !== 1" :severity="activeView === 1 ? '' : 'secondary'" @click="onViewChange(1)"/>
+    </PButtonGroup>
   </div>
 
   <div :class="scrollableDiv ? 'scrollable-div' : 'flex'">
