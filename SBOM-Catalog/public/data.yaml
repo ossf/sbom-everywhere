@@ -1,0 +1,567 @@
+- Name: Syft
+  Link: https://github.com/anchore/syft
+  Publisher: Anchore
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+    - Convert
+  Type:
+    - Source
+    - Container
+  Language:
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Rpm
+    - Deb
+    - Cran
+    - Alpm
+    - Generic
+    - Nuget
+    - Apk
+    - Hex
+    - Hackage
+    - Cargo
+
+- Name: Grype
+  Link: https://github.com/anchore/grype
+  Publisher: Anchore
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Consume
+  Type:
+    - Source
+    - Container
+  Language:
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Rpm
+    - Deb
+    - Cran
+    - Alpm
+    - Generic
+    - Nuget
+    - Apk
+    - Hex
+    - Hackage
+    - Cargo
+
+- Name: Trivy
+  Link: https://github.com/aquasecurity/trivy
+  Publisher: Aquasecurity
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+    - Container
+  Language:
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Rpm
+    - Deb
+    - Nuget
+    - Hex
+    - Hackage
+
+- Name: Tern
+  Link: https://github.com/tern-tools/tern
+  Publisher: Tern
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Container
+  Language:
+    - Gem
+    - Pypi
+    - Npm
+    - Rpm
+    - Deb
+    - Alpm
+    - Apk
+
+- Name: Microsoft-SBOM-Tool
+  Link: https://github.com/microsoft/sbom-tool
+  Publisher: Microsoft
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+    - Container
+  Language:
+    - Rpm
+    - Swid
+    - Deb
+    - Gem
+    - Pypi
+    - Golang
+    - Npm
+    - Maven
+    - Nuget
+    - Cargo
+
+- Name: Github-Dependency-Graph
+  Link: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph
+  Publisher: Github
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Github
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Nuget
+    - Hex
+    - Pub
+    - Hackage
+    - Cargo
+
+- Name: Scancode
+  Link: https://github.com/nexB/scancode-toolkit
+  Publisher: NexB
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Deb
+    - Nuget
+    - Cargo
+    - Bazel
+    - Haxe
+    - Opam
+    - Jar
+    - Hale
+    - Bower
+    - Autotools
+    - Dart
+    - Osgi
+    - Alpine
+    - Conan
+
+- Name: CdxGen
+  Link: https://github.com/CycloneDx/cdxgen
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+    - Container
+  Language:
+    - Clojars
+    - Github
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Rpm
+    - Nuget
+    - Hex
+    - Pub
+    - Hackage
+    - Cargo
+
+- Name: Kubernetes-BOM
+  Link: https://github.com/kubernetes-sigs/bom
+  Publisher: Kubernetes-SIGs
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Container
+  Language:
+    - Pkg
+
+- Name: Bomber
+  Link: https://github.com/devops-kung-fu/bomber
+  Publisher: DevOps-Kung-Fu-Mafia
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Consume
+  Type:
+  Language:
+
+- Name: CycloneDx-Cocoapods
+  Link: https://github.com/CycloneDx/cyclonedx-cocoapods
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Languages:
+    - Objective-C
+    - Swift
+
+- Name: Voltone_SBOM
+  Link: https://github.com/voltone/sbom
+  Publisher: Voltone
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Languages:
+    - Elixir
+
+- Name: CycloneDx_GoMod
+  Link: https://github.com/CycloneDX/cyclonedx-gomod
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Languages:
+    - Go
+
+- Name: CycloneDx_Node_Module
+  Link: https://github.com/CycloneDX/cyclonedx-node-module
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Languages:
+    - Npm
+
+- Name: CycloneDx-dotnet
+  Link: https://github.com/CycloneDx/cyclonedx-dotnet
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Dotnet
+
+- Name: CycloneDx-NPM
+  Link: https://github.com/CycloneDx/cyclonedx-node-npm
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Npm
+
+- Name: CycloneDx-Maven
+  Link: https://github.com/CycloneDx/cyclonedx-maven-plugin
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Maven
+
+- Name: CycloneDx-Gradle
+  Link: https://github.com/CycloneDx/cyclonedx-gradle-plugin
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Maven
+    - Jar
+
+- Name: CycloneDx-PHP-Composer
+  Link: https://github.com/CycloneDx/cyclonedx-php-composer
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Composer
+
+- Name: CycloneDx-Python
+  Link: https://github.com/CycloneDx/cyclonedx-python
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Pypi
+
+- Name: CycloneDx-Ruby-Gem
+  Link: https://github.com/CycloneDx/cyclonedx-ruby-gem
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Gem
+
+- Name: CycloneDx-Rust-Cargo
+  Link: https://github.com/CycloneDx/cyclonedx-rust-cargo
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Cargo
+
+- Name: CycloneDx-Webpack-Plugin
+  Link: https://github.com/CycloneDX/cyclonedx-webpack-plugin
+  Publisher: CycloneDx
+  License: OpenSource
+  Standards:
+    - CycloneDx
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Npm
+
+- Name: ORT
+  Link: https://github.com/oss-review-toolkit/ort
+  Publisher: OSS-Review-Toolkit
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+    - Consume
+  Type:
+    - Source
+  Language:
+
+- Name: Protobom
+  Link: https://github.com/bom-squad/protobom
+  Publisher: BOM-Squad
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Convert
+  Type:
+  Language:
+
+- Name: Sbom-workbench
+  Link: https://github.com/scanoss/sbom-workbench
+  Publisher: SCANOSS
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+    - Consume
+  Type:
+    - Source
+  Language:
+
+- Name: SPDX-Maven
+  Link: https://github.com/spdx/spdx-maven-plugin
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Maven
+
+- Name: SPDX-Gradle
+  Link: https://github.com/spdx/spdx-gradle-plugin
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Maven
+
+- Name: SPDX-Java-Tools
+  Link: https://github.com/spdx/tools-java
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Convert
+    - Merge
+  Type:
+  Language:
+
+- Name: SPDX-Python-Tools
+  Link: https://github.com/spdx/tools-python
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Convert
+    - Compare
+  Type:
+  Language:
+
+- Name: SPDX-Online-Tools
+  Link: https://github.com/spdx/spdx-online-tools
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Convert
+    - Compare
+    - Validate
+  Type:
+  Language:
+
+- Name: SW360
+  Link: https://github.com/eclipse-sw360/sw360
+  Publisher: Eclipse-SW360
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Merge
+  Type:
+  Language:
+
+- Name: Sbom4files
+  Link: https://github.com/anthonyharrison/sbom4files
+  Publisher: Anthony-Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Generic
+
+- Name: Sbom4python
+  Link: https://github.com/anthonyharrison/sbom4python
+  Publisher: Anthony-Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Pypi
+
+- Name: Sbom4rust
+  Link: https://github.com/anthonyharrison/sbom4rust
+  Publisher: Anthony-Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDx
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Source
+  Language:
+    - Cargo
