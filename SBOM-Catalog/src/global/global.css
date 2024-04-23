@@ -1,0 +1,37 @@
+body {
+    margin: 0
+}
+
+.full-vue-heigth {
+    height: 100vh;
+    position: relative;
+}
+
+.shadow-right {
+    -webkit-box-shadow: 5px 0px 10px 0px rgba(154, 151, 151, 0.3);
+    -moz-box-shadow: 5px 0px 10px 0px rgba(154, 151, 151, 0.3);
+    box-shadow: 5px 0px 10px 0px rgba(154, 151, 151, 0.3);
+}
+
+.shadow-left {
+    -webkit-box-shadow: -5px 0px 10px 0px rgba(154, 151, 151, 0.3);
+    -moz-box-shadow: -5px 0px 10px 0px rgba(154, 151, 151, 0.3);
+    box-shadow: -5px 0px 10px 0px rgba(154, 151, 151, 0.3);
+}
+
+.scrollable-div {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.curser-pointer {
+    cursor: pointer
+}
+
+.responsive-image {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

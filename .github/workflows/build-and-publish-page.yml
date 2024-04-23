@@ -1,0 +1,79 @@
+name: Node.js CI
+
+on:
+  release:
+    types: [published]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: cd SBOM-Catalog && npm install
+
+      - name: Run build
+        run: cd SBOM-Catalog && npm run build
+
+      - name: Upload pages artifact to action workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-build-artifact
+          path: SBOM-Catalog/dist
+
+      - name: Create zip for release file
+        run: zip -r sbom-catalog-${{github.ref_name}}.zip SBOM-Catalog/dist
+
+      - name: Upload pages release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: sbom-catalog-${{github.ref_name}}.zip
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: SBOM-Catalog/dist
+          branch: gh-pages
+
+  create_spdx_sbom:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Syft SPDX SBOM generation
+        uses: anchore/sbom-action@v0
+        with:
+          artifact-name: sbom-catalog-${{github.ref_name}}.spdx.json
+          format: spdx-json
+
+  create_cdx_sbom:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Syft CycloneDx SBOM generation
+        uses: anchore/sbom-action@v0
+        with:
+          artifact-name: sbom-catalog-${{github.ref_name}}.cdx.json
+          format: cyclonedx-json

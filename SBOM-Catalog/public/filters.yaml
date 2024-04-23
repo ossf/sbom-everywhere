@@ -1,0 +1,27 @@
+- name: Standards
+  enabled: true
+  description: Filter to distinguish between SBOM standards like SPDX and CycloneDx
+
+- name: License
+  enabled: false
+  description: Filter to distinguish between different license types like OpenSource or Proprietary
+
+- name: Abilities
+  enabled: true
+  description: Filter to distinguish between different abilities like SBOM creation, conversion or consumption
+
+- name: Type
+  enabled: false
+  description: Filter to distinguish between different phases where SBOMs are created like sources, build or analysed
+
+- name: Publisher
+  enabled: false
+  description: Filter that shows the publisher of a SBOM related tool
+
+- name: Name
+  enabled: true
+  description: The Name of the SBOM related tool
+
+- name: Language
+  enabled: false
+  description: Filter to distinguish between different programming languages, build tools or operating systems
