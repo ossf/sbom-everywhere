@@ -1,6 +1,6 @@
 # Best Practices for Naming and Directory Conventions for SBOMs (Software Bill of Materials) in Open Source Projects
 
-The [Software Bill of Materials (SBOM)}(https://www.cisa.gov/sbom) plays a vital role in providing visibility & transparency into the software supply chain. Using SBOM standards such as [CycloneDX](https://cyclonedx.org/) and [SPDX](https://spdx.dev/) ensures interoperability, accurate dependency tracking, and efficient vulnerability management. Here are some best practices for naming and directory conventions when creating and managing SBOMs.
+The [Software Bill of Materials (SBOM)](https://www.cisa.gov/sbom) plays a vital role in providing visibility & transparency into the software supply chain. Using SBOM standards such as [CycloneDX](https://cyclonedx.org/) and [SPDX](https://spdx.dev/) ensures interoperability, accurate dependency tracking, and efficient vulnerability management. Here are some best practices for naming and directory conventions when creating and managing SBOMs.
 
 ## Scope
 
