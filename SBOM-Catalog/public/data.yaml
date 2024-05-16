@@ -566,7 +566,7 @@
   Language:
     - Cargo
 
-- Name: CycloneDX Editor Validator Tool
+- Name: CycloneDX-Editor-Validator-Tool
   Link: https://github.com/Festo-se/cyclonedx-editor-validator
   Publisher: Festo
   License: OpenSource
