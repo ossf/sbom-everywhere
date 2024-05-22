@@ -3,7 +3,18 @@
 This is a project to implement an SBOM Catalog inspired by the [Landscape of the Cloud Native Computing Foundation](https://landscape.cncf.io/).
 
 
-The page can be found [here](https://ossf.github.io/sbom-everywhere/)
+The page can be found [here](https://sbom-catalog.openssf.org/)
+
+## How to run the tool locally
+
+Run the comamnds
+```
+npm install
+npm run dev
+```
+
+Visiting the URL specificed by the tool should show you the current version
+of the site.
 
 ## How to add your tool
 If you know of a tool or project that should be listed here, please open an Issue or add a MergeRequest. There are three things to consider while adding a new tool:
