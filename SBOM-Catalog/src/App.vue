@@ -117,7 +117,7 @@ watch(filters, (newFilters) => {
       </draggable>
 
       <div style="margin-top: auto">
-        <a href="https://github.com/ossf/sbom-everywhere" target="_blank">
+        <a href="https://github.com/ossf/sbom-everywhere/tree/main/SBOM-Catalog" target="_blank">
           <PButton
               label="Contribute on GitHub" icon="pi pi-github"
               rounded outlined severity="secondary" class="w-full"/>

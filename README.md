@@ -13,6 +13,36 @@ Home of the OpenSSF SBOM Everywhere SIG. We're glad you're here!
 *   Every other Tuesday @ 11:05am EST. The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 *   [Meeting Minutes](https://docs.google.com/document/d/193ODRga1F49WKPYYR79SNi9b27mChBqpOf5iiWJcMso/edit#heading=h.xqitfd6hs1gc) can be found in this Google Document. Feel free to add agenda items, please put your name next to items you add.
 
+## Current Projects
+
+### SBOM Catalog
+To provide a better overview of the available tooling and their capabilities, this group maintains an SBOM Catalog which can be found under the following link:
+
+[https://sbom-catalog.openssf.org/](https://sbom-catalog.openssf.org/)
+
+If you want to get involved, please see the document [here](/SBOM-Catalog/contribute.md)
+
+#### TODO
+More data needs to be added to the catalog
+
+### Establishing SBOM Best Practices for open source projects
+
+The goal of this project is to understand what open source projects need to start publishing SBOMs
+
+[https://docs.google.com/document/d/15_FKO8D03VSYDTNsMQZtn1aRfgVmModF-NM6VBnlrZA/](Draft document)
+
+#### TODO
+This document needs to be better defined to construct a plan to help open source projects
+
+### Best Practices for Naming and Directory Conventions for SBOMs (Software Bill of Materials) in Open Source Projects
+
+This document describes where to put an SBOM to be distributed and how to name it. It currently has a very narrow scope.
+
+#### TODO
+It needs to be expanded to cover other use cases
+
+[https://github.com/ossf/sbom-everywhere/blob/main/reference/sbom_naming.md](Reference doument)
+
 ## Motivation
 
 - The initial motivation for the formation of the OSSF SBOM Everywhere SIG is born from OpenSSF's [The Open Source Software Security Mobilization Plan](reference/mobilization_plan.pdf).  SBOM standardization and consensus from within the open source community is integral to adoption of universal constructs that reveal themselves via the exploration of use cases beyond a compliance check box.
@@ -84,14 +114,6 @@ The Federal Government exists at every point of the Software Delivery Lifecycle,
   - [Executive Order 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains)
   - ![](https://www.nist.gov/sites/default/files/styles/2800_x_2800_limit/public/images/2021/07/09/software-verification-timeline.png)
   - [Minimum Standards for Federal Government End Users](https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/recommended-minimum-standard-vendor-or-developer)
-
-
-## SBOM Catalog
-To provide a better overview of the available tooling and their capabilities, this group maintains an SBOM Catalog which can be found under the following link:
-
-[https://ossf.github.io/sbom-everywhere/](https://ossf.github.io/sbom-everywhere/)
-
-If you want to get involved, please see the document [here](/SBOM-Catalog/contribute.md)
 
 
 ## Prior Work
