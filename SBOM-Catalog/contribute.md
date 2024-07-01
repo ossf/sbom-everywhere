@@ -1,9 +1,6 @@
-# SBOM Catalog
+# OpenSSF SBOM Catalog Contributing Guide
 
-This is a project to implement an SBOM Catalog inspired by the [Landscape of the Cloud Native Computing Foundation](https://landscape.cncf.io/).
-
-
-The page can be found [here](https://sbom-catalog.openssf.org/)
+If you are interested in adding entries to the catalog, or modifying functionality of the catalog, please review this guide.
 
 ## How to run the tool locally
 
@@ -13,11 +10,10 @@ npm install
 npm run dev
 ```
 
-Visiting the URL specificed by the tool should show you the current version
-of the site.
+Visiting the URL specified in the output will show you the current version of the site.
 
 ## How to add your tool
-If you know of a tool or project that should be listed here, please open an Issue or add a MergeRequest. There are three things to consider while adding a new tool:
+If you know of a tool or project that should be listed here, please open a pull request. There are three things to consider while adding a new tool:
 
 ### 1. Add a new entry
 The public/data.yaml contains all the information a user can search on the page. Add a new entry to the list of tools. Please follow the following convention regarding the values. Please also refer to the tool's source, where the features are documented.
