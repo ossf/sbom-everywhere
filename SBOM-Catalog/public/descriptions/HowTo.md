@@ -5,3 +5,6 @@ The filters can be turned on or off, or their order can be changed by dragging a
 By clicking on an entry, the details of a category are displayed.
 
 The Page provides three different Views. A map view, a tree view, and a list view. The data can be normalized or aggregated. If normalized, each single category will be displayed but might contain duplicate entries. Each entry is distinct if aggregated, but the categories are displayed in groups.
+
+<hr>
+This catalog is maintained by the OpenSSF <a href="https://github.com/ossf/sbom-everywhere">SBOM Everywhere</a> Working Group
