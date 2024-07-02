@@ -3,8 +3,10 @@ name: CI
 on:
   pull_request:
 
+  workflow_dispatch:
+
 jobs:
-  build:
+  build-catalog:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,5 +20,26 @@ jobs:
       - name: Install dependencies
         run: cd SBOM-Catalog && npm install
 
+      - name: Run lint
+        run: cd SBOM-Catalog && npm run lint
+
       - name: Run build
         run: cd SBOM-Catalog && npm run build
+
+
+  build-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: cd SBOM-wiki && npm install
+
+      - name: Run build
+        run: cd SBOM-wiki && npm run build
