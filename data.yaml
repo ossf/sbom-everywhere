@@ -3,7 +3,7 @@
   Publisher: Anchore
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -34,7 +34,7 @@
   Publisher: Anchore
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Consume
@@ -64,7 +64,7 @@
   Publisher: Aquasecurity
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -89,7 +89,7 @@
   Publisher: Tern
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -156,7 +156,7 @@
   Publisher: NexB
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -185,11 +185,11 @@
     - Conan
 
 - Name: CdxGen
-  Link: https://github.com/CycloneDx/cdxgen
-  Publisher: CycloneDx
+  Link: https://github.com/CycloneDX/cdxgen
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -229,19 +229,19 @@
   Publisher: DevOps-Kung-Fu-Mafia
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Consume
   Type:
   Language:
 
-- Name: CycloneDx-Cocoapods
-  Link: https://github.com/CycloneDx/cyclonedx-cocoapods
-  Publisher: CycloneDx
+- Name: CycloneDX-Cocoapods
+  Link: https://github.com/CycloneDX/cyclonedx-cocoapods
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -255,7 +255,7 @@
   Publisher: Voltone
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -263,12 +263,12 @@
   Languages:
     - Elixir
 
-- Name: CycloneDx_GoMod
+- Name: CycloneDX_GoMod
   Link: https://github.com/CycloneDX/cyclonedx-gomod
-  Publisher: CycloneDx
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -276,12 +276,12 @@
   Languages:
     - Go
 
-- Name: CycloneDx_Node_Module
+- Name: CycloneDX_Node_Module
   Link: https://github.com/CycloneDX/cyclonedx-node-module
-  Publisher: CycloneDx
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -289,12 +289,12 @@
   Languages:
     - Npm
 
-- Name: CycloneDx-dotnet
-  Link: https://github.com/CycloneDx/cyclonedx-dotnet
-  Publisher: CycloneDx
+- Name: CycloneDX-dotnet
+  Link: https://github.com/CycloneDX/cyclonedx-dotnet
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -302,12 +302,12 @@
   Language:
     - Dotnet
 
-- Name: CycloneDx-NPM
-  Link: https://github.com/CycloneDx/cyclonedx-node-npm
-  Publisher: CycloneDx
+- Name: CycloneDX-NPM
+  Link: https://github.com/CycloneDX/cyclonedx-node-npm
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -315,12 +315,12 @@
   Language:
     - Npm
 
-- Name: CycloneDx-Maven
-  Link: https://github.com/CycloneDx/cyclonedx-maven-plugin
-  Publisher: CycloneDx
+- Name: CycloneDX-Maven
+  Link: https://github.com/CycloneDX/cyclonedx-maven-plugin
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -328,12 +328,12 @@
   Language:
     - Maven
 
-- Name: CycloneDx-Gradle
-  Link: https://github.com/CycloneDx/cyclonedx-gradle-plugin
-  Publisher: CycloneDx
+- Name: CycloneDX-Gradle
+  Link: https://github.com/CycloneDX/cyclonedx-gradle-plugin
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -342,12 +342,12 @@
     - Maven
     - Jar
 
-- Name: CycloneDx-PHP-Composer
-  Link: https://github.com/CycloneDx/cyclonedx-php-composer
-  Publisher: CycloneDx
+- Name: CycloneDX-PHP-Composer
+  Link: https://github.com/CycloneDX/cyclonedx-php-composer
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -355,12 +355,12 @@
   Language:
     - Composer
 
-- Name: CycloneDx-Python
-  Link: https://github.com/CycloneDx/cyclonedx-python
-  Publisher: CycloneDx
+- Name: CycloneDX-Python
+  Link: https://github.com/CycloneDX/cyclonedx-python
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -368,12 +368,12 @@
   Language:
     - Pypi
 
-- Name: CycloneDx-Ruby-Gem
-  Link: https://github.com/CycloneDx/cyclonedx-ruby-gem
-  Publisher: CycloneDx
+- Name: CycloneDX-Ruby-Gem
+  Link: https://github.com/CycloneDX/cyclonedx-ruby-gem
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -381,12 +381,12 @@
   Language:
     - Gem
 
-- Name: CycloneDx-Rust-Cargo
-  Link: https://github.com/CycloneDx/cyclonedx-rust-cargo
-  Publisher: CycloneDx
+- Name: CycloneDX-Rust-Cargo
+  Link: https://github.com/CycloneDX/cyclonedx-rust-cargo
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -394,12 +394,12 @@
   Language:
     - Cargo
 
-- Name: CycloneDx-Webpack-Plugin
+- Name: CycloneDX-Webpack-Plugin
   Link: https://github.com/CycloneDX/cyclonedx-webpack-plugin
-  Publisher: CycloneDx
+  Publisher: CycloneDX
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Generate
   Type:
@@ -412,7 +412,7 @@
   Publisher: OSS-Review-Toolkit
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -426,7 +426,7 @@
   Publisher: BOM-Squad
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Convert
@@ -529,7 +529,7 @@
   Publisher: Anthony-Harrison
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -543,7 +543,7 @@
   Publisher: Anthony-Harrison
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -557,7 +557,7 @@
   Publisher: Anthony-Harrison
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
     - SPDX
   Abilities:
     - Generate
@@ -571,7 +571,7 @@
   Publisher: Festo
   License: OpenSource
   Standards:
-    - CycloneDx
+    - CycloneDX
   Abilities:
     - Edit
     - Merge
