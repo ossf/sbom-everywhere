@@ -1,8 +1,9 @@
 name: Node.js CI
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
   workflow_dispatch:
 
@@ -18,20 +19,35 @@ jobs:
         with:
           node-version: 'lts/*'
 
+      # Build main page for the wiki
+      - name: Install dependencies
+        run: cd SBOM-wiki && npm install
+
+      - name: Run build
+        run: cd SBOM-wiki && npm run build
+
+      # Build the SBOM Catalog and copy the artifact to the wiki
       - name: Install dependencies
         run: cd SBOM-Catalog && npm install
+
+      - name: Run lint
+        run: cd SBOM-Catalog && npm run lint
 
       - name: Run build
         run: cd SBOM-Catalog && npm run build
 
+      - name: copy Catalog to build artifact
+        run: rm -rf SBOM-wiki/.vitepress/dist/catalog/* && mv SBOM-Catalog/dist/* SBOM-wiki/.vitepress/dist/catalog
+
+      # Publish all aritifacts
       - name: Upload pages artifact to action workflow
         uses: actions/upload-artifact@v4
         with:
           name: pages-build-artifact
-          path: SBOM-Catalog/dist
+          path: SBOM-wiki/.vitepress/dist/
 
       - name: Create zip for release file
-        run: zip -r sbom-catalog-${{github.ref_name}}.zip SBOM-Catalog/dist
+        run: zip -r sbom-catalog-${{github.ref_name}}.zip SBOM-wiki/.vitepress/dist
 
       - name: Upload pages release asset
         uses: softprops/action-gh-release@v2
@@ -41,9 +57,10 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: SBOM-Catalog/dist
+          folder: SBOM-wiki/.vitepress/dist
           branch: gh-pages
 
+  # Create a SBOM with Syft for SPDX
   create_spdx_sbom:
     runs-on: ubuntu-latest
 
@@ -61,6 +78,7 @@ jobs:
           artifact-name: sbom-catalog-${{github.ref_name}}.spdx.json
           format: spdx-json
 
+  # Create a SBOM with Syft for CycloneDX
   create_cdx_sbom:
     runs-on: ubuntu-latest
 
