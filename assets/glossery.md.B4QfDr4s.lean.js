@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,a3 as s}from"./chunks/framework.Bsyxd66g.js";const m=JSON.parse('{"title":"Glossery","description":"","frontmatter":{},"headers":[],"relativePath":"glossery.md","filePath":"glossery.md"}'),o={name:"glossery.md"},r=s("",7),i=[r];function n(l,c,d,h,p,u){return t(),a("div",null,i)}const f=e(o,[["render",n]]);export{m as __pageData,f as default};
