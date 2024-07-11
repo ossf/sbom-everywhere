@@ -578,3 +578,19 @@
     - Validate
   Type:
   Language:
+
+- Name: GUAC
+  Link: https://github.com/guacsec/guac
+  Publisher: GUAC (OpenSSF)
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Consume
+  Type: 
+    - Source
+    - Build
+    - Analyzed
+  Language:
+    - Generic
