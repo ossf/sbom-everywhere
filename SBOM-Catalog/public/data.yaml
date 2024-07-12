@@ -588,6 +588,7 @@
     - SPDX
   Abilities:
     - Consume
+    - Compare
   Type: 
     - Source
     - Build
