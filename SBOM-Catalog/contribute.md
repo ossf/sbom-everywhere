@@ -24,6 +24,10 @@ The name of the tool. This should be distinct in the list and is used as an iden
 ##### Publisher
 The publisher refers to the company or institution maintaining the tool. It should be spelled similarly each time so users can find all tools from the same publisher.
 
+#### License
+The general class of license the tool is released under.
+Use either *OpenSource* or *Proprietary*.
+
 ##### Standards
 A list of Standards a tool can produce. Currently, the three standards which are recognized by the [NTIA](https://www.ntia.gov/sites/default/files/publications/sbom_formats_survey-version-2021_0.pdf) are supported:
 - SPDX
