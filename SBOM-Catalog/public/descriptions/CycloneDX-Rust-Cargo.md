@@ -1,0 +1,3 @@
+The CycloneDX Rust Cargo plugin creates Software Bill of Materials (SBOM) files for Rust projects using the CycloneDX standard. It provides tools to generate and manage SBOMs for projects built with Cargo, Rust's package manager. The repository includes both a Rust library for handling SBOMs and a command-line tool to generate them directly from Rust projects. The plugin is useful for enhancing software supply chain security by detailing dependencies within Rust applications.
+
+For more details, visit the [GitHub repository](https://github.com/CycloneDX/cyclonedx-rust-cargo).

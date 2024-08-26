@@ -1,0 +1,3 @@
+The SCANOSS SBOM Workbench is a graphical user interface (GUI) designed to scan and audit source code using the SCANOSS API. It facilitates license compliance checks and generates SPDX-Lite SBOMs (Software Bill of Materials). The tool offers advanced settings, such as proxy configurations and local cryptography detection, and supports multiple languages. It is built using the Electron React Boilerplate and is open for contributions from the community.
+
+For more details, visit the [SCANOSS SBOM Workbench GitHub page](https://github.com/scanoss/sbom-workbench).
