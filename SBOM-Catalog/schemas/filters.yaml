@@ -1,0 +1,7 @@
+list(include('filter_item'))
+
+---
+filter_item:
+  name: str()
+  enabled: bool()
+  description: str()

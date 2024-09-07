@@ -16,9 +16,23 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
+      
+      - uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3 # v5.2.0
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
 
       - name: Lint Catalog Data
         run: yamllint -d relaxed SBOM-Catalog
+
+      - name: Schema Check Catalog Data
+        run: pip install yamale==5.2.1
+
+      - name: Schema Check Catalog Data
+        run: yamale -s SBOM-Catalog/schemas/data.yaml SBOM-Catalog/public/data.yaml
+
+      - name: Schema Check Catalog Filters
+        run: yamale -s SBOM-Catalog/schemas/filters.yaml SBOM-Catalog/public/filters.yaml
 
       - name: Install dependencies
         run: cd SBOM-Catalog && npm install
