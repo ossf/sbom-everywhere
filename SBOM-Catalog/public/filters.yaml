@@ -1,3 +1,4 @@
+---
 - name: Standards
   enabled: true
   description: Filter to distinguish between SBOM standards like SPDX and CycloneDx

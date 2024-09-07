@@ -1,3 +1,4 @@
+---
 - Name: Syft
   Link: https://github.com/anchore/syft
   Publisher: Anchore
@@ -589,7 +590,7 @@
   Abilities:
     - Consume
     - Compare
-  Type: 
+  Type:
     - Source
     - Build
     - Analyzed

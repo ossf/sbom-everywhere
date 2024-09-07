@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: 'lts/*'
 
+      - name: Lint Catalog Data
+        run: yamllint -d relaxed SBOM-Catalog
+
       - name: Install dependencies
         run: cd SBOM-Catalog && npm install
 
