@@ -282,6 +282,7 @@
   Standards:
     - CycloneDX
   License: OpenSource
+  Publisher: CycloneDX
   Abilities:
     - Generate
     - Edit
@@ -322,6 +323,7 @@
     - CycloneDX
     - SPDX
   License: OpenSource
+  Publisher: CycloneDX
   Abilities:
     - Compare
     - Convert
@@ -348,6 +350,7 @@
   Standards:
     - CycloneDX
   License: OpenSource
+  Publisher: CycloneDX
   Abilities:
     - Generate
   Types:
