@@ -51,7 +51,7 @@ product artifacts. The following types are supported as published by the [NTIA](
 - Design
 - Source
 - Build
-- Analyzed
+- Analyze
 - Deployed
 - Runtime
 - Container

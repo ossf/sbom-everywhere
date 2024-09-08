@@ -607,7 +607,7 @@
   Types:
     - Source
     - Build
-    - Analyzed
+    - Analyze
   Languages:
     - Generic
 
