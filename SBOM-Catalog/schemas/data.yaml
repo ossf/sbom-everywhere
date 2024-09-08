@@ -9,5 +9,5 @@ data_item:
   License: enum('OpenSource', 'Proprietary')
   Standards: list(enum('CycloneDX', 'SPDX', 'SWID'))
   Abilities: list(enum('Compare', 'Consume', 'Convert', 'Edit', 'Generate', 'Merge', 'Validate'))
-  Type: subset(enum('Design', 'Source', 'Build', 'Analyzed', 'Deployed', 'Runtime', 'Container'), allow_empty=True)
-  Language: subset(str(), allow_empty=True)
+  Types: subset(enum('Design', 'Source', 'Build', 'Analyzed', 'Deployed', 'Runtime', 'Container'), allow_empty=True)
+  Languages: subset(str(), allow_empty=True)
