@@ -277,6 +277,19 @@
   Languages:
     - Go
 
+- Name: CycloneDX-go
+  Link: https://github.com/CycloneDX/cyclonedx-go
+  Standards:
+    - CycloneDX
+  License: OpenSource
+  Abilities:
+    - Generate
+    - Edit
+  Types:
+    - Source
+  Languages:
+    - Go
+
 - Name: CycloneDX_Node_Module
   Link: https://github.com/CycloneDX/cyclonedx-node-module
   Publisher: CycloneDX
@@ -303,6 +316,20 @@
   Languages:
     - Dotnet
 
+- Name: CycloneDX-dotnet-lib
+  Link: https://github.com/CycloneDX/cyclonedx-dotnet-library
+  Standards:
+    - CycloneDX
+    - SPDX
+  License: OpenSource
+  Abilities:
+    - Compare
+    - Convert
+    - Edit
+    - Validate
+  Languages:
+    - Dotnet
+
 - Name: CycloneDX-NPM
   Link: https://github.com/CycloneDX/cyclonedx-node-npm
   Publisher: CycloneDX
@@ -313,6 +340,31 @@
     - Generate
   Types:
     - Source
+  Languages:
+    - Npm
+
+- Name: CycloneDX-Yarn
+  Link: https://github.com/CycloneDX/cyclonedx-node-yarn
+  Standards:
+    - CycloneDX
+  License: OpenSource
+  Abilities:
+    - Generate
+  Types:
+    - Source
+  Languages:
+    - Yarn
+    - Npm
+
+- Name: CycloneDX-javascript-lib
+  Link: https://github.com/CycloneDX/cyclonedx-javascript-library
+  Standards:
+    - CycloneDX
+  Publisher: CycloneDX
+  License: OpenSource
+  Abilities:
+    - Edit
+    - Validate
   Languages:
     - Npm
 
@@ -355,6 +407,18 @@
     - Source
   Languages:
     - Composer
+
+- Name: CycloneDX-PHP-lib
+  Link: https://github.com/CycloneDX/cyclonedx-php-library
+  Standards:
+    - CycloneDX
+    - SPDX
+  Publisher: CycloneDX
+  License: OpenSource
+  Abilities:
+    - Edit
+    - Validate
+
 
 - Name: CycloneDX-Python
   Link: https://github.com/CycloneDX/cyclonedx-python
@@ -666,3 +730,19 @@
   Types:
     - Analyze
   Languages:
+
+- Name: CycloneDX-core-java
+  Link: https://github.com/CycloneDX/cyclonedx-core-java
+  Publisher: CycloneDX
+  License: OpenSource
+  Standards:
+    - CycloneDX
+  Abilities:
+    - Compare
+    - Edit
+    - Validate
+    - Sign
+  Languages:
+    - Java
+    - Jar
+    - Maven
