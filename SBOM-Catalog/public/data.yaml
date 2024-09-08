@@ -611,8 +611,6 @@
   Languages:
     - Generic
 
-  Language:
-
 - Name: CycloneDX-CLI
   Link: https://github.com/CycloneDX/cyclonedx-cli
   Publisher: CycloneDX
