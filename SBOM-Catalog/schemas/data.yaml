@@ -1,0 +1,13 @@
+# Yamale schema file for SBOM-Catalog/public/data.yaml
+
+list(include('data_item'))
+---
+data_item:
+  Name: str()
+  Link: str()
+  Publisher: str()
+  License: enum('OpenSource', 'Proprietary')
+  Standards: list(enum('CycloneDX', 'SPDX', 'SWID'))
+  Abilities: list(enum('Compare', 'Consume', 'Convert', 'Edit', 'Generate', 'Merge', 'Validate'))
+  Types: subset(enum('Design', 'Source', 'Build', 'Analyzed', 'Deployed', 'Runtime', 'Container'), allow_empty=True)
+  Languages: subset(str(), allow_empty=True)
