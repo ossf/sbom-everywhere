@@ -137,10 +137,8 @@ watch(filters, (newFilters) => {
         <h2 class="m-0">{{ selectedItem }}</h2>
         <img
             :src="'logos/' + selectedItem + '.png'" style="display: none"
-            :alt="selectedItem"
-            class="responsive-image p-1"
-            @error="event => event.target.style.display = 'none'"
-            @load="event => event.target.style.display = 'block'"/>
+            alt=""
+            class="responsive-image p-1 block"/>
       </div>
       <PDivider class="mt-2"/>
       <div class="scrollable-div">

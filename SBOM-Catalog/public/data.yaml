@@ -368,6 +368,20 @@
   Language:
     - Pypi
 
+- Name: CycloneDX-Python-lib
+  Link: https://github.com/CycloneDX/cyclonedx-python-lib
+  Publisher: CycloneDX
+  License: OpenSource
+  Standards:
+    - CycloneDX
+  Abilities:
+    - Generate
+    - Consume
+  Type:
+    - Source
+  Language:
+    - Pypi
+
 - Name: CycloneDX-Ruby-Gem
   Link: https://github.com/CycloneDX/cyclonedx-ruby-gem
   Publisher: CycloneDX
@@ -594,4 +608,59 @@
     - Build
     - Analyzed
   Language:
-    - Generic
+
+- Name: CycloneDX-CLI
+  Link: https://github.com/CycloneDX/cyclonedx-cli
+  Publisher: CycloneDX
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Consume
+    - Compare
+    - Convert
+    - Edit
+    - Merge
+    - Validate
+    - Sign
+  Type:
+  Language:
+
+- Name: distro2SBOM
+  Link: https://github.com/anthonyharrison/distro2sbom
+  Publisher: Anthony Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Analyze
+  Language:
+
+- Name: lib4sbom
+  Link: https://github.com/anthonyharrison/lib4sbom
+  Publisher: Anthony Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Convert
+    - Edit
+  Type:
+  Language:
+
+- Name: FOSSLight
+  Link: https://github.com/fosslight/fosslight
+  Publisher: FOSSLight
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Type:
+    - Analyze
+  Language:

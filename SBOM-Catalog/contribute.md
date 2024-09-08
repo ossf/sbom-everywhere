@@ -43,6 +43,7 @@ Abilities describe the capabilities of the tool. In what part of the software de
 - **Generate**  - *Can automatically generate a SBOM*
 - **Merge**     - *Can merge several SBOMs*
 - **Validate**  - *Can validate a SBOM against the file schema or requirements like defined by the NTIA*
+- **Sign**      - *Can sign a SBOM (according to the signage process of the schema)*
 
 ##### Type
 SBOMs may contain different forms of the minimum information sourced from different

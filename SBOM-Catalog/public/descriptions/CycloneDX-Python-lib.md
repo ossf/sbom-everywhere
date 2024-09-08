@@ -1,0 +1,3 @@
+The CycloneDX Python library is a tool designed to work with the OWASP CycloneDX standard, specifically for creating, rendering, and validating Software Bill of Materials (SBOM) documents and Vulnerability Exploitability eXchange (VEX) documents in Python. This library is primarily used as a software component and not as a standalone application. It supports all currently maintained Python versions and integrates with CycloneDX to enhance software supply chain security.
+
+For more details, you can visit the GitHub page [here](https://github.com/CycloneDX/cyclonedx-python-lib).

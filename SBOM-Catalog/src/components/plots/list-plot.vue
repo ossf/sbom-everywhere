@@ -60,7 +60,7 @@ const filters = ref({
           <div class="flex">
             <div v-if="typeof slotProps.data[col.name] === 'string'">
               <div class="flex align-items-center">
-                <img :src="'logos/' + slotProps.data[col.name] + '.png'" :alt="slotProps.data[col.name]" class="responsive-image p-1"/>
+                <img :src="'logos/' + slotProps.data[col.name] + '.png'" class="responsive-image p-1" alt=""/>
                 <div class="m-2">{{ slotProps.data[col.name] }}</div>
               </div>
             </div>
