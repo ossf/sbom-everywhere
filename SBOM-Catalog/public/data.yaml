@@ -1,3 +1,4 @@
+---
 - Name: Syft
   Link: https://github.com/anchore/syft
   Publisher: Anchore
@@ -8,10 +9,10 @@
   Abilities:
     - Generate
     - Convert
-  Type:
+  Types:
     - Source
     - Container
-  Language:
+  Languages:
     - Gem
     - Pypi
     - Composer
@@ -38,10 +39,10 @@
     - SPDX
   Abilities:
     - Consume
-  Type:
+  Types:
     - Source
     - Container
-  Language:
+  Languages:
     - Gem
     - Pypi
     - Composer
@@ -68,10 +69,10 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
     - Container
-  Language:
+  Languages:
     - Gem
     - Pypi
     - Composer
@@ -93,9 +94,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Container
-  Language:
+  Languages:
     - Gem
     - Pypi
     - Npm
@@ -112,10 +113,10 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
     - Container
-  Language:
+  Languages:
     - Rpm
     - Swid
     - Deb
@@ -135,9 +136,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Github
     - Gem
     - Pypi
@@ -160,9 +161,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Gem
     - Pypi
     - Composer
@@ -192,10 +193,10 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
     - Container
-  Language:
+  Languages:
     - Clojars
     - Github
     - Gem
@@ -219,9 +220,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Container
-  Language:
+  Languages:
     - Pkg
 
 - Name: Bomber
@@ -233,8 +234,8 @@
     - SPDX
   Abilities:
     - Consume
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: CycloneDX-Cocoapods
   Link: https://github.com/CycloneDX/cyclonedx-cocoapods
@@ -244,7 +245,7 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
   Languages:
     - Objective-C
@@ -258,7 +259,7 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
   Languages:
     - Elixir
@@ -271,7 +272,21 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
+    - Source
+  Languages:
+    - Go
+
+- Name: CycloneDX-go
+  Link: https://github.com/CycloneDX/cyclonedx-go
+  Standards:
+    - CycloneDX
+  License: OpenSource
+  Publisher: CycloneDX
+  Abilities:
+    - Generate
+    - Edit
+  Types:
     - Source
   Languages:
     - Go
@@ -284,7 +299,7 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
   Languages:
     - Npm
@@ -297,9 +312,24 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
+    - Dotnet
+
+- Name: CycloneDX-dotnet-lib
+  Link: https://github.com/CycloneDX/cyclonedx-dotnet-library
+  Standards:
+    - CycloneDX
+    - SPDX
+  License: OpenSource
+  Publisher: CycloneDX
+  Abilities:
+    - Compare
+    - Convert
+    - Edit
+    - Validate
+  Languages:
     - Dotnet
 
 - Name: CycloneDX-NPM
@@ -310,9 +340,35 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
+    - Npm
+
+- Name: CycloneDX-Yarn
+  Link: https://github.com/CycloneDX/cyclonedx-node-yarn
+  Standards:
+    - CycloneDX
+  License: OpenSource
+  Publisher: CycloneDX
+  Abilities:
+    - Generate
+  Types:
+    - Source
+  Languages:
+    - Yarn
+    - Npm
+
+- Name: CycloneDX-javascript-lib
+  Link: https://github.com/CycloneDX/cyclonedx-javascript-library
+  Standards:
+    - CycloneDX
+  Publisher: CycloneDX
+  License: OpenSource
+  Abilities:
+    - Edit
+    - Validate
+  Languages:
     - Npm
 
 - Name: CycloneDX-Maven
@@ -323,9 +379,9 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Maven
 
 - Name: CycloneDX-Gradle
@@ -336,9 +392,9 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Maven
     - Jar
 
@@ -350,10 +406,22 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Composer
+
+- Name: CycloneDX-PHP-lib
+  Link: https://github.com/CycloneDX/cyclonedx-php-library
+  Standards:
+    - CycloneDX
+    - SPDX
+  Publisher: CycloneDX
+  License: OpenSource
+  Abilities:
+    - Edit
+    - Validate
+
 
 - Name: CycloneDX-Python
   Link: https://github.com/CycloneDX/cyclonedx-python
@@ -363,9 +431,23 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
+    - Pypi
+
+- Name: CycloneDX-Python-lib
+  Link: https://github.com/CycloneDX/cyclonedx-python-lib
+  Publisher: CycloneDX
+  License: OpenSource
+  Standards:
+    - CycloneDX
+  Abilities:
+    - Generate
+    - Consume
+  Types:
+    - Source
+  Languages:
     - Pypi
 
 - Name: CycloneDX-Ruby-Gem
@@ -376,9 +458,9 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Gem
 
 - Name: CycloneDX-Rust-Cargo
@@ -389,9 +471,9 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Cargo
 
 - Name: CycloneDX-Webpack-Plugin
@@ -402,9 +484,9 @@
     - CycloneDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Npm
 
 - Name: ORT
@@ -417,9 +499,9 @@
   Abilities:
     - Generate
     - Consume
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
 
 - Name: Protobom
   Link: https://github.com/bom-squad/protobom
@@ -430,8 +512,8 @@
     - SPDX
   Abilities:
     - Convert
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: Sbom-workbench
   Link: https://github.com/scanoss/sbom-workbench
@@ -442,9 +524,9 @@
   Abilities:
     - Generate
     - Consume
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
 
 - Name: SPDX-Maven
   Link: https://github.com/spdx/spdx-maven-plugin
@@ -454,9 +536,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Maven
 
 - Name: SPDX-Gradle
@@ -467,9 +549,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Maven
 
 - Name: SPDX-Java-Tools
@@ -482,8 +564,8 @@
     - Consume
     - Convert
     - Merge
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: SPDX-Python-Tools
   Link: https://github.com/spdx/tools-python
@@ -495,8 +577,8 @@
     - Consume
     - Convert
     - Compare
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: SPDX-Online-Tools
   Link: https://github.com/spdx/spdx-online-tools
@@ -509,8 +591,8 @@
     - Convert
     - Compare
     - Validate
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: SW360
   Link: https://github.com/eclipse-sw360/sw360
@@ -521,8 +603,8 @@
   Abilities:
     - Consume
     - Merge
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: Sbom4files
   Link: https://github.com/anthonyharrison/sbom4files
@@ -533,9 +615,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Generic
 
 - Name: Sbom4python
@@ -547,9 +629,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Pypi
 
 - Name: Sbom4rust
@@ -561,9 +643,9 @@
     - SPDX
   Abilities:
     - Generate
-  Type:
+  Types:
     - Source
-  Language:
+  Languages:
     - Cargo
 
 - Name: CycloneDX-Editor-Validator-Tool
@@ -576,8 +658,8 @@
     - Edit
     - Merge
     - Validate
-  Type:
-  Language:
+  Types:
+  Languages:
 
 - Name: GUAC
   Link: https://github.com/guacsec/guac
@@ -589,9 +671,81 @@
   Abilities:
     - Consume
     - Compare
-  Type: 
+  Types:
     - Source
     - Build
-    - Analyzed
-  Language:
+    - Analyze
+  Languages:
     - Generic
+
+- Name: CycloneDX-CLI
+  Link: https://github.com/CycloneDX/cyclonedx-cli
+  Publisher: CycloneDX
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Consume
+    - Compare
+    - Convert
+    - Edit
+    - Merge
+    - Validate
+    - Sign
+  Types:
+  Languages:
+
+- Name: distro2SBOM
+  Link: https://github.com/anthonyharrison/distro2sbom
+  Publisher: Anthony Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Analyze
+  Languages:
+
+- Name: lib4sbom
+  Link: https://github.com/anthonyharrison/lib4sbom
+  Publisher: Anthony Harrison
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Convert
+    - Edit
+  Types:
+  Languages:
+
+- Name: FOSSLight
+  Link: https://github.com/fosslight/fosslight
+  Publisher: FOSSLight
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Analyze
+  Languages:
+
+- Name: CycloneDX-core-java
+  Link: https://github.com/CycloneDX/cyclonedx-core-java
+  Publisher: CycloneDX
+  License: OpenSource
+  Standards:
+    - CycloneDX
+  Abilities:
+    - Compare
+    - Edit
+    - Validate
+    - Sign
+  Languages:
+    - Java
+    - Jar
+    - Maven

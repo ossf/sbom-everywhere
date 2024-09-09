@@ -2,10 +2,11 @@
 
 import {onMounted, ref, watch} from "vue";
 import * as d3 from "d3";
+import {useRouter} from "vue-router";
 
-const selected = ref()
+const router = useRouter();
 const props = defineProps(['dataList'])
-const emit = defineEmits(['update:selectedItem'])
+
 const activeView = ref(1)
 const scrollableDiv = ref(false)
 
@@ -15,10 +16,6 @@ onMounted(() => {
 
 watch (props, () => {
   generateTreeObject()
-})
-
-watch(selected, (newSelection) => {
-  emit('update:selectedItem', newSelection.name)
 })
 
 function onViewChange(view) {
@@ -88,7 +85,7 @@ function generateTreeObjectRound() {
       .attr("r", 3)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
-        selected.value = d.data
+        router.push({params: {selection: d.data.name}});
       });
 
   // Append images.
@@ -123,7 +120,7 @@ function generateTreeObjectRound() {
       .style("cursor", "pointer")
       .text(d => d.data.name)
       .on("click", (event, d) => {
-        selected.value = d.data
+        router.push({params: {selection: d.data.name}});
       });
 
   return svg.node();
@@ -196,7 +193,7 @@ function generateTreeObjectFlat() {
       .attr("transform", d => `translate(${d.y},${d.x})`)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
-        selected.value = d.data
+        router.push({params: {selection: d.data.name}});
       });
 
   node.append("circle")
@@ -204,7 +201,7 @@ function generateTreeObjectFlat() {
       .attr("r", 3)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
-        selected.value = d.data
+        router.push({params: {selection: d.data.name}});
       });
 
   node.append("text")
@@ -217,7 +214,7 @@ function generateTreeObjectFlat() {
       .clone(true).lower()
       .attr("stroke", "white")
       .on("click", (event, d) => {
-        selected.value = d.data
+        router.push({params: {selection: d.data.name}});
       });
 
   return svg.node();

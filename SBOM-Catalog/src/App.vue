@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import {onBeforeMount, reactive, Ref, ref, watch} from "vue";
+import {onBeforeMount, onMounted, reactive, Ref, ref, watch} from "vue";
 import axios from "axios";
-import { load } from "js-yaml";
+import {load} from "js-yaml";
 import draggable from 'vuedraggable'
 import {aggregateList, deepClone, generateTreeObject, normaliseList} from "./global/global.ts";
 import TreePlot from "./components/plots/tree-plot.vue";
@@ -9,21 +9,15 @@ import ListPlot from "./components/plots/list-plot.vue";
 import MarkdownParser from "./components/markdownParser.vue";
 import CirclePlot from "./components/plots/circle-plot.vue";
 import DetailEnumeration from "./components/detail-enumeration.vue";
-import type { Tool } from "./types/tool";
-import type { Filter } from "./types/filter";
+import type {Tool} from "./types/tool";
+import type {Filter} from "./types/filter";
+import {AggregationModes, ViewMode} from "./types/view.d.ts";
+import {useRoute, useRouter} from "vue-router";
 
-enum AggregationModes {
-  Normalize,
-  Aggregate
-}
+const route = useRoute();
+const router = useRouter();
 
-enum ViewMode {
-  Circle,
-  Tree,
-  List
-}
-
-const activeViewMode: Ref<ViewMode> = ref(ViewMode.Circle)
+const activeViewMode: Ref<ViewMode> = ref(ViewMode.Circle);
 const activeAggregationMode: Ref<AggregationModes> = ref(AggregationModes.Normalize)
 
 const rawdata: Ref<Tool[]> = ref([])
@@ -31,8 +25,6 @@ const filters = reactive<Filter[]>([]);
 
 const formattedData: Ref<Tool[]> = ref([])
 const filteredTreeData = ref()
-
-const selectedItem: Ref<string> = ref('HowTo')
 
 onBeforeMount(() => {
   axios.get('filters.yaml').then(x => {
@@ -45,12 +37,12 @@ onBeforeMount(() => {
 })
 
 function onViewChange(view: ViewMode) {
-  activeViewMode.value = view
+  router.push({params: {view: view}})
 }
 
 function onAggregationModeChange(mode: AggregationModes) {
-  activeAggregationMode.value = mode
-  recalculateAllData(filters, rawdata.value)
+  router.push({params: {aggregation: mode}})
+
 }
 
 const updateFilters = (event: any) => {
@@ -66,6 +58,21 @@ function recalculateAllData(currentFilters: Filter[], currentRawData: Tool[]) {
   }
   filteredTreeData.value = generateTreeObject(currentFilters, formattedData.value)
 }
+
+watch(() => route.params.view, (newView) => {
+  if (newView) {
+    activeViewMode.value = ViewMode[newView as keyof typeof ViewMode];
+    recalculateAllData(filters, rawdata.value)
+  }
+});
+
+watch(() => route.params.aggregation, (newAggregation) => {
+  if (newAggregation) {
+    activeAggregationMode.value = AggregationModes[newAggregation as keyof typeof AggregationModes];
+    recalculateAllData(filters, rawdata.value)
+  }
+});
+
 
 watch(rawdata, (newRawData) => {
   recalculateAllData(filters, newRawData)
@@ -126,26 +133,24 @@ watch(filters, (newFilters) => {
     </div>
     <div id="workbench" class="flex-grow-1 flex col full-vue-heigth">
       <div v-if="filteredTreeData" class="flex-grow-1 flex col full-vue-heigth">
-        <circle-plot v-if="activeViewMode === ViewMode.Circle" v-model:selected-item="selectedItem" :dataList="filteredTreeData"/>
-        <tree-plot v-else-if="activeViewMode === ViewMode.Tree" v-model:selected-item="selectedItem" :dataList="filteredTreeData"/>
-        <list-plot v-else-if="activeViewMode === ViewMode.List" v-model:selected-item="selectedItem" :dataList="rawdata" :filterList="filters"/>
+        <circle-plot v-if="activeViewMode === ViewMode.Circle" :dataList="filteredTreeData"/>
+        <tree-plot v-else-if="activeViewMode === ViewMode.Tree" :dataList="filteredTreeData"/>
+        <list-plot v-else-if="activeViewMode === ViewMode.List" :dataList="rawdata" :filterList="filters"/>
       </div>
     </div>
 
     <div class="flex flex-column surface-50 col-2 full-vue-heigth shadow-left">
       <div class="flex justify-content-between align-items-center m-2">
-        <h2 class="m-0">{{ selectedItem }}</h2>
+        <h2 class="m-0">{{ $route.params.selection }}</h2>
         <img
-            :src="'logos/' + selectedItem + '.png'" style="display: none"
-            :alt="selectedItem"
-            class="responsive-image p-1"
-            @error="event => event.target.style.display = 'none'"
-            @load="event => event.target.style.display = 'block'"/>
+            :src="'logos/' + $route.params.selection + '.png'" style="display: none"
+            alt=""
+            class="responsive-image p-1 block"/>
       </div>
       <PDivider class="mt-2"/>
       <div class="scrollable-div">
-        <detail-enumeration :selected="selectedItem" :rawdata="rawdata"/>
-        <markdown-parser :selected="selectedItem"/>
+        <detail-enumeration :rawdata="rawdata"/>
+        <markdown-parser/>
       </div>
     </div>
   </div>

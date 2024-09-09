@@ -1,0 +1,3 @@
+The GitHub repository for **Distro2SBOM** provides a tool to generate a Software Bill of Materials (SBOM) from system packaging information. It supports multiple distributions like RPM, DEB, and Windows, and can output SBOMs in formats like SPDX and CycloneDX. This tool is designed to be integrated into CI systems, allowing for the generation of accurate SBOMs for auditing and compliance purposes. Installation and usage instructions are provided in the repository, along with options for customizing the output and supported formats.
+
+For more details, visit the [Distro2SBOM GitHub page](https://github.com/anthonyharrison/distro2sbom).

@@ -13,7 +13,7 @@
     "typecheck": "vue-tsc --build"
   },
   "dependencies": {
-    "axios": "^1.6.8",
+    "axios": "^1.7.3",
     "d3": "^7.9.0",
     "highlight.js": "^11.9.0",
     "js-yaml": "^4.1.0",
@@ -23,14 +23,15 @@
     "primeicons": "^6.0.1",
     "primevue": "^3.50.0",
     "vue": "^3.4.21",
+    "vue-router": "^4.4.3",
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.10.2",
     "@types/js-yaml": "^4.0.9",
     "@vitejs/plugin-vue": "^4.6.2",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
-    "@rushstack/eslint-patch": "^1.10.2",
     "esbuild": "^0.20.2",
     "eslint": "^8.57.0",
     "eslint-plugin-eslint-comments": "^3.2.0",

@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 import {ref, watch} from "vue";
+import {useRoute} from "vue-router";
 
-const props = defineProps(['selected', 'rawdata'])
+const props = defineProps(['rawdata'])
+
+const route = useRoute();
 
 const selectedObject = ref(null)
 
-watch(() => props.selected, (newVal) => {
+watch(() => route.params.selection, (newVal) => {
   selectedObject.value = null
   selectedObject.value = props.rawdata.find(x => x.Name === newVal)
 })
@@ -46,5 +49,6 @@ watch(() => props.selected, (newVal) => {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
+  color: #478566;
 }
 </style>

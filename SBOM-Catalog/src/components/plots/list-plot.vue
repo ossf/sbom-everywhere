@@ -3,14 +3,15 @@ import {onMounted, Ref, ref, watch} from "vue";
 import {FilterMatchMode} from "primevue/api";
 import {Tool} from "../../types/tool";
 import {Filter} from "../../types/filter";
+import {useRouter} from "vue-router";
 
 interface listPlotProps {
   dataList: Tool[]
   filterList: Filter[]
 }
 
+const router = useRouter();
 const props = defineProps<listPlotProps>()
-const emit = defineEmits(['update:selectedItem'])
 
 const selected = ref()
 const activeFilters: Ref<Filter[]> = ref([])
@@ -21,7 +22,7 @@ onMounted(() => {
 })
 
 watch(selected, (newSelection) => {
-  emit('update:selectedItem', newSelection.Name)
+  router.push({params: {selection: newSelection.Name}});
 })
 
 watch (props, (newProps) => {
@@ -60,7 +61,7 @@ const filters = ref({
           <div class="flex">
             <div v-if="typeof slotProps.data[col.name] === 'string'">
               <div class="flex align-items-center">
-                <img :src="'logos/' + slotProps.data[col.name] + '.png'" :alt="slotProps.data[col.name]" class="responsive-image p-1"/>
+                <img :src="'logos/' + slotProps.data[col.name] + '.png'" class="responsive-image p-1" alt=""/>
                 <div class="m-2">{{ slotProps.data[col.name] }}</div>
               </div>
             </div>
