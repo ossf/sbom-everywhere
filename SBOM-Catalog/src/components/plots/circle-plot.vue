@@ -2,10 +2,10 @@
 
 import {onMounted, ref, watch} from "vue";
 import * as d3 from 'd3';
+import {useRouter} from "vue-router";
 
-const selected = ref()
+const router = useRouter();
 const props = defineProps(['dataList'])
-const emit = defineEmits(['update:selectedItem'])
 
 onMounted(() => {
   generateTreeObject()
@@ -13,10 +13,6 @@ onMounted(() => {
 
 watch (props, () => {
   generateTreeObject()
-})
-
-watch(selected, (newSelection) => {
-  emit('update:selectedItem', newSelection)
 })
 
 function generateTreeObject() {
@@ -72,11 +68,12 @@ root.descendants().forEach((d) => {
   const imageSize = d.r * 2; // calculate the size of the image based on the radius of the circle
 
   pattern.append("image")
+      .attr("href", "logos/" + d.data.name.charAt(0).toLowerCase() + "-solid.svg") // construct the image URL from the node's name
       .attr("xlink:href", "logos/" + d.data.name + ".png") // construct the image URL from the node's name
       .attr("height", imageSize) // set the size of the image
       .attr("width", imageSize) // set the size of the image
       .attr("x", 0) // center the image horizontally
-      .attr("y", 0); // center the image vertically
+      .attr("y", 0) // center the image vertically
 });
 
 // Append the nodes.
@@ -89,7 +86,7 @@ root.descendants().forEach((d) => {
     .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
     .on("mouseout", function() { d3.select(this).attr("stroke", null); })
     .on("click", (event, d) => {
-      selected.value = d.data.name; // set the selected ref to the name of the clicked element
+      router.push({params: {selection: d.data.name}}); // set the selected ref to the name of the clicked element
       if (focus !== d && d.children) {
         zoom(event, d);
       }
@@ -148,11 +145,12 @@ const label = svg.append("g")
       const imageSize = d.r * 2 * k; // calculate the size of the image based on the radius of the circle and the zoom level
 
       pattern.append("image")
-          .attr("xlink:href", "logos/" + d.data.name + ".png") // construct the image URL from the node's name
+          .attr("href", "logos/" + d.data.name.charAt(0).toLowerCase() + "-solid.svg") // construct the image URL from the node's name
+          .attr("href", "logos/" + d.data.name + ".png") // construct the image URL from the node's name
           .attr("height", imageSize) // set the size of the image
           .attr("width", imageSize) // set the size of the image
           .attr("x", 0) // center the image horizontally
-          .attr("y", 0); // center the image vertically
+          .attr("y", 0) // center the image vertically
     });
 
     // Update the fill attribute of the circles to use the new pattern.

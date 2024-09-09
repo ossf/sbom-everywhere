@@ -4,15 +4,12 @@ import axios from 'axios';
 import {Marked} from "marked";
 import {markedHighlight} from "marked-highlight";
 import hljs from 'highlight.js';
+import {useRoute} from "vue-router";
 
-const props = defineProps(['selected'])
+const route = useRoute();
 const mdres = ref()
 
-onMounted(() => {
-  loadMarkdown(props.selected)
-})
-
-watch(() => props.selected, (newSelected) => {
+watch(() => route.params.selection, (newSelected) => {
   loadMarkdown(newSelected)
 })
 

@@ -20,10 +20,12 @@ import Tag from "primevue/tag";
 import ButtonGroup from "primevue/buttongroup";
 import InputIcon from "primevue/inputicon";
 import IconField from "primevue/iconfield";
+import router from "./router";
 
 const app = createApp(App);
 
 app.use(PrimeVue)
+app.use(router)
 
 app.component('PButton', Button)
 app.component('PButtonGroup', ButtonGroup)

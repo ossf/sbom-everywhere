@@ -3,14 +3,15 @@ import {onMounted, Ref, ref, watch} from "vue";
 import {FilterMatchMode} from "primevue/api";
 import {Tool} from "../../types/tool";
 import {Filter} from "../../types/filter";
+import {useRouter} from "vue-router";
 
 interface listPlotProps {
   dataList: Tool[]
   filterList: Filter[]
 }
 
+const router = useRouter();
 const props = defineProps<listPlotProps>()
-const emit = defineEmits(['update:selectedItem'])
 
 const selected = ref()
 const activeFilters: Ref<Filter[]> = ref([])
@@ -21,7 +22,7 @@ onMounted(() => {
 })
 
 watch(selected, (newSelection) => {
-  emit('update:selectedItem', newSelection.Name)
+  router.push({params: {selection: newSelection.Name}});
 })
 
 watch (props, (newProps) => {
