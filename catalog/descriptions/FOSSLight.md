@@ -1,0 +1,3 @@
+The [FOSSLight Hub](https://github.com/fosslight/fosslight) is an integrated management web service designed for open source compliance processes. It helps manage open source software, licenses, and vulnerabilities, supporting the creation of Software Bill of Materials (SBOM) and ensuring compliance with license obligations. The tool also offers features for tracking issues, managing third-party software, and monitoring vulnerabilities in projects, including support for SPDX (ISO standard). It is released under the AGPL-3.0 license by LG Electronics.
+
+For more details, you can explore the GitHub repository [here](https://github.com/fosslight/fosslight).

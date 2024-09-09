@@ -1,0 +1,3 @@
+You can export a Software Bill of Materials (SBOM) for your GitHub repository directly through the GitHub UI or via the REST API. This feature allows you to generate an SBOM in the SPDX format, providing transparency about your repository's dependencies, including information on licenses and vulnerability severity. This is particularly useful for complying with supply chain security requirements, such as those outlined in U.S. federal government regulations.
+
+For detailed steps, visit [GitHub Docs](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository).

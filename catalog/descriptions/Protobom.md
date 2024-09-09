@@ -1,0 +1,3 @@
+Protobom is a universal SBOM (Software Bill of Materials) representation using protocol buffers, designed to ingest and export SBOMs in formats like SPDX and CycloneDX without data loss. It provides a Go library for parsing and generating SBOM documents, supporting various SBOM formats and versions. Developers can use Protobom to work with SBOMs programmatically, abstracting away format-specific details.
+
+For more detailed information, you can visit the [Protobom GitHub repository](https://github.com/bom-squad/protobom).
