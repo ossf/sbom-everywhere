@@ -1,7 +1,7 @@
 # SBOM Everywhere Catalog FAQ
 
 ## What is the SBOM Catalog?
-The OpenSSF has a working group called “SBOM Everywhere”, one of the projects this group is working on is a place to catalog as much SBOM related information as possible. Because the OpenSSF has a focus on open source, we’re doing it as an open source project! The goal is to capture anything that’s SBOM related and make it easy to find. Projects, documents, standards, working groups, anything that could be useful.
+The OpenSSF has a working group called [SBOM Everywhere](https://github.com/ossf/sbom-everywhere), one of the projects this group is working on is a place to catalog as much SBOM related information as possible. Because the OpenSSF has a focus on open source, we’re doing it as an open source project! The goal is to capture anything that’s SBOM related and make it easy to find. Projects, documents, standards, working groups, anything that could be useful.
 
 ## How do I access and use the tool?
 The SBOM catalog can be seen at https://sbom-catalog.openssf.org/ - It’s actually two tools, the Wiki and the catalog. The Wiki is to capture more static information like documents and standards. Our goal is to link to as many things as we can.
