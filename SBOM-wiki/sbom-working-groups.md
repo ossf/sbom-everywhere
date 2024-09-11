@@ -1,7 +1,7 @@
 # SBOM working groups
 
 ## CycloneDX
-To get in touch with the CycloneDX community you best join the [CycloneDX Slak](https://cyclonedx.org/slack). Further information is provided on the CycloneDX [participate page](https://cyclonedx.org/about/participate/).
+To get in touch with the CycloneDX community you best join the [CycloneDX Slack](https://cyclonedx.org/slack). Further information and invitation link is provided on the CycloneDX [participate page](https://cyclonedx.org/about/participate/).
 
 ## SPDX
 SPDX published their open workstreams in the following [Github repository](https://github.com/spdx/meetings)
