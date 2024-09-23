@@ -35,7 +35,7 @@ features:
     link: /sbom-compliance
   - title: Working Groups
     details: Do you want to join, contribute or ask questions. Here is a list of working groups.
-    link: /sbom-working-groups.md
+    link: /sbom-working-groups
 ---
 
 <style>
