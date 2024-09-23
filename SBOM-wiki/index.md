@@ -34,8 +34,8 @@ features:
     details: Wondering who requires SBOM and want to see a list referencing the sources? Here's a list of laws, guidelines and requirements mandating SBOMs.
     link: /sbom-compliance
   - title: Working Groups
-    details: Do you want to join, contribute or ask questions. Her is a list of working groups.
-    link: sbom-everywhere-sig
+    details: Do you want to join, contribute or ask questions. Here is a list of working groups.
+    link: /sbom-working-groups.md
 ---
 
 <style>
