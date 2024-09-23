@@ -117,4 +117,4 @@ NTIA's legwork has been a guiding source having done the most comprehensive rese
 
 ## Governance
 
-The [CHARTER.md](https://github.com/ossf/sbom-everywhere/CHARTER.md) outlines the scope and governance of our group activities.
+The [CHARTER.md](https://github.com/ossf/sbom-everywhere/blob/main/CHARTER.md) outlines the scope and governance of our group activities.
