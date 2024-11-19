@@ -749,3 +749,13 @@
     - Java
     - Jar
     - Maven
+
+- Name: DaggerBoard
+  Link: https://github.com/nyph-infosec/daggerboard
+  Publisher: NYPH-Infosec
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Consume
