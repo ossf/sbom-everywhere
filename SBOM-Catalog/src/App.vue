@@ -150,7 +150,7 @@ watch(filters, (newFilters) => {
       <PDivider class="mt-2"/>
       <div class="scrollable-div">
         <detail-enumeration :rawdata="rawdata"/>
-        <markdown-parser/>
+        <markdown-parser :rawdata="rawdata"/>
       </div>
     </div>
   </div>

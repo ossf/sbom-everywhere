@@ -1,19 +1,40 @@
 <script lang="ts" setup>
-import {onMounted, ref, watch} from "vue";
+import {ref, watch} from "vue";
 import axios from 'axios';
 import {Marked} from "marked";
 import {markedHighlight} from "marked-highlight";
 import hljs from 'highlight.js';
 import {useRoute} from "vue-router";
 
-const route = useRoute();
 const mdres = ref()
 
-watch(() => route.params.selection, (newSelected) => {
-  loadMarkdown(newSelected)
+const props = defineProps(['rawdata'])
+
+const route = useRoute();
+
+watch(() => route.params.selection, (newVal) => {
+  const selectedObject = props.rawdata.find(x => x.Name === newVal)
+  if (selectedObject) {
+    const marked = new Marked(
+        markedHighlight({
+          langPrefix: 'hljs language-',
+          highlight(code, lang) {
+            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+            return hljs.highlight(code, {language}).value;
+          }
+        })
+    )
+    if (selectedObject.Summary === undefined) {
+      mdres.value = marked.parse('*No description available*')
+    } else {
+      mdres.value = marked.parse(selectedObject.Summary)
+    }
+  } else {
+    loadRemoteText(route.params.selection)
+  }
 })
 
-function loadMarkdown(newSelected: string) {
+function loadRemoteText(newSelected: string) {
   const marked = new Marked(
       markedHighlight({
         langPrefix: 'hljs language-',

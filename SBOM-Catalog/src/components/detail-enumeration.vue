@@ -19,8 +19,8 @@ watch(() => route.params.selection, (newVal) => {
   <div v-if="selectedObject">
     <table>
       <tr v-for="(value, key) in selectedObject" :key="key">
-        <th v-if="typeof value === 'string'" class="text-left">{{ key }}: </th>
-        <td v-if="typeof value === 'string'" class="white-space-nowrap overflow-hidden text-overflow-ellipsis">
+        <th v-if="typeof value === 'string' && key != 'Summary'" class="text-left">{{ key }}: </th>
+        <td v-if="typeof value === 'string' && key != 'Summary'" class="white-space-nowrap overflow-hidden text-overflow-ellipsis">
           <div v-if="value === 'Link'">
             <a :href="value" target="_blank">{{ value }}</a>
           </div>
