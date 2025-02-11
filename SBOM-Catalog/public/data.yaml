@@ -803,7 +803,7 @@
     - Hex
   License: BSD-3-Clause
   Link: https://github.com/voltone/sbom
-  Name: sbom
+  Name: Voltone_SBOM
   Publisher: voltone
   Source: AI-Generated
   Standards:
@@ -1319,7 +1319,7 @@
     - Pypi
   License: Apache-2.0
   Link: https://github.com/oss-review-toolkit/ort
-  Name: ort
+  Name: ORT
   Publisher: oss-review-toolkit
   Source: AI-Generated
   Standards:
@@ -2158,7 +2158,7 @@
     - Swift
   License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-cocoapods
-  Name: CycloneDX-cocoapods
+  Name: CycloneDX-Cocoapods
   Publisher: CycloneDX
   Source: AI-Generated
   Standards:
@@ -2308,27 +2308,6 @@
     integrated SBOM handling within their security processes.'
   Types:
     - Analyze
-- Abilities: []
-  Languages:
-    - Clojars
-  License: No License
-  Link: https://github.com/thspinto/oss_inventory
-  Name: oss_inventory
-  Publisher: thspinto
-  Source: AI-Generated
-  Standards: []
-  Summary: 'I apologize, but based on the provided content, I cannot write a summary
-    focused on SBOM features as the text appears to be a README file for Buffalo,
-    a web development framework in Go. The content does not contain any information
-    about SBOM (Software Bill of Materials) generation or related features. The text
-    primarily describes how to set up and run a Buffalo web application, including
-    database configuration and basic startup instructions.
-
-
-    To provide an accurate SBOM-focused summary, I would need information about a
-    tool that actually provides SBOM generation capabilities.'
-  Types:
-    - Design
 - Abilities:
     - Generate
   Languages:
@@ -2519,7 +2498,7 @@
     - Pypi
   License: BSD-2-Clause
   Link: https://github.com/tern-tools/tern
-  Name: tern
+  Name: Tern
   Publisher: tern-tools
   Source: AI-Generated
   Standards:
@@ -2587,7 +2566,7 @@
     - Swift
   License: No License
   Link: https://github.com/nexB/scancode-toolkit
-  Name: scancode-toolkit
+  Name: Scancode-Toolkit
   Publisher: nexB
   Source: AI-Generated
   Standards:
@@ -3450,8 +3429,8 @@
     - Rpm
   License: Apache-2.0
   Link: https://github.com/aquasecurity/trivy
-  Name: trivy
-  Publisher: aquasecurity
+  Name: Trivy
+  Publisher: Aquasecurity
   Source: AI-Generated
   Standards:
     - SPDX
@@ -4783,7 +4762,7 @@
     - Pypi
   License: MPL-2.0
   Link: https://github.com/devops-kung-fu/bomber
-  Name: bomber
+  Name: Bomber
   Publisher: devops-kung-fu
   Source: AI-Generated
   Standards:
@@ -5054,7 +5033,7 @@
   License: Apache-2.0
   Link: https://github.com/cyclonedx/sbom-utility
   Name: sbom-utility
-  Publisher: cyclonedx
+  Publisher: CycloneDX
   Source: AI-Generated
   Standards:
     - SPDX
@@ -6263,3 +6242,183 @@
     insights into cryptographic assets and their post-quantum safety compliance.'
   Types:
     - Source
+
+- Name: Microsoft-SBOM-Tool
+  Link: https://github.com/microsoft/sbom-tool
+  Publisher: Microsoft
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Source
+    - Container
+  Languages:
+    - Rpm
+    - Swid
+    - Deb
+    - Gem
+    - Pypi
+    - Golang
+    - Npm
+    - Maven
+    - Nuget
+    - Cargo
+
+- Name: Github-Dependency-Graph
+  Link: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph
+  Publisher: Github
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Source
+  Languages:
+    - Github
+    - Gem
+    - Pypi
+    - Composer
+    - Golang
+    - Npm
+    - Maven
+    - Nuget
+    - Hex
+    - Pub
+    - Hackage
+    - Cargo
+
+- Name: Kubernetes-BOM
+  Link: https://github.com/kubernetes-sigs/bom
+  Publisher: Kubernetes-SIGs
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Container
+  Languages:
+    - Pkg
+
+- Name: Protobom
+  Link: https://github.com/bom-squad/protobom
+  Publisher: BOM-Squad
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Convert
+  Types:
+  Languages:
+
+- Name: Sbom-workbench
+  Link: https://github.com/scanoss/sbom-workbench
+  Publisher: SCANOSS
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+    - Consume
+  Types:
+    - Source
+  Languages:
+
+- Name: SPDX-Maven
+  Link: https://github.com/spdx/spdx-maven-plugin
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Source
+  Languages:
+    - Maven
+
+- Name: SPDX-Gradle
+  Link: https://github.com/spdx/spdx-gradle-plugin
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Generate
+  Types:
+    - Source
+  Languages:
+    - Maven
+
+- Name: SPDX-Java-Tools
+  Link: https://github.com/spdx/tools-java
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Convert
+    - Merge
+  Types:
+  Languages:
+
+- Name: SPDX-Python-Tools
+  Link: https://github.com/spdx/tools-python
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Convert
+    - Compare
+  Types:
+  Languages:
+
+- Name: SPDX-Online-Tools
+  Link: https://github.com/spdx/spdx-online-tools
+  Publisher: SPDX
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Convert
+    - Compare
+    - Validate
+  Types:
+  Languages:
+
+- Name: SW360
+  Link: https://github.com/eclipse-sw360/sw360
+  Publisher: Eclipse-SW360
+  License: OpenSource
+  Standards:
+    - SPDX
+  Abilities:
+    - Consume
+    - Merge
+  Types:
+  Languages:
+
+- Name: GUAC
+  Link: https://github.com/guacsec/guac
+  Publisher: GUAC (OpenSSF)
+  License: OpenSource
+  Standards:
+    - CycloneDX
+    - SPDX
+  Abilities:
+    - Consume
+    - Compare
+  Types:
+    - Source
+    - Build
+    - Analyze
+  Languages:
+    - Generic
