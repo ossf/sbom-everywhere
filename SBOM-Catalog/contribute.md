@@ -2,6 +2,20 @@
 
 If you are interested in adding entries to the catalog, or modifying functionality of the catalog, please review this guide.
 
+## How to request changes
+
+If you notice any issues with the catalog or have suggestions for improvements, there are two ways to contribute:
+
+1. **Open an Issue**: If you find a bug, have a feature request, or want to suggest improvements, please open an issue on GitHub. This helps us track and discuss potential changes before implementation.
+
+2. **Submit a Pull Request**: If you'd like to contribute code changes directly:
+   - Fork the repository
+   - Create a new branch for your changes
+   - Make your changes following the guidelines above
+   - Submit a pull request with a clear description of the changes
+
+For both issues and pull requests, please provide as much context as possible to help us understand your request.
+
 ## How to run the tool locally
 
 Run the comamnds

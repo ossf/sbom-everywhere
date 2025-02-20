@@ -1,33 +1,26 @@
 <script lang="ts" setup>
 import {onMounted, Ref, ref, watch} from "vue";
 import {FilterMatchMode} from "primevue/api";
-import {Tool} from "../../types/tool";
 import {Filter} from "../../types/filter";
-import {useRouter} from "vue-router";
+import { useMainStore } from "../../stores/mainStore";
 
-interface listPlotProps {
-  dataList: Tool[]
-  filterList: Filter[]
-}
-
-const router = useRouter();
-const props = defineProps<listPlotProps>()
+const store = useMainStore();
 
 const selected = ref()
 const activeFilters: Ref<Filter[]> = ref([])
 const metaKey = ref(true)
 
 onMounted(() => {
-  onFilterChange(props.filterList)
+  onFilterChange(store.filters)
 })
 
 watch(selected, (newSelection) => {
-  router.push({params: {selection: newSelection.Name}});
+  store.activeSelection = newSelection.Name
 })
 
-watch (props, (newProps) => {
-  onFilterChange(newProps.filterList)
-})
+watch (store.filters, () => {
+  onFilterChange(store.filters)
+}, { deep: true })
 
 function onFilterChange(newProps: Filter[]) {
   activeFilters.value.length = 0
@@ -45,7 +38,7 @@ const filters = ref({
 
 <template>
   <div class="w-12 scrollable-div">
-    <PDataTable v-model:selection="selected" v-model:filters="filters" :value="props.dataList" selection-mode="single" data-key="Name" :meta-key-selection="metaKey">
+    <PDataTable v-model:selection="selected" v-model:filters="filters" :value="store.rawData" selection-mode="single" data-key="Name" :meta-key-selection="metaKey">
       <template #header>
         <div class="flex justify-content-between align-items-center">
           <h2>List of all SBOM related Tools:</h2>

@@ -1,27 +1,42 @@
 <script lang="ts" setup>
-import {ref, watch} from "vue";
-import {useRoute} from "vue-router";
+import { ref } from "vue";
+import { useMainStore } from "../stores/mainStore";
+import MarkdownParser from "./markdownParser.vue";
+import type { Tool } from '../types/tool';
 
-const props = defineProps(['rawdata'])
+const store = useMainStore();
 
-const route = useRoute();
-
-const selectedObject = ref(null)
-
-watch(() => route.params.selection, (newVal) => {
-  selectedObject.value = null
-  selectedObject.value = props.rawdata.find(x => x.Name === newVal)
-})
+const sourceTooltip = (source: string) => {
+  if (source === 'AI-Generated') {
+    return "This tool was cataloged using AI"
+  } else if (source === 'AI & human reviewed') {
+    return 'This tool was cataloged using AI and then reviewed by a human'
+  } else if (source === 'Human written') {
+    return "This tool was cataloged by a human without AI assistance"
+  }
+}
 
 </script>
 
 <template>
-  <div v-if="selectedObject">
+  <div class="flex justify-content-between align-items-center m-2">
+    <h2 class="m-0">{{ store.activeSelection }}</h2>
+      <img
+          :src="'logos/' + store.activeSelection + '.png'" style="display: none"
+          alt=""
+          class="responsive-image p-1 block"/>
+  </div>
+  <div v-if="store.selectedObject" class="flex justify-content-end flex-wrap">
+    <PChip class="p-1 m-1" v-tooltip="sourceTooltip(store.selectedObject.Source)">{{ store.selectedObject.Source }}</PChip>
+  </div>
+  <PDivider class="mt-2"/>
+
+  <div v-if="store.selectedObject" class="scrollable-div">
     <table>
-      <tr v-for="(value, key) in selectedObject" :key="key">
-        <th v-if="typeof value === 'string' && key != 'Summary'" class="text-left">{{ key }}: </th>
-        <td v-if="typeof value === 'string' && key != 'Summary'" class="white-space-nowrap overflow-hidden text-overflow-ellipsis">
-          <div v-if="value === 'Link'">
+      <tr v-for="(value, key) in store.selectedObject" :key="key">
+        <th v-if="typeof value === 'string' && key !== 'Summary' && key !== 'Source'" class="text-left">{{ key }}: </th>
+        <td v-if="typeof value === 'string' && key !== 'Summary' && key !== 'Source'" class="white-space-nowrap overflow-hidden text-overflow-ellipsis">
+          <div v-if="key === 'Link'">
             <a :href="value" target="_blank">{{ value }}</a>
           </div>
           <div v-else>
@@ -31,7 +46,7 @@ watch(() => route.params.selection, (newVal) => {
       </tr>
     </table>
 
-    <div v-for="(value, key) in selectedObject" :key="key">
+    <div v-for="(value, key) in store.selectedObject" :key="key">
       <div v-if="Array.isArray(value)">
         <b>{{ key }}:</b>
         <div class="flex-container">
@@ -41,8 +56,8 @@ watch(() => route.params.selection, (newVal) => {
     </div>
     <div class="m-1"/>
     <PDivider/>
+    <markdown-parser/>
   </div>
-
 </template>
 
 <style scoped>

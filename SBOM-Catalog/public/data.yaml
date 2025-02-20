@@ -6242,183 +6242,850 @@
     insights into cryptographic assets and their post-quantum safety compliance.'
   Types:
     - Source
-
-- Name: Microsoft-SBOM-Tool
-  Link: https://github.com/microsoft/sbom-tool
-  Publisher: Microsoft
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Generate
-  Types:
-    - Source
-    - Container
-  Languages:
-    - Rpm
-    - Swid
-    - Deb
-    - Gem
-    - Pypi
-    - Golang
-    - Npm
-    - Maven
-    - Nuget
-    - Cargo
-
-- Name: Github-Dependency-Graph
-  Link: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph
-  Publisher: Github
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Generate
-  Types:
-    - Source
-  Languages:
-    - Github
-    - Gem
-    - Pypi
-    - Composer
-    - Golang
-    - Npm
-    - Maven
-    - Nuget
-    - Hex
-    - Pub
-    - Hackage
-    - Cargo
-
-- Name: Kubernetes-BOM
-  Link: https://github.com/kubernetes-sigs/bom
-  Publisher: Kubernetes-SIGs
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Generate
-  Types:
-    - Container
-  Languages:
-    - Pkg
-
-- Name: Protobom
-  Link: https://github.com/bom-squad/protobom
-  Publisher: BOM-Squad
-  License: OpenSource
-  Standards:
-    - CycloneDX
-    - SPDX
-  Abilities:
-    - Convert
-  Types:
-  Languages:
-
-- Name: Sbom-workbench
-  Link: https://github.com/scanoss/sbom-workbench
-  Publisher: SCANOSS
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Generate
+- Abilities:
     - Consume
-  Types:
-    - Source
   Languages:
-
-- Name: SPDX-Maven
-  Link: https://github.com/spdx/spdx-maven-plugin
-  Publisher: SPDX
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Generate
-  Types:
-    - Source
-  Languages:
-    - Maven
-
-- Name: SPDX-Gradle
-  Link: https://github.com/spdx/spdx-gradle-plugin
-  Publisher: SPDX
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Generate
-  Types:
-    - Source
-  Languages:
-    - Maven
-
-- Name: SPDX-Java-Tools
-  Link: https://github.com/spdx/tools-java
-  Publisher: SPDX
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Consume
-    - Convert
-    - Merge
-  Types:
-  Languages:
-
-- Name: SPDX-Python-Tools
-  Link: https://github.com/spdx/tools-python
-  Publisher: SPDX
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Consume
-    - Convert
-    - Compare
-  Types:
-  Languages:
-
-- Name: SPDX-Online-Tools
-  Link: https://github.com/spdx/spdx-online-tools
-  Publisher: SPDX
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Consume
-    - Convert
-    - Compare
-    - Validate
-  Types:
-  Languages:
-
-- Name: SW360
-  Link: https://github.com/eclipse-sw360/sw360
-  Publisher: Eclipse-SW360
-  License: OpenSource
-  Standards:
-    - SPDX
-  Abilities:
-    - Consume
-    - Merge
-  Types:
-  Languages:
-
-- Name: GUAC
+    - Generic
+  License: Apache-2.0
   Link: https://github.com/guacsec/guac
-  Publisher: GUAC (OpenSSF)
-  License: OpenSource
+  Name: guac
+  Publisher: guacsec
+  Source: AI-Generated
   Standards:
-    - CycloneDX
     - SPDX
-  Abilities:
+    - CycloneDX
+  Summery: 'GUAC (Graph for Understanding Artifact Composition) is a software security
+    metadata aggregation tool that consolidates data into a high-fidelity graph database.
+    The tool processes multiple SBOM formats including CycloneDX and SPDX, along with
+    various security-related metadata formats such as SLSA, OpenSSF Scorecard, and
+    vulnerability data.
+
+
+    Key Features:
+
+    - Normalizes entity identities across different SBOM and security metadata formats
+
+    - Maps relationships between software components and their security attributes
+
+    - Supports multiple backend databases with PostgreSQL and in-memory storage being
+    the primary supported options
+
+    - Provides a GraphQL API for querying aggregated data
+
+    - Enables security audit, policy enforcement, and risk management capabilities
+
+
+    The tool''s ability to process multiple SBOM formats and link them with security
+    metadata makes it particularly valuable for organizations managing complex software
+    supply chains. GUAC is an OpenSSF incubating project, maintained under the Supply
+    Chain Integrity Working Group.'
+  Types:
+    - Analyze
+- Abilities:
     - Consume
+  Languages:
+    - Generic
+    - Maven
+  License: NOASSERTION
+  Link: https://github.com/eclipse-sw360/sw360
+  Name: sw360
+  Publisher: eclipse-sw360
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SW360 Portal is a software component catalogue application designed to
+    manage software components, their metadata, and associated SPDX files for license
+    compliance. The tool provides SBOM-related functionalities through its backend
+    services and REST API.
+
+
+    Key SBOM Features:
+
+    - Management of software components and their metadata
+
+    - SPDX file handling for license condition tracking
+
+    - Project and product dependency management
+
+    - License information maintenance and compliance tracking
+
+
+    Technical Implementation:
+
+    - Backend: Tomcat-based Thrift services
+
+    - Database: CouchDB for component storage
+
+    - Frontend: Web portal interface
+
+    - REST API: External integration capabilities
+
+
+    The system can be deployed via Docker containers or on bare metal systems, with
+    Ubuntu server 22.04 LTS as the reference platform. SW360 is released under the
+    Eclipse Public License 2.0.'
+  Types:
+    - Design
+- Abilities:
     - Compare
+    - Convert
+    - Validate
+  Languages:
+    - Cargo
+    - Pypi
+  License: Apache-2.0
+  Link: https://github.com/spdx/spdx-online-tools
+  Name: spdx-online-tools
+  Publisher: spdx
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SPDX Online Tools is a web-based application for working with Software
+    Package Data Exchange (SBOM) documents. The tool provides validation, comparison,
+    and format conversion capabilities for SPDX files.
+
+
+    Key SBOM-related features:
+
+    - Upload and parse SPDX documents in multiple formats
+
+    - Validate SPDX documents against the SPDX specification
+
+    - Compare multiple SPDX RDF files
+
+    - Convert between different SPDX formats
+
+    - License text comparison against SPDX license list
+
+    - REST API access to all SBOM functionality
+
+
+    The tool is built on Django and leverages the SPDX Java Tools library for document
+    processing. It requires Python 3.7+ and either Oracle JDK/JRE or OpenJDK. The
+    system can be deployed via Docker or installed locally on Linux, Windows or macOS
+    systems.'
+  Types:
+    - Analyze
+- Abilities:
+    - Convert
+    - Generate
+    - Validate
+  Languages:
+    - Pypi
+  License: Apache-2.0
+  Link: https://github.com/spdx/tools-python
+  Name: tools-python
+  Publisher: spdx
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SPDX Tools Python is a comprehensive library for handling Software Package
+    Data Exchange (SPDX) documents. The tool supports SPDX versions 2.2, 2.3, and
+    provides experimental support for the upcoming 3.0 specification.
+
+
+    Key SBOM-related features:
+
+    - Parse, validate, and create SPDX documents
+
+    - Support multiple formats: Tag/Value, RDF, JSON, YAML, XML
+
+    - Full validation against SPDX v2.2 and v2.3 specifications
+
+    - Document visualization through graph generation
+
+    - Programmatic API for document manipulation
+
+    - Command-line interface for parsing, validation, and format conversion
+
+    - Type-safe implementation with strict validation rules
+
+
+    The library uses a dataclass-based model for SPDX documents, ensuring type safety
+    and validation during document creation and modification. It provides comprehensive
+    support for license handling through the license-expression library and includes
+    utilities for checksum calculation and relationship management.
+
+
+    The tool is maintained by the SPDX community and is available under the Apache-2.0
+    license. It can be installed via pip and requires Python 3.7 or later.
+
+
+    Repository: https://github.com/spdx/tools-python
+
+    PyPI Package: https://pypi.python.org/pypi/spdx-tools'
+  Types:
+    - Source
+- Abilities:
+    - Compare
+    - Convert
+    - Generate
+    - Validate
+  Languages:
+    - Generic
+  License: Apache-2.0
+  Link: https://github.com/spdx/tools-java
+  Name: tools-java
+  Publisher: spdx
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SPDX Tools-Java: SBOM Generation and Management Utility
+
+
+    SPDX Tools-Java is a comprehensive software utility for creating, converting,
+    and managing Software Bill of Materials (SBOM) in SPDX format. The tool supports
+    SPDX specifications versions 2.0 through 3.0.1 and provides functionality for
+    format conversion, document comparison, verification, and validation.
+
+
+    Key Features:
+
+    - Supports multiple SBOM formats including Tag, RDF/XML, XLSX, JSON, XML, YAML,
+    and JSON-LD
+
+    - Format conversion capabilities between supported formats
+
+    - Document comparison functionality for multiple SBOM files
+
+    - Verification code generation for source files
+
+    - Document validation and verification
+
+    - SPDX document viewing and pretty printing
+
+
+    The tool is available as a command-line interface and can be integrated into build
+    processes. It is distributed under the Apache-2.0 license and is maintained by
+    the SPDX Workgroup. The utility is accessible through Maven Central and direct
+    binary downloads from the project''s release page.
+
+
+    Online validation and conversion services are available through the SPDX Validation
+    Tool portal at tools.spdx.org.'
+  Types:
+    - Source
+    - Analyze
+- Abilities:
+    - Generate
+  Languages:
+    - Maven
+  License: Apache-2.0
+  Link: https://github.com/spdx/spdx-gradle-plugin
+  Name: spdx-gradle-plugin
+  Publisher: spdx
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SPDX Gradle Plugin - SBOM Generation Tool Summary
+
+
+    The SPDX Gradle Plugin is a build automation tool for generating Software Bill
+    of Materials (SBOM) in SPDX format. The plugin integrates with Gradle build systems
+    and produces SBOM documentation in JSON format.
+
+
+    Key Features:
+
+    - Generates SPDX-compliant SBOMs for Gradle projects
+
+    - Supports multiple configuration targets within a single project
+
+    - Customizable document properties including name, namespace, and creator information
+
+    - SCM (Source Control Management) integration capabilities
+
+    - Configurable package relationship handling
+
+    - Maven dependency analysis with licensing and copyright detection
+
+
+    The tool provides flexible configuration options through Gradle''s DSL, allowing
+    users to specify output locations, document metadata, and dependency configurations.
+    While primarily focused on Maven dependencies, the plugin offers experimental
+    features for advanced use cases such as custom repository URI mapping and selective
+    project inclusion in the SBOM.
+
+
+    The SBOM output includes comprehensive dependency information, making it suitable
+    for software composition analysis and compliance documentation requirements.'
   Types:
     - Source
     - Build
-    - Analyze
+- Abilities:
+    - Generate
+  Languages:
+    - Maven
+  License: Apache-2.0
+  Link: https://github.com/spdx/spdx-maven-plugin
+  Name: spdx-maven-plugin
+  Publisher: spdx
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SPDX Maven Plugin
+
+
+    The SPDX Maven Plugin is a Maven extension that generates Software Package Data
+    Exchange (SPDX) documents from Maven project artifacts defined in POM files. The
+    plugin creates standardized SBOM documentation in SPDX format, which is compatible
+    with the SPDX specification.
+
+
+    Key Features:
+
+    - Generates SPDX documents from Maven project metadata
+
+    - Supports all SPDX document and package properties
+
+    - Allows configuration of file-level SPDX information
+
+    - Provides mapping between POM properties and SPDX fields
+
+    - Handles both standard SPDX licenses and custom license declarations
+
+    - Configurable file exclusion patterns
+
+    - Outputs SPDX files in the project''s target directory
+
+
+    The plugin integrates seamlessly with Maven build processes and can be configured
+    through standard Maven plugin configuration mechanisms. It supports automated
+    SBOM generation as part of the build lifecycle or can be executed independently
+    using the ''createSPDX'' goal.'
+  Types:
+    - Build
+- Abilities:
+    - Generate
+    - Edit
+  Languages:
+    - Npm
+  License: NOASSERTION
+  Link: https://github.com/scanoss/sbom-workbench
+  Name: sbom-workbench
+  Publisher: scanoss
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'SBOM Workbench is a graphical user interface tool for source code scanning
+    and auditing utilizing the SCANOSS API. The tool focuses on license compliance
+    and SBOM generation with support for SPDX-Lite format. Key features include source
+    code component identification, local cryptography detection, and collaborative
+    workspace capabilities.
+
+
+    The tool provides configuration options for scanner parameters, proxy settings,
+    and custom cryptography detection rules. Through its BOM rules system, users can
+    include, remove, or replace components in the bill of materials before and after
+    scanning. The system supports both full and partial matching rules based on file
+    paths and Package URLs (PURL).
+
+
+    SBOM Workbench offers multi-language support and is built using Electron and React.
+    The tool is available as open-source software under the GPL-2.0 license and provides
+    pre-built binaries for multiple platforms through the Software Transparency Foundation.'
+  Types:
+    - Source
+- Abilities:
+    - Convert
+    - Consume
   Languages:
     - Generic
+  License: Apache-2.0
+  Link: https://github.com/bom-squad/protobom
+  Name: protobom
+  Publisher: bom-squad
+  Source: AI-Generated
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summery: 'Protobom is a protocol buffers-based tool for SBOM data representation
+    and conversion. It provides a neutral intermediate format capable of processing
+    both SPDX and CycloneDX documents without data loss. The tool features a Go library
+    with implementations for reading and writing various SBOM formats.
+
+
+    Key Features:
+
+    - Supports multiple SBOM formats (SPDX 2.3, CycloneDX 1.4-1.6)
+
+    - Provides JSON encoding/decoding capabilities
+
+    - Implements format-specific serializers and unserializers
+
+    - Offers programmatic SBOM generation and manipulation
+
+    - Enables lossless conversion between supported formats
+
+
+    The tool is particularly useful for SBOM format conversion, data extraction, and
+    programmatic SBOM generation. It is available as an OpenSSF Sandbox project and
+    can be extended to support additional formats and languages through protocol buffers
+    implementations.'
+  Types:
+    - Build
+- Abilities:
+    - Generate
+    - Convert
+    - Consume
+  Languages:
+    - Clojars
+    - Generic
+  License: Apache-2.0
+  Link: https://github.com/kubernetes-sigs/bom
+  Name: bom
+  Publisher: kubernetes-sigs
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'bom: A versatile SBOM generation and analysis tool
+
+
+    bom is a utility for creating, viewing, and transforming Software Bills of Materials
+    (SBOMs) in SPDX format. The tool supports multiple input sources including directories,
+    container images, single files, and archives. Key features include:
+
+
+    - SPDX-compliant SBOM generation with support for tag-value and JSON formats
+
+    - Built-in license classifier supporting 400+ SPDX catalog licenses
+
+    - Container image analysis with layer inspection capabilities
+
+    - Golang dependency analysis with go.mod support
+
+    - GitIgnore integration for repository scanning
+
+    - SBOM visualization and query functionality
+
+    - In-toto provenance attestation export
+
+    - Multiple output formats and package relationship tracking
+
+
+    Originally developed for the Kubernetes project''s SBOM generation needs, bom
+    is now incubating under the Linux Foundation''s Automating Compliance Tooling
+    TAC. The tool provides a comprehensive solution for organizations requiring detailed
+    software component tracking and license compliance documentation.'
+  Types:
+    - Design
+    - Source
+    - Container
+- Abilities:
+    - Generate
+    - Validate
+  Languages:
+    - Autotools
+    - Dotnet
+  License: MIT
+  Link: https://github.com/microsoft/sbom-tool
+  Name: sbom-tool
+  Publisher: microsoft
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'Microsoft SBOM Tool is an enterprise-grade solution for generating Software
+    Bill of Materials (SBOM) in SPDX 2.2 format. The tool leverages Component Detection
+    libraries and the ClearlyDefined API to identify components and populate license
+    information.
+
+
+    Key Features:
+
+    - Generates SPDX 2.2 compatible SBOMs
+
+    - Supports multiple platforms (Windows, Linux, macOS)
+
+    - Available as standalone executable, Docker image, and .NET tool
+
+    - Validates generated SBOM files
+
+    - Includes redaction capabilities for file references
+
+    - Integrates with CI/CD pipelines (GitHub Actions, Azure DevOps)
+
+    - Component detection for various package ecosystems
+
+    - Scalable for enterprise environments
+
+
+    The tool provides comprehensive CLI arguments for customization and can be deployed
+    through package managers like WinGet and Homebrew. It includes built-in telemetry
+    features and outputs results in JSON format.'
+  Types:
+    - Source
+    - Build
+- Abilities:
+    - Consume
+  Languages:
+    - Generic
+  License: No License
+  Link: https://github.com/jenkinsci/nexus-platform-plugin
+  Name: nexus-platform-plugin
+  Publisher: jenkinsci
+  Source: AI-Generated
+  Standards:
+    - SPDX
+  Summery: 'Sonatype Nexus Platform Plugin for Jenkins
+
+
+    The Nexus Platform Plugin integrates Sonatype''s software supply chain management
+    capabilities into Jenkins CI/CD pipelines. While primarily known for its artifact
+    management and security scanning features, the plugin supports Software Bill of
+    Materials (SBOM) generation as part of the build process. It can create detailed
+    component inventories that document dependencies, versions, and licensing information
+    of software components used in builds.
+
+
+    Key SBOM Features:
+
+    - Generates CycloneDX format SBOMs
+
+    - Provides component vulnerability data
+
+    - Integrates with Nexus Repository Manager
+
+    - Supports policy evaluation of SBOMs
+
+
+    Note: This plugin is no longer distributed through the Jenkins project. Installation
+    and usage instructions are available through Sonatype''s documentation.'
+  Types:
+    - Build
+- Abilities:
+    - Convert
+    - Merge
+    - Generate
+    - Validate
+  Languages:
+    - Bazel
+    - Deb
+    - Elixir
+    - Maven
+    - Npm
+    - Nuget
+    - Pypi
+  License: NOASSERTION
+  Link: https://github.com/sw360/capycli
+  Name: capycli
+  Publisher: sw360
+  Source: AI-Generated
+  Standards:
+    - CycloneDX
+  Summery: 'CaPyCli (Clearing Automation Python Command Line Tool) is a Python-based
+    utility designed to automate license clearing processes using SW360. The tool
+    provides comprehensive SBOM (Software Bill of Materials) capabilities, including:
+
+
+    Key SBOM Features:
+
+    - Generation of SBOM from various project types (NuGet, Python, JavaScript, Maven)
+
+    - Conversion between different SBOM formats
+
+    - Mapping of SBOM data to SW360 components
+
+    - Creation and update of components and releases in SW360
+
+    - Source code download for SBOM items
+
+    - Component granularity analysis
+
+    - SBOM comparison and merging capabilities
+
+
+    The tool uses a custom JSON-based SBOM format compatible with CycloneDX, focusing
+    on essential information for SW360 integration. It supports automated dependency
+    detection and metadata enrichment, making it particularly suitable for projects
+    with numerous third-party components.
+
+
+    Requirements:
+
+    - Python 3.8 or higher
+
+    - SW360 instance with API access
+
+    - Valid SW360 access token
+
+
+    The tool is available via PyPI and is released under the MIT license.'
+  Types:
+    - Source
+    - Build
+- Abilities:
+    - Generate
+  Languages:
+    - Npm
+  License: MIT
+  Link: https://github.com/shiftleftcyber/cyclonedx-npm-pipe
+  Name: cyclonedx-npm-pipe
+  Publisher: shiftleftcyber
+  Source: AI-Generated
+  Standards:
+    - CycloneDX
+  Summery: 'ShiftSBOM-Node is a Bitbucket Pipe designed for generating CycloneDX-compliant
+    Software Bill of Materials (SBOM) for Node.js/npm projects. The tool operates
+    client-side without requiring external subscriptions, server access, or API keys.
+
+
+    Key Features:
+
+    - Generates SBOMs in both JSON and XML formats
+
+    - Supports CycloneDX specification versions 1.2 through 1.6
+
+    - Configurable component flattening and PackageURL formatting
+
+    - Selective dependency inclusion with options to omit dev, optional, or peer dependencies
+
+    - Customizable output directory and main component type specification
+
+    - Package-lock.json only mode for dependency analysis
+
+
+    The tool integrates with Bitbucket Pipelines and utilizes the cyclonedx-npm library
+    for SBOM generation. It requires pre-installed npm dependencies and supports caching
+    for improved pipeline performance. ShiftSBOM-Node is maintained in both Bitbucket
+    and GitHub repositories, ensuring broad accessibility and community contribution
+    options.'
+  Types:
+    - Source
+    - Build
+- Abilities:
+    - Consume
+  Languages:
+    - Conan
+  License: MIT
+  Link: https://github.com/shiftleftcyber/sbom-utilities-pipe
+  Name: sbom-utilities-pipe
+  Publisher: shiftleftcyber
+  Source: AI-Generated
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summery: 'ShiftSBOM-Utils is a Bitbucket Pipe that provides a comprehensive suite
+    of tools for analyzing Software Bill of Materials (SBOM) in CycloneDX or SPDX
+    formats. The tool operates entirely client-side without requiring external subscriptions
+    or API keys.
+
+
+    Key Features:
+
+    - Vulnerability scanning through multiple engines including bomber, osv-scanner,
+    and grype
+
+    - SBOM quality assessment using sbomqs
+
+    - Integration with OWASP Dependency Track for advanced analysis
+
+    - Support for multiple output formats (JSON, HTML, detailed reports)
+
+    - Configurable scanning parameters and ignore lists
+
+    - Pipeline-ready implementation for CI/CD workflows
+
+
+    The tool serves as a centralized solution for SBOM analysis, combining multiple
+    open-source security and quality assessment tools in a single pipeline step. It
+    supports automated assessment workflows and can be easily integrated into existing
+    Bitbucket CI/CD pipelines.
+
+
+    Technical Requirements:
+
+    - Bitbucket Pipelines environment
+
+    - Valid SBOM in CycloneDX or SPDX format
+
+    - Docker container support
+
+
+    The tool is actively maintained and regularly updated with new analysis capabilities
+    and vulnerability scanning engines.'
+  Types:
+    - Analyze
+- Abilities:
+    - Generate
+    - Convert
+  Languages:
+    - Hackage
+    - Maven
+    - Npm
+  License: MIT
+  Link: https://github.com/shiftleftcyber/syft-bitbucket-pipe
+  Name: syft-bitbucket-pipe
+  Publisher: shiftleftcyber
+  Source: AI-Generated
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summery: 'ShiftSBOMGen is a Bitbucket Pipe designed for Software Bill of Materials
+    (SBOM) generation, operating as a client-side solution without requiring external
+    subscriptions, server access, or API keys. The tool leverages Syft technology
+    to create SBOMs in both CycloneDX and SPDX formats.
+
+
+    Key Features:
+
+    - Supports multiple SBOM standards (CycloneDX, SPDX)
+
+    - Compatible with various ecosystems and container types
+
+    - Generates JSON-formatted output
+
+    - Integrates seamlessly with Bitbucket pipelines
+
+    - Supports scanning of local repositories, JAR files, and Docker image archives
+
+    - Enables artifact preservation for downstream processing
+
+
+    The tool is implemented as a Docker container and can be easily incorporated into
+    existing Bitbucket pipelines through simple YAML configuration. Output files can
+    be automatically archived as pipeline artifacts for further processing or documentation
+    purposes.
+
+
+    For detailed information: https://bitbucket.org/ccideas1/syft-pipe/src/main/'
+  Types:
+    - Build
+    - Container
+- Abilities:
+    - Generate
+    - Consume
+    - Validate
+  Languages:
+    - Hackage
+    - Pypi
+  License: Apache-2.0
+  Link: https://github.com/IBM/cbomkit
+  Name: cbomkit
+  Publisher: IBM
+  Source: AI-Generated
+  Standards: []
+  Summery: 'CBOMkit - Cryptography Bill of Materials Toolkit
+
+
+    CBOMkit is a comprehensive toolset for managing Cryptography Bill of Materials
+    (CBOM), designed to handle the identification, documentation, and compliance verification
+    of cryptographic components in software projects. The toolkit consists of several
+    key components:
+
+
+    Core Features:
+
+    - CBOM Generation through source code scanning of git repositories
+
+    - Interactive CBOM visualization and statistical analysis
+
+    - Compliance verification against specified security policies
+
+    - CBOM storage and REST API access
+
+
+    Technical Capabilities:
+
+    - Supports Java (JCA, BouncyCastle) and Python (pyca/cryptography) cryptographic
+    libraries
+
+    - Provides deployment options via Docker, Podman, or Kubernetes
+
+    - Implements WebSocket integration for real-time scan progress monitoring
+
+    - Includes configurable compliance checking mechanisms with quantum-safe verification
+
+
+    The toolkit is particularly useful for organizations requiring cryptographic asset
+    management and compliance verification in their software development lifecycle.
+    Its modular architecture allows for extensibility and integration with external
+    compliance services.
+
+
+    License: Apache License 2.0'
+  Types:
+    - Source
+- Abilities:
+    - Generate
+  Languages:
+    - Generic
+    - Clojars
+  License: Apache-2.0
+  Link: https://github.com/IBM/cbomkit-theia
+  Name: cbomkit-theia
+  Publisher: IBM
+  Source: AI-Generated
+  Standards:
+    - CycloneDX
+  Summery: 'CBOMkit-theia is a specialized tool for detecting and analyzing cryptographic
+    assets in container images and directories. The tool generates Cryptographic Bill
+    of Materials (CBOM) in CycloneDX v1.6 format. It operates as part of the CBOMkit
+    ecosystem and integrates with the Sonar Cryptography Plugin.
+
+
+    Key Features:
+
+    - Detection of certificates, keys, and secrets in images/directories
+
+    - Verification of cryptographic assets'' executability in CBOMs
+
+    - Support for multiple image sources including local directories, Docker images,
+    OCI registries
+
+    - Plugins for certificate detection, Java security configuration analysis, and
+    secret detection
+
+    - Server mode capability for API-based operation
+
+    - Command-line interface for direct interaction
+
+
+    The tool supports various container formats and can analyze local directories,
+    Docker images, and OCI-compliant containers. Output is provided in CycloneDX v1.6
+    format, making it compatible with standard SBOM toolchains. Implementation requires
+    Go 1.23 or higher and Docker daemon for specific functionalities.'
+  Types:
+    - Analyze
+    - Container
+- Abilities:
+    - Consume
+  Languages:
+    - Pypi
+  License: Apache-2.0
+  Link: https://github.com/CycloneDX/Sunshine/
+  Name: Sunshine
+  Publisher: CycloneDX
+  Source: AI-Generated
+  Standards:
+    - CycloneDX
+  Summery: 'Sunshine is a visualization tool for CycloneDX Software Bill of Materials
+    (SBOM) files. The tool processes CycloneDX JSON format and generates an interactive
+    HTML report containing graphical charts and tabular representations of components,
+    dependencies, vulnerabilities, and licenses.
+
+
+    Key Features:
+
+    - Browser-based processing without data transmission
+
+    - Standalone CLI operation
+
+    - Visual dependency mapping
+
+    - Component relationship visualization
+
+    - Vulnerability and license tracking
+
+    - Interactive HTML output
+
+
+    The tool can be deployed as a web application through GitHub Pages or local hosting,
+    or utilized as a command-line interface tool. The generated reports provide comprehensive
+    visibility into software composition and supply chain relationships documented
+    in CycloneDX SBOMs.
+
+
+    Developed by the CycloneDX community, Sunshine serves as an analytical tool for
+    SBOM data interpretation and supply chain transparency.'
+  Types:
+    - Analyze

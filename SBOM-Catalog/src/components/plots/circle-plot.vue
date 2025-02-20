@@ -1,26 +1,25 @@
 <script setup>
 
-import {onMounted, ref, watch} from "vue";
+import {onMounted, watch} from "vue";
 import * as d3 from 'd3';
-import {useRouter} from "vue-router";
+import { useMainStore } from "../../stores/mainStore";
 
-const router = useRouter();
-const props = defineProps(['dataList'])
+const store = useMainStore();
 
 onMounted(() => {
-  generateTreeObject()
+    generateTreeObject()
 })
 
-watch (props, () => {
+watch(() => store.filteredTreeData, () => {
   generateTreeObject()
-})
+}, { deep: true })
 
 function generateTreeObject() {
-  // Specify the chart’s dimensions.
+  // Specify the chart's dimensions.
   const rect = document.getElementById('workbench').getBoundingClientRect()
   const width = rect.width > rect.height ? rect.height : rect.width;
   const height = rect.height < rect.width ? rect.height : rect.width;
-  const data = JSON.parse(JSON.stringify(props.dataList))
+  const data = JSON.parse(JSON.stringify(store.filteredTreeData))
 
   // Make sure the plot is empty.
   d3.select("#plot").selectAll("*").remove();
@@ -86,7 +85,7 @@ root.descendants().forEach((d) => {
     .on("mouseover", function() { d3.select(this).attr("stroke", "#000"); })
     .on("mouseout", function() { d3.select(this).attr("stroke", null); })
     .on("click", (event, d) => {
-      router.push({params: {selection: d.data.name}}); // set the selected ref to the name of the clicked element
+      store.activeSelection = d.data.name // set the selected ref to the name of the clicked element
       if (focus !== d && d.children) {
         zoom(event, d);
       }
@@ -109,7 +108,7 @@ const label = svg.append("g")
     .style("fill-opacity", d => d.parent === root ? 1 : 0)
     .style("display", d => d.parent === root ? "inline" : "none")
     .text(d => d.data.name)
-    .style("font-size", d => (30 - d.data.name.length / 2) + "px"); // Making the font size dynamic so longer labels have a smaller font, so they fit better.
+    .style("font-size", d => (30 - (d.data.name.length ^ 1.5)) + "px"); // Making the font size dynamic so longer labels have a smaller font, so they fit better.
 
 
   // Create the zoom behavior and zoom immediately in to the initial focus node.
