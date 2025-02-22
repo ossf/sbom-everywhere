@@ -104,7 +104,7 @@ const updateFilters = (event: any) => {
       <div v-if="store.filteredTreeData" class="flex-grow-1 flex col full-vue-heigth">
         <circle-plot v-if="store.activeViewMode === ViewMode.Circle"/>
         <tree-plot v-else-if="store.activeViewMode === ViewMode.Tree"/>
-        <list-plot v-else-if="store.activeViewMode === ViewMode.List" :dataList="store.rawData" :filterList="store.filters"/>
+        <list-plot v-else-if="store.activeViewMode === ViewMode.List"/>
       </div>
     </div>
 

@@ -6,10 +6,10 @@ import axios from 'axios'
 import { load } from 'js-yaml'
 import { aggregateList, deepClone, generateTreeObject, normaliseList } from '../global/global'
 import { AggregationModes, ViewMode } from '../types/view.d.ts'
-import { useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 export const useMainStore = defineStore('main', () => {
-  const route = useRoute()
+  const router = useRouter()
   
   // State
   const rawData = ref<Tool[]>([])
@@ -23,14 +23,22 @@ export const useMainStore = defineStore('main', () => {
 
   // Actions
   async function loadInitialData() {
-    if (route.params.view) {
-      activeViewMode.value = ViewMode[route.params.view as keyof typeof ViewMode]
+    // Wait for router to be ready
+    await router.isReady()
+    
+    const params = router.currentRoute.value.params
+    console.log('Router params:', params)
+
+    if (params.view) {
+      activeViewMode.value = ViewMode[params.view as keyof typeof ViewMode] || ViewMode.Circle
     }
-    if (route.params.aggregation) {
-      activeAggregationMode.value = AggregationModes[route.params.aggregation as keyof typeof AggregationModes]
+    
+    if (params.aggregation) {
+      activeAggregationMode.value = AggregationModes[params.aggregation as keyof typeof AggregationModes] || AggregationModes.Normalize
     }
-    if (route.params.selection) {
-      activeSelection.value = route.params.selection as string
+    
+    if (params.selection) {
+      activeSelection.value = params.selection as string
     }
 
     try {
@@ -41,9 +49,6 @@ export const useMainStore = defineStore('main', () => {
       
       filters.value = load(filtersResponse.data) as Filter[]
       rawData.value = load(dataResponse.data) as Tool[]
-
-      // Initialize from route params if they exist
-      syncWithRoute()
     } catch (error) {
       console.error('Error loading data:', error)
     }
@@ -66,22 +71,37 @@ export const useMainStore = defineStore('main', () => {
     filteredTreeData.value = generateTreeObject(filters.value, formattedData.value)
   }
 
-  // New function to sync store with route
-  function syncWithRoute() {
-    route.params.view = activeViewMode.value
-    route.params.aggregation = activeAggregationMode.value
-    route.params.selection = activeSelection.value
-    recalculateAllData()
-  }
-
   // Set up watchers
   watch([rawData, filters, activeAggregationMode], () => {
     recalculateAllData()
   })
 
   // Watch route changes
-  watch(() => route.params, () => {
-    syncWithRoute()
+  watch(() => activeViewMode.value, (newValue) => {
+    router.replace({
+      params: {
+        ...router.currentRoute.value.params,
+        view: newValue
+      }
+    })
+  })
+
+  watch(() => activeAggregationMode.value, (newValue) => {
+    router.replace({
+      params: {
+        ...router.currentRoute.value.params,
+        aggregation: newValue
+      }
+    })
+  })
+
+  watch(() => activeSelection.value, (newValue) => {
+    router.replace({
+      params: {
+        ...router.currentRoute.value.params,
+        selection: newValue
+      }
+    })
   })
 
   watch(filters, () => {
@@ -105,7 +125,6 @@ export const useMainStore = defineStore('main', () => {
     // Actions
     loadInitialData,
     updateFilters,
-    recalculateAllData,
-    syncWithRoute
+    recalculateAllData
   }
 }) 

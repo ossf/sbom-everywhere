@@ -31,7 +31,8 @@ const sourceTooltip = (source: string) => {
   </div>
   <PDivider class="mt-2"/>
 
-  <div v-if="store.selectedObject" class="scrollable-div">
+  <div class="scrollable-div">
+  <div v-if="store.selectedObject">
     <table>
       <tr v-for="(value, key) in store.selectedObject" :key="key">
         <th v-if="typeof value === 'string' && key !== 'Summary' && key !== 'Source'" class="text-left">{{ key }}: </th>
@@ -56,6 +57,7 @@ const sourceTooltip = (source: string) => {
     </div>
     <div class="m-1"/>
     <PDivider/>
+  </div>
     <markdown-parser/>
   </div>
 </template>

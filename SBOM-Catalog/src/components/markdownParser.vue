@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import axios from 'axios';
 import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
@@ -8,6 +8,10 @@ import { useMainStore } from "../stores/mainStore";
 
 const mdres = ref<string>();
 const store = useMainStore();
+
+onMounted(() => {
+  loadRemoteText(store.activeSelection);
+})
 
 watch(() => store.selectedObject, (selectedObject) => {
   const marked = new Marked(
@@ -21,10 +25,11 @@ watch(() => store.selectedObject, (selectedObject) => {
   );
 
   if (selectedObject) {
-    if (selectedObject.Summary === undefined) {
-      mdres.value = marked.parse('*No description available*');
-    } else {
+    console.log(selectedObject);
+    if (selectedObject.Summary) {
       mdres.value = marked.parse(selectedObject.Summary);
+    } else {
+      mdres.value = marked.parse('*No description available*');
     }
   } else {
     loadRemoteText(store.activeSelection);
