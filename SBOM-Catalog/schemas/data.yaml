@@ -7,7 +7,7 @@ data_item:
   Link: str()
   Publisher: str()
   Summary: str()
-  License: enum('OpenSource', 'Proprietary')
+  License: enum('GPL-3.0', 'MIT', 'BSD-3-Clause', 'Apache-2.0', 'LGPL-3.0', 'NOASSERTION', 'MPL-2.0', 'No License', 'GPL-2.0', 'BSD-2-Clause')
   Standards: list(enum('CycloneDX', 'SPDX', 'SWID'))
   Source: enum('AI-Generated', 'AI & human reviewed', 'Human written')
   Abilities: list(enum('Compare', 'Consume', 'Convert', 'Edit', 'Generate', 'Merge', 'Validate', 'Sign'))

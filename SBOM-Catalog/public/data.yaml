@@ -202,11 +202,11 @@
   Languages:
     - JavaScript
     - Npm
-  License: AI & human reviewed
+  License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-javascript-library
   Name: CycloneDX-javascript-library
   Publisher: CycloneDX
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summery: 'CycloneDX JavaScript Library is a core implementation of CycloneDX for
