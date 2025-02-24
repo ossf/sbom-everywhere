@@ -11,5 +11,5 @@ data_item:
   Standards: list(enum('CycloneDX', 'SPDX', 'SWID'))
   Source: enum('AI-Generated', 'AI & human reviewed', 'Human written')
   Abilities: list(enum('Compare', 'Consume', 'Convert', 'Edit', 'Generate', 'Merge', 'Validate', 'Sign'))
-  Types: subset(enum('Design', 'Source', 'Build', 'Analyze', 'Deployed', 'Runtime', 'Container'), allow_empty=True)
+  Types: subset(enum('Design', 'Source', 'Build', 'Analyze', 'Deployment', 'Runtime', 'Container'), allow_empty=True)
   Languages: subset(str(), allow_empty=True)
