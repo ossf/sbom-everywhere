@@ -168,7 +168,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: 'CycloneDX .NET Library is a software component that enables programmatic
+  Summary: 'CycloneDX .NET Library is a software component that enables programmatic
     creation and consumption of CycloneDX Software Bill of Materials (SBOM). The library
     is compatible with .NET Standard 2.0 and provides functionality for generating
     and processing lightweight, human-readable BOMs.
@@ -209,7 +209,7 @@
   Source: AI & human reviewed
   Standards:
     - CycloneDX
-  Summery: 'CycloneDX JavaScript Library is a core implementation of CycloneDX for
+  Summary: 'CycloneDX JavaScript Library is a core implementation of CycloneDX for
     JavaScript environments (Node.js and WebBrowsers), focused on SBOM generation
     and manipulation. The library provides comprehensive data models and utilities
     for creating, managing, and validating Software Bill of Materials (SBOM) in both
@@ -250,7 +250,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CycloneDX BOM is a meta-package designed for generating Software Bill
+  Summary: 'CycloneDX BOM is a meta-package designed for generating Software Bill
     of Materials (SBOM) in CycloneDX format for Node.js-based projects. The package
     serves as a collection of ecosystem-specific tools supporting npm, pnpm, and yarn
     package managers. Each tool is maintained as a separate package, allowing users
@@ -290,7 +290,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CycloneDX SBOM for npm is a command-line tool designed to generate Software
+  Summary: 'CycloneDX SBOM for npm is a command-line tool designed to generate Software
     Bill of Materials (SBOM) for Node.js NPM projects. The tool produces SBOM documents
     that comply with CycloneDX specifications and standards, achieving almost Level-2
     compliance according to OWASP Software Component Verification Standard.
@@ -330,7 +330,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CycloneDX SBOM for Yarn is a tool that generates Software Bill of Materials
+  Summary: 'CycloneDX SBOM for Yarn is a tool that generates Software Bill of Materials
     (SBOM) in CycloneDX format for Yarn package manager projects. The tool supports
     Yarn version 3 (berry) and requires Node.js 18 or higher. It can be installed
     as a zero-install package, CLI wrapper, or Yarn plugin.
@@ -372,7 +372,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'The CycloneDX webpack plugin is a tool that generates CycloneDX Software
+  Summary: 'The CycloneDX webpack plugin is a tool that generates CycloneDX Software
     Bill of Materials (SBOM) for webpack-based projects. The plugin analyzes the dependency
     graph after tree-shaking to include only actually used dependencies in the SBOM.
 
@@ -414,7 +414,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CycloneDX Maven Plugin: SBOM Generation Tool
+  Summary: 'CycloneDX Maven Plugin: SBOM Generation Tool
 
 
     The CycloneDX Maven Plugin is a Software Bill of Materials (SBOM) generation tool
@@ -460,7 +460,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CycloneDX-go is a Go library for creating and processing CycloneDX Software
+  Summary: 'CycloneDX-go is a Go library for creating and processing CycloneDX Software
     Bill of Materials (SBOM). The library supports reading and writing BOMs conforming
     to CycloneDX specifications versions 1.0 through 1.6. Compatible with Go 1.20+,
     it provides a programmatic interface for SBOM manipulation in Go applications.
@@ -609,7 +609,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: CycloneDX PHP Library is a comprehensive implementation of the CycloneDX
+  Summary: CycloneDX PHP Library is a comprehensive implementation of the CycloneDX
     specification for PHP applications, focusing on Software Bill of Materials (SBOM)
     generation and manipulation. The library provides data models, serialization capabilities,
     and validation functions for CycloneDX documents in both JSON and XML formats.
@@ -1816,7 +1816,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: "Jake is a Python-based tool for generating Software Bill of Materials\
+  Summary: "Jake is a Python-based tool for generating Software Bill of Materials\
     \ (SBOM) and performing vulnerability scanning. The tool offers the following\
     \ key SBOM capabilities:\n\n- Generates CycloneDX SBOMs in XML or JSON format\
     \ with support for schema versions 1.0-1.3\n- Accepts input from multiple sources\
@@ -1842,7 +1842,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: "Nancy is a vulnerability checking tool for Golang dependencies, powered\
+  Summary: "Nancy is a vulnerability checking tool for Golang dependencies, powered\
     \ by Sonatype OSS Index and Nexus IQ Server. The tool analyzes dependencies from\
     \ go.mod files or dep's Gopkg.lock to identify known security vulnerabilities.\n\
     \nKey Features:\n- Scans Golang dependencies for known vulnerabilities using Sonatype\
@@ -1910,7 +1910,7 @@
   Publisher: valaatech
   Source: AI-Generated
   Standards: []
-  Summery: "Summary of @valos/kernel SBOM Features:\n\n@valos/kernel is a distributed\
+  Summary: "Summary of @valos/kernel SBOM Features:\n\n@valos/kernel is a distributed\
     \ platform system that implements a package monorepo structure. The tool provides\
     \ SBOM-relevant features through its package management and dependency tracking\
     \ capabilities.\n\nKey SBOM-related features:\n- Manages dependencies across multiple\
@@ -2026,7 +2026,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "Grype is a vulnerability scanner for container images and filesystems\
+  Summary: "Grype is a vulnerability scanner for container images and filesystems\
     \ developed by Anchore. The tool integrates seamlessly with Syft for Software\
     \ Bill of Materials (SBOM) generation and scanning. Here are its key features\
     \ related to SBOM:\n\nSupport for SBOM Input Formats:\n- Syft JSON\n- SPDX\n-\
@@ -2127,7 +2127,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: CycloneDX Web Tool is a browser-based application for processing CycloneDX
+  Summary: CycloneDX Web Tool is a browser-based application for processing CycloneDX
     Software Bill of Materials (SBOM). The tool performs all operations client-side
     using WebAssembly, ensuring data privacy as no BOM information is transmitted
     to external servers. Key features include format conversion between different
@@ -2872,7 +2872,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: "pip-audit is a Python package vulnerability scanning tool that includes\
+  Summary: "pip-audit is a Python package vulnerability scanning tool that includes\
     \ SBOM generation capabilities. The tool provides the following key features:\n\
     \nKey Features:\n- Generates Software Bill of Materials (SBOM) in CycloneDX XML\
     \ or JSON formats\n- Scans Python environments and requirements files for known\
@@ -3035,7 +3035,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: "Build Info Go is a Go library and CLI tool for generating build information\
+  Summary: "Build Info Go is a Go library and CLI tool for generating build information\
     \ (build-info) and Software Bill of Materials (SBOM) for source code projects.\
     \ The tool supports multiple package manager ecosystems including Go, Maven, Gradle,\
     \ npm, Yarn, pip, pipenv, twine, .NET, and NuGet. \n\nKey SBOM-related features:\n\
@@ -3207,7 +3207,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "apt2sbom - SBOM Generator for Ubuntu Systems\n\nA command-line tool and\
+  Summary: "apt2sbom - SBOM Generator for Ubuntu Systems\n\nA command-line tool and\
     \ library for generating Software Bill of Materials (SBOM) from Ubuntu package\
     \ inventories. The tool converts installed Ubuntu packages into standardized SBOM\
     \ formats including SPDX (JSON/YAML) and CycloneDX (JSON). \n\nKey Features:\n\
@@ -3415,7 +3415,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "CDX2SPDX is a conversion utility that transforms Software Bill of Materials\
+  Summary: "CDX2SPDX is a conversion utility that transforms Software Bill of Materials\
     \ (SBOM) documents from CycloneDX format to SPDX format. The tool supports both\
     \ JSON and XML input formats from CycloneDX and can output to various SPDX formats\
     \ including JSON, tag/value, XLSX, XML, RDF/XML, and YAML. \n\nKey Features:\n\
@@ -3746,7 +3746,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "OpenClarity - VM Security and SBOM Analysis Tool\n\nOpenClarity is an\
+  Summary: "OpenClarity - VM Security and SBOM Analysis Tool\n\nOpenClarity is an\
     \ open-source tool for agentless Software Bill of Materials (SBOM) generation\
     \ and security threat detection for virtual machines. The tool supports SBOM generation\
     \ through multiple scanning engines including Syft, Trivy, Windows Registry scanning,\
@@ -4053,7 +4053,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: "SBOM Action is a GitHub Action designed for Software Bill of Materials\
+  Summary: "SBOM Action is a GitHub Action designed for Software Bill of Materials\
     \ (SBOM) analysis of container images. The tool performs differential analysis\
     \ between SBOMs, comparing a base image SBOM with a locally generated one. \n\n\
     Key Features:\n- Automated SBOM comparison for container images\n- Pull request\
@@ -4431,7 +4431,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: SBOM4Files is a command-line tool designed to generate Software Bill of
+  Summary: SBOM4Files is a command-line tool designed to generate Software Bill of
     Materials (SBOM) for directory contents. The tool supports both SPDX and CycloneDX
     SBOM formats and can process files recursively through directory structures. Key
     features include license identification, copyright detection, and multiple checksum
@@ -4724,7 +4724,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "SBOMMerge is a Python-based tool designed to merge two Software Bill of\
+  Summary: "SBOMMerge is a Python-based tool designed to merge two Software Bill of\
     \ Materials (SBOM) documents. The tool supports both SPDX 2.3 and CycloneDX (1.4,\
     \ 1.5) formats in various file types including JSON, YAML, and TagValue. \n\n\
     Key Features:\n- Automatic format detection based on file extensions\n- Support\
@@ -4752,7 +4752,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "Here's a concise summary of Lib4SBOM:\n\nLib4SBOM is a Python library\
+  Summary: "Here's a concise summary of Lib4SBOM:\n\nLib4SBOM is a Python library\
     \ for parsing and generating Software Bill of Materials (SBOMs) in both SPDX and\
     \ CycloneDX formats. Key features include:\n\nCore Capabilities:\n- Parses SPDX\
     \ SBOMs in TagValue, JSON, YAML, XML and RDF formats\n- Parses CycloneDX SBOMs\
@@ -5054,7 +5054,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "Here's a concise summary of the sbom-utility tool and its key features\
+  Summary: "Here's a concise summary of the sbom-utility tool and its key features\
     \ focused on SBOM:\n\nThe sbom-utility is a command-line platform for validating,\
     \ analyzing and editing Software Bills-of-Materials (SBOMs). Key capabilities\
     \ include:\n\n- Validates SBOMs against official CycloneDX and SPDX JSON schemas\n\
@@ -5133,7 +5133,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: gh-sbom is a GitHub CLI extension for generating Software Bill of Materials
+  Summary: gh-sbom is a GitHub CLI extension for generating Software Bill of Materials
     (SBOM) in SPDX or CycloneDX format. The tool leverages GitHub's Dependency Graph
     to extract component information from repositories. The SPDX output utilizes the
     Dependency Graph SBOM API for efficient server-side generation, making it suitable
@@ -5485,7 +5485,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: cdx-central is a command-line utility designed for downloading public CycloneDX
+  Summary: cdx-central is a command-line utility designed for downloading public CycloneDX
     Software Bill of Materials (SBOMs) from Maven Central repository. The tool focuses
     on retrieving SBOMs for the latest versions of artifacts and offers configurable
     parameters for concurrent processing and filtering based on component count. Key
@@ -5506,7 +5506,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: CDX vs CDX is a comparison tool for CycloneDX Software Bill of Materials
+  Summary: CDX vs CDX is a comparison tool for CycloneDX Software Bill of Materials
     (SBOM) files in JSON format. The tool analyzes two CycloneDX files and identifies
     components that are unique to each file as well as components that are common
     between them. It features a graphical user interface for easy file selection and
@@ -5596,7 +5596,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: "SBOM Scorecard is a tool designed to evaluate the quality and completeness\
+  Summary: "SBOM Scorecard is a tool designed to evaluate the quality and completeness\
     \ of Software Bill of Materials (SBOM) files. The tool supports multiple SBOM\
     \ formats including SPDX and CycloneDX. It analyzes SBOM files against a set of\
     \ weighted criteria to produce a numerical score.\n\nKey Features:\n- Validates\
@@ -6270,7 +6270,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: 'GUAC (Graph for Understanding Artifact Composition) is a software security
+  Summary: 'GUAC (Graph for Understanding Artifact Composition) is a software security
     metadata aggregation tool that consolidates data into a high-fidelity graph database.
     The tool processes multiple SBOM formats including CycloneDX and SPDX, along with
     various security-related metadata formats such as SLSA, OpenSSF Scorecard, and
@@ -6309,7 +6309,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SW360 Portal is a software component catalogue application designed to
+  Summary: 'SW360 Portal is a software component catalogue application designed to
     manage software components, their metadata, and associated SPDX files for license
     compliance. The tool provides SBOM-related functionalities through its backend
     services and REST API.
@@ -6356,7 +6356,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SPDX Online Tools is a web-based application for working with Software
+  Summary: 'SPDX Online Tools is a web-based application for working with Software
     Package Data Exchange (SBOM) documents. The tool provides validation, comparison,
     and format conversion capabilities for SPDX files.
 
@@ -6395,7 +6395,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SPDX Tools Python is a comprehensive library for handling Software Package
+  Summary: 'SPDX Tools Python is a comprehensive library for handling Software Package
     Data Exchange (SPDX) documents. The tool supports SPDX versions 2.2, 2.3, and
     provides experimental support for the upcoming 3.0 specification.
 
@@ -6446,7 +6446,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SPDX Tools-Java: SBOM Generation and Management Utility
+  Summary: 'SPDX Tools-Java: SBOM Generation and Management Utility
 
 
     SPDX Tools-Java is a comprehensive software utility for creating, converting,
@@ -6493,7 +6493,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SPDX Gradle Plugin - SBOM Generation Tool Summary
+  Summary: 'SPDX Gradle Plugin - SBOM Generation Tool Summary
 
 
     The SPDX Gradle Plugin is a build automation tool for generating Software Bill
@@ -6539,7 +6539,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SPDX Maven Plugin
+  Summary: 'SPDX Maven Plugin
 
 
     The SPDX Maven Plugin is a Maven extension that generates Software Package Data
@@ -6583,7 +6583,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'SBOM Workbench is a graphical user interface tool for source code scanning
+  Summary: 'SBOM Workbench is a graphical user interface tool for source code scanning
     and auditing utilizing the SCANOSS API. The tool focuses on license compliance
     and SBOM generation with support for SPDX-Lite format. Key features include source
     code component identification, local cryptography detection, and collaborative
@@ -6615,7 +6615,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: 'Protobom is a protocol buffers-based tool for SBOM data representation
+  Summary: 'Protobom is a protocol buffers-based tool for SBOM data representation
     and conversion. It provides a neutral intermediate format capable of processing
     both SPDX and CycloneDX documents without data loss. The tool features a Go library
     with implementations for reading and writing various SBOM formats.
@@ -6654,7 +6654,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'bom: A versatile SBOM generation and analysis tool
+  Summary: 'bom: A versatile SBOM generation and analysis tool
 
 
     bom is a utility for creating, viewing, and transforming Software Bills of Materials
@@ -6700,7 +6700,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'Microsoft SBOM Tool is an enterprise-grade solution for generating Software
+  Summary: 'Microsoft SBOM Tool is an enterprise-grade solution for generating Software
     Bill of Materials (SBOM) in SPDX 2.2 format. The tool leverages Component Detection
     libraries and the ClearlyDefined API to identify components and populate license
     information.
@@ -6742,7 +6742,7 @@
   Source: AI-Generated
   Standards:
     - SPDX
-  Summery: 'Sonatype Nexus Platform Plugin for Jenkins
+  Summary: 'Sonatype Nexus Platform Plugin for Jenkins
 
 
     The Nexus Platform Plugin integrates Sonatype''s software supply chain management
@@ -6788,7 +6788,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CaPyCli (Clearing Automation Python Command Line Tool) is a Python-based
+  Summary: 'CaPyCli (Clearing Automation Python Command Line Tool) is a Python-based
     utility designed to automate license clearing processes using SW360. The tool
     provides comprehensive SBOM (Software Bill of Materials) capabilities, including:
 
@@ -6840,7 +6840,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'ShiftSBOM-Node is a Bitbucket Pipe designed for generating CycloneDX-compliant
+  Summary: 'ShiftSBOM-Node is a Bitbucket Pipe designed for generating CycloneDX-compliant
     Software Bill of Materials (SBOM) for Node.js/npm projects. The tool operates
     client-side without requiring external subscriptions, server access, or API keys.
 
@@ -6880,7 +6880,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: 'ShiftSBOM-Utils is a Bitbucket Pipe that provides a comprehensive suite
+  Summary: 'ShiftSBOM-Utils is a Bitbucket Pipe that provides a comprehensive suite
     of tools for analyzing Software Bill of Materials (SBOM) in CycloneDX or SPDX
     formats. The tool operates entirely client-side without requiring external subscriptions
     or API keys.
@@ -6936,7 +6936,7 @@
   Standards:
     - SPDX
     - CycloneDX
-  Summery: 'ShiftSBOMGen is a Bitbucket Pipe designed for Software Bill of Materials
+  Summary: 'ShiftSBOMGen is a Bitbucket Pipe designed for Software Bill of Materials
     (SBOM) generation, operating as a client-side solution without requiring external
     subscriptions, server access, or API keys. The tool leverages Syft technology
     to create SBOMs in both CycloneDX and SPDX formats.
@@ -6980,7 +6980,7 @@
   Publisher: IBM
   Source: AI-Generated
   Standards: []
-  Summery: 'CBOMkit - Cryptography Bill of Materials Toolkit
+  Summary: 'CBOMkit - Cryptography Bill of Materials Toolkit
 
 
     CBOMkit is a comprehensive toolset for managing Cryptography Bill of Materials
@@ -7033,7 +7033,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'CBOMkit-theia is a specialized tool for detecting and analyzing cryptographic
+  Summary: 'CBOMkit-theia is a specialized tool for detecting and analyzing cryptographic
     assets in container images and directories. The tool generates Cryptographic Bill
     of Materials (CBOM) in CycloneDX v1.6 format. It operates as part of the CBOMkit
     ecosystem and integrates with the Sonar Cryptography Plugin.
@@ -7074,7 +7074,7 @@
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summery: 'Sunshine is a visualization tool for CycloneDX Software Bill of Materials
+  Summary: 'Sunshine is a visualization tool for CycloneDX Software Bill of Materials
     (SBOM) files. The tool processes CycloneDX JSON format and generates an interactive
     HTML report containing graphical charts and tabular representations of components,
     dependencies, vulnerabilities, and licenses.
