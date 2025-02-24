@@ -4,26 +4,38 @@
   Languages:
     - Apk
     - Autotools
+    - C
+    - "C++"
     - Cargo
     - Composer
     - Conan
+    - Dart
     - Deb
     - Dotnet
     - Elixir
+    - Erlang
     - Gem
     - Generic
+    - Go
+    - Haskell
     - Haxe
+    - Java
+    - JavaSkript
+    - Nix
     - Npm
     - Nuget
     - Objective_C
+    - Ppkg
     - Pypi
     - Rpm
     - Swift
+    - Terraform
+    - Wordpress
   License: Apache-2.0
   Link: https://github.com/anchore/syft
   Name: Syft
   Publisher: Anchore
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - SPDX
     - CycloneDX
@@ -62,12 +74,13 @@
     - Convert
     - Validate
   Languages:
+    - Java
     - Maven
   License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-core-java
   Name: CycloneDX-core-java
   Publisher: CycloneDX
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'CycloneDX Core (Java) is a library providing essential functionality for
@@ -100,11 +113,12 @@
   Languages:
     - Elixir
     - Nuget
+    - Dotnet
   License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-dotnet
   Name: CycloneDX-dotnet
   Publisher: CycloneDX
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'CycloneDX .NET Module - SBOM Generation Tool
@@ -144,12 +158,13 @@
     - Convert
     - Consume
   Languages:
+    - Dotnet
     - Elixir
   License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-dotnet-library
   Name: CycloneDX-dotnet-library
   Publisher: CycloneDX
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - SPDX
     - CycloneDX
@@ -185,8 +200,9 @@
     - Convert
     - Validate
   Languages:
+    - JavaScript
     - Npm
-  License: Apache-2.0
+  License: AI & human reviewed
   Link: https://github.com/CycloneDX/cyclonedx-javascript-library
   Name: CycloneDX-javascript-library
   Publisher: CycloneDX

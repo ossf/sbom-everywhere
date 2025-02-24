@@ -17,8 +17,8 @@ watch(() => store.filteredTreeData, () => {
 function generateTreeObject() {
   // Specify the chart's dimensions.
   const rect = document.getElementById('workbench').getBoundingClientRect()
-  const width = rect.width > rect.height ? rect.height : rect.width;
-  const height = rect.height < rect.width ? rect.height : rect.width;
+  const width = rect.width;
+  const height = rect.height;
   const data = JSON.parse(JSON.stringify(store.filteredTreeData))
 
   // Make sure the plot is empty.
@@ -66,13 +66,19 @@ root.descendants().forEach((d) => {
 
   const imageSize = d.r * 2; // calculate the size of the image based on the radius of the circle
 
-  pattern.append("image")
-      .attr("href", "logos/" + d.data.name.charAt(0).toLowerCase() + "-solid.svg") // construct the image URL from the node's name
-      .attr("xlink:href", "logos/" + d.data.name + ".png") // construct the image URL from the node's name
-      .attr("height", imageSize) // set the size of the image
-      .attr("width", imageSize) // set the size of the image
-      .attr("x", 0) // center the image horizontally
-      .attr("y", 0) // center the image vertically
+  // Create an image element and handle both fallback and primary images
+  const image = pattern.append("image")
+      .attr("width", imageSize)
+      .attr("height", imageSize)
+      .attr("x", 0)
+      .attr("y", 0);
+
+  // Try to load the PNG first
+  image.attr("href", `logos/${d.data.name}.png`)
+      .on("error", function() {
+        // If PNG fails, load the SVG fallback
+        d3.select(this).attr("href", `logos/${d.data.name.charAt(0).toLowerCase()}-solid.svg`);
+      });
 });
 
 // Append the nodes.
@@ -115,7 +121,9 @@ const label = svg.append("g")
   svg.on("click", (event) => zoom(event, root));
   let focus = root;
   let view;
-  zoomTo([focus.x, focus.y, focus.r * 2]);
+
+  // Initial zoom to show the entire visualization
+  zoomTo([root.x, root.y, root.r * 2.7]);
 
   function zoomTo(v) {
     const k = width / v[2];
@@ -162,7 +170,7 @@ const label = svg.append("g")
     const transition = svg.transition()
         .duration(event.altKey ? 7500 : 750)
         .tween("zoom", d => {
-          const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+          const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 3]);
           return t => zoomTo(i(t));
         });
 
@@ -180,8 +188,8 @@ const label = svg.append("g")
 </script>
 
 <template>
-  <div class="flex w-full justify-content-center">
-    <svg id="plot" style="width:100%; height:100%"/>
+  <div class="flex w-full h-full justify-content-center">
+    <svg id="plot"/>
   </div>
 </template>
 
