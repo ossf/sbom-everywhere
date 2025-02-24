@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 
 import "./global/global.css"
@@ -23,6 +24,7 @@ import IconField from "primevue/iconfield";
 import router from "./router";
 
 const app = createApp(App);
+app.use(createPinia())
 
 app.use(PrimeVue)
 app.use(router)

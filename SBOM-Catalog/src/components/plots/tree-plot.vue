@@ -2,21 +2,21 @@
 
 import {onMounted, ref, watch} from "vue";
 import * as d3 from "d3";
-import {useRouter} from "vue-router";
+import { useMainStore } from "../../stores/mainStore";
 
-const router = useRouter();
-const props = defineProps(['dataList'])
+
+const store = useMainStore();
 
 const activeView = ref(1)
 const scrollableDiv = ref(false)
 
 onMounted(() => {
-  generateTreeObject()
+    generateTreeObject()
 })
 
-watch (props, () => {
+watch(() => store.filteredTreeData, () => {
   generateTreeObject()
-})
+}, { deep: true })
 
 function onViewChange(view) {
   activeView.value = view
@@ -52,7 +52,7 @@ function generateTreeObjectRound() {
       .separation((a, b) => (a.parent == b.parent ? 1 : 2) / a.depth);
 
   // Sort the tree and apply the layout.
-  const root = tree(d3.hierarchy(JSON.parse(JSON.stringify(props.dataList)))
+  const root = tree(d3.hierarchy(JSON.parse(JSON.stringify(store.filteredTreeData)))
       .sort((a, b) => d3.ascending(a.data.name, b.data.name)));
 
   // Creates the SVG container.
@@ -85,7 +85,7 @@ function generateTreeObjectRound() {
       .attr("r", 3)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
-        router.push({params: {selection: d.data.name}});
+        store.activeSelection = d.data.name 
       });
 
   // Append images.
@@ -120,7 +120,7 @@ function generateTreeObjectRound() {
       .style("cursor", "pointer")
       .text(d => d.data.name)
       .on("click", (event, d) => {
-        router.push({params: {selection: d.data.name}});
+        store.activeSelection = d.data.name 
       });
 
   return svg.node();
@@ -131,7 +131,7 @@ function generateTreeObjectFlat() {
   const rect = document.getElementById('workbench').getBoundingClientRect()
   const width = rect.width;
 
-  const root = d3.hierarchy(JSON.parse(JSON.stringify(props.dataList)));
+  const root = d3.hierarchy(JSON.parse(JSON.stringify(store.filteredTreeData)));
   const dx = 20;
   const dy = width / (root.height + 1);
 
@@ -193,7 +193,7 @@ function generateTreeObjectFlat() {
       .attr("transform", d => `translate(${d.y},${d.x})`)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
-        router.push({params: {selection: d.data.name}});
+        store.activeSelection = d.data.name 
       });
 
   node.append("circle")
@@ -201,7 +201,7 @@ function generateTreeObjectFlat() {
       .attr("r", 3)
       .style("cursor", "pointer")
       .on("click", (event, d) => {
-        router.push({params: {selection: d.data.name}});
+        store.activeSelection = d.data.name 
       });
 
   node.append("text")
@@ -214,7 +214,7 @@ function generateTreeObjectFlat() {
       .clone(true).lower()
       .attr("stroke", "white")
       .on("click", (event, d) => {
-        router.push({params: {selection: d.data.name}});
+        store.activeSelection = d.data.name 
       });
 
   return svg.node();

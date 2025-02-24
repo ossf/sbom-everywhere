@@ -7,6 +7,7 @@ import {Tool} from "../types/tool";
 import {Tree} from "../types/tree";
 
 export function generateTreeObject(filters: Filter[], tools: Tool[]): Tree {
+    console.log("Generating tree object")
     const enabledFilters: Filter[] = filters.filter(filter => filter.enabled);
     return {
         name: 'Landscape',
@@ -94,6 +95,7 @@ function retrieveDistinctAttributes(currentFilter: Filter, tools: Tool[]):Set<st
 Normalise algorithm to get the data into the different Plots.
  */
 export function normaliseList(tools: Tool[]): Tool[] {
+    console.log("Normalising list")
     const result: Tool[] = []
     let finishflag: boolean = true
 
@@ -135,6 +137,7 @@ export function normaliseList(tools: Tool[]): Tool[] {
 Aggregation algorithm to get the data into the different Plots.
  */
 export function aggregateList(tools: Tool[]): Tool[] {
+    console.log("Aggregating list")
     for (const entry of tools) {
         for (const key in entry) {
             if (entry[key as keyof Tool] instanceof Array) {
