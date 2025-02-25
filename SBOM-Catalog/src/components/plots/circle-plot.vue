@@ -14,6 +14,28 @@ watch(() => store.filteredTreeData, () => {
   generateTreeObject()
 }, { deep: true })
 
+function loadLogoImage(pattern, d, imageSize) {
+  // Create an image element and handle both fallback and primary images
+  const image = pattern.append("image")
+      .attr("width", imageSize)
+      .attr("height", imageSize)
+      .attr("x", 0)
+      .attr("y", 0);
+
+  // Create a new Image object to test if the PNG exists
+  const testImage = new Image();
+  testImage.onerror = function() {
+    // If PNG fails, load the SVG fallback
+    image.attr("href", `logos/${d.data.name.charAt(0).toLowerCase()}-solid.svg`);
+  };
+  testImage.onload = function() {
+    // If PNG loads successfully, use it
+    image.attr("href", `logos/${d.data.name}.png`);
+  };
+  // Start loading the PNG
+  testImage.src = `logos/${d.data.name}.png`;
+}
+
 function generateTreeObject() {
   // Specify the chart's dimensions.
   const rect = document.getElementById('workbench').getBoundingClientRect()
@@ -64,24 +86,11 @@ root.descendants().forEach((d) => {
         .attr("r", d.r) // make the radius half the size of the pattern
         .attr("fill", "white"); // set the fill color to white
 
-  const imageSize = d.r * 2; // calculate the size of the image based on the radius of the circle
+    const imageSize = d.r * 2;
+    loadLogoImage(pattern, d, imageSize);
+  });
 
-  // Create an image element and handle both fallback and primary images
-  const image = pattern.append("image")
-      .attr("width", imageSize)
-      .attr("height", imageSize)
-      .attr("x", 0)
-      .attr("y", 0);
-
-  // Try to load the PNG first
-  image.attr("href", `logos/${d.data.name}.png`)
-      .on("error", function() {
-        // If PNG fails, load the SVG fallback
-        d3.select(this).attr("href", `logos/${d.data.name.charAt(0).toLowerCase()}-solid.svg`);
-      });
-});
-
-// Append the nodes.
+  // Append the nodes.
   const node = svg.append("g")
     .selectAll("circle")
     .data(root.descendants().slice(1))
@@ -98,23 +107,23 @@ root.descendants().forEach((d) => {
       event.stopPropagation();
     })
 
-// Append the text labels.
-const label = svg.append("g")
-    .style("font", "30px sans-serif")
-    .style("font-weight", "bold")
-    .attr("stroke-width", 5)
-    .attr("paint-order", "stroke")
-    .attr("stroke", "rgb(241,241,241)")
-    .attr("fill", "currentColor")
-    .attr("pointer-events", "none")
-    .attr("text-anchor", "middle")
-    .selectAll("text")
-    .data(root.descendants())
-    .join("text")
-    .style("fill-opacity", d => d.parent === root ? 1 : 0)
-    .style("display", d => d.parent === root ? "inline" : "none")
-    .text(d => d.data.name)
-    .style("font-size", d => (30 - (d.data.name.length ^ 1.5)) + "px"); // Making the font size dynamic so longer labels have a smaller font, so they fit better.
+  // Append the text labels.
+  const label = svg.append("g")
+      .style("font", "30px sans-serif")
+      .style("font-weight", "bold")
+      .attr("stroke-width", 5)
+      .attr("paint-order", "stroke")
+      .attr("stroke", "rgb(241,241,241)")
+      .attr("fill", "currentColor")
+      .attr("pointer-events", "none")
+      .attr("text-anchor", "middle")
+      .selectAll("text")
+      .data(root.descendants())
+      .join("text")
+      .style("fill-opacity", d => d.parent === root ? 1 : 0)
+      .style("display", d => d.parent === root ? "inline" : "none")
+      .text(d => d.data.name)
+      .style("font-size", d => (30 - (d.data.name.length ^ 1.5)) + "px"); // Making the font size dynamic so longer labels have a smaller font, so they fit better.
 
 
   // Create the zoom behavior and zoom immediately in to the initial focus node.
@@ -149,15 +158,8 @@ const label = svg.append("g")
           .attr("r", d.r * k) // make the radius half the size of the pattern
           .attr("fill", "white"); // set the fill color to white
 
-      const imageSize = d.r * 2 * k; // calculate the size of the image based on the radius of the circle and the zoom level
-
-      pattern.append("image")
-          .attr("href", "logos/" + d.data.name.charAt(0).toLowerCase() + "-solid.svg") // construct the image URL from the node's name
-          .attr("href", "logos/" + d.data.name + ".png") // construct the image URL from the node's name
-          .attr("height", imageSize) // set the size of the image
-          .attr("width", imageSize) // set the size of the image
-          .attr("x", 0) // center the image horizontally
-          .attr("y", 0) // center the image vertically
+      const imageSize = d.r * 2 * k;
+      loadLogoImage(pattern, d, imageSize);
     });
 
     // Update the fill attribute of the circles to use the new pattern.
