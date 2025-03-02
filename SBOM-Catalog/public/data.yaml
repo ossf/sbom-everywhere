@@ -2301,7 +2301,7 @@
   Name: salus
   Publisher: coinbase
   Source: AI & human reviewed
-  Standards: 
+  Standards:
     - CycloneDX
   Summary: 'Salus (Security Automation as a Lightweight Universal Scanner) is a container-based
     security scanning coordinator that includes SBOM generation capabilities through
@@ -2334,7 +2334,7 @@
   Name: cosign
   Publisher: sigstore
   Source: AI & human reviewed
-  Standards: 
+  Standards:
     - SPDX
     - CycloneDX
   Summary: 'Cosign is a container signing, verification, and storage tool developed
@@ -2637,7 +2637,7 @@
   Name: checkov
   Publisher: bridgecrewio
   Source: AI-Generated
-  Standards: 
+  Standards:
     - CycloneDX
   Summary: 'Checkov - Security and Compliance Scanner with SBOM Generation
 
@@ -3003,7 +3003,7 @@
   Name: kics
   Publisher: Checkmarx
   Source: AI & human reviewed
-  Standards: 
+  Standards:
     - CycloneDX
   Summary: 'KICS (Keeping Infrastructure as Code Secure) is an open-source static
     analysis tool focused on validating security and compliance in Infrastructure
@@ -5329,7 +5329,7 @@
   Name: macaron
   Publisher: oracle
   Source: AI-Generated
-  Standards: 
+  Standards:
     - CycloneDX
   Summary: 'Macaron is a supply chain security analysis tool developed by Oracle Labs
     that focuses on build integrity and artifact dependencies analysis. The tool implements
@@ -6779,7 +6779,7 @@
   Name: cbomkit
   Publisher: IBM
   Source: AI-Generated
-  Standards: 
+  Standards:
     - CycloneDX
   Summary: 'CBOMkit - Cryptography Bill of Materials Toolkit
 
