@@ -1079,14 +1079,15 @@
     - Generate
     - Validate
   Languages:
-    - Clojars
-    - Elixir
-    - Npm
-  License: NOASSERTION
+    - Maven
+    - Gradle
+    - Java
+    - Kotlin
+  License: EPL-2.0
   Link: https://github.com/eclipse/antenna
   Name: antenna
   Publisher: eclipse
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'Eclipse SW360 Antenna - SBOM Generation and License Compliance Tool (Archived)
@@ -1100,19 +1101,12 @@
 
 
     Key SBOM Features:
-
     - Dependency scanning and analysis
-
     - Source code download and validation
-
     - License identification and compliance checking
-
     - Generation of third-party attribution documents
-
     - Creation of source code archives
-
     - Support for Maven and Gradle build environments
-
     - Integration with SW360 for component management
 
 
@@ -1374,11 +1368,12 @@
     - Generate
   Languages:
     - Npm
-  License: NOASSERTION
+    - JavaScript
+  License: Apache-2.0
   Link: https://github.com/RetireJS/retire.js
   Name: retire.js
   Publisher: RetireJS
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'Retire.js is a security-focused tool designed to identify JavaScript libraries
@@ -1387,19 +1382,12 @@
 
 
     Key Features:
-
     - Command-line scanner for web and Node.js applications
-
     - SBOM generation in CycloneDX format
-
     - Integration options with build tools (Grunt, Gulp)
-
     - Browser extensions for Chrome and Firefox
-
     - Security tool integration with Burp and OWASP ZAP
-
     - Vulnerability detection in JavaScript dependencies
-
     - Automated scanning capabilities
 
 
@@ -1408,6 +1396,7 @@
     transparency through standardized SBOM output.'
   Types:
     - Source
+    - Build
     - Analyze
 - Abilities:
     - Consume
@@ -1427,7 +1416,7 @@
   Link: https://github.com/DependencyTrack/dependency-track
   Name: dependency-track
   Publisher: DependencyTrack
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'Dependency-Track is an intelligent Component Analysis platform that utilizes
@@ -1438,18 +1427,11 @@
 
 
     Key SBOM-related features:
-
     - Generation and processing of CycloneDX SBOMs
-
-    - Component tracking across multiple types (applications, libraries, containers,
-    firmware)
-
+    - Component tracking across multiple types (applications, libraries, containers, firmware)
     - Integration with vulnerability databases (NVD, GitHub Advisories, OSV)
-
     - Repository support for major package ecosystems
-
     - Policy engine for security, license, and operational compliance
-
     - API-first architecture enabling automation and CI/CD integration
 
 
@@ -1469,7 +1451,7 @@
   Link: https://github.com/jenkinsci/dependency-track-plugin
   Name: dependency-track-plugin
   Publisher: jenkinsci
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'Dependency-Track Jenkins Plugin - SBOM Integration Tool
@@ -1482,17 +1464,11 @@
 
 
     Key SBOM Features:
-
     - Supports synchronous and asynchronous SBOM publishing
-
     - Automated project creation and SBOM upload
-
     - Real-time vulnerability and policy violation analysis
-
     - Configurable risk thresholds and job status controls
-
     - Integration with Jenkins pipeline workflows
-
     - Support for CycloneDX SBOM format
 
 
@@ -1513,7 +1489,7 @@
   Link: https://github.com/pmckeown/dependency-track-maven-plugin
   Name: dependency-track-maven-plugin
   Publisher: pmckeown
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'The Dependency-Track Maven Plugin enables integration with Dependency-Track
@@ -1523,30 +1499,19 @@
 
 
     Core Features:
-
     - Upload and management of CycloneDX SBOM files to Dependency-Track
-
     - Project vulnerability findings analysis and reporting
-
     - Policy violation detection and enforcement
-
     - Inherited risk score calculation and thresholds
-
     - Project metrics collection and analysis
-
     - Project lifecycle management including deletion
 
 
     Key SBOM Capabilities:
-
     - Automatic SBOM generation via integration with cyclonedx-maven-plugin
-
     - SBOM upload with project metadata updates
-
     - Support for parent/child project relationships
-
     - Project tagging and version management
-
     - Configurable polling for SBOM processing status
 
 
@@ -1557,13 +1522,9 @@
 
 
     Technical requirements include:
-
     - Maven build environment
-
     - Dependency-Track server (API endpoint)
-
     - API key with required permissions
-
     - CycloneDX plugin for SBOM generation'
   Types:
     - Source
@@ -1647,11 +1608,11 @@
     - Consume
   Languages:
     - Generic
-  License: No License
+  License: GPL-2.0
   Link: https://github.com/scanoss/engine
   Name: engine
   Publisher: scanoss
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - SPDX
     - CycloneDX
@@ -1664,15 +1625,10 @@
 
 
     Key SBOM Features:
-
     - Real-time SBOM creation during development
-
     - Support for CycloneDX and SPDX 2.2 JSON formats
-
     - SBOM ingestion capability to prioritize declared components
-
     - File identification through full package, file, and snippet matching
-
     - Component ranking based on release dates and context hints
 
 
@@ -1680,48 +1636,23 @@
     analysis of code components. Output is generated in JSON format, enabling easy
     integration with other tools and processes. SCANOSS requires a knowledge database
     (LDB) and can be customized through mining tools to create specialized component
-    databases.
-
-
-    License: GPL 2.0'
+    databases.'
   Types:
     - Source
-- Abilities:
-    - Generate
-  Languages:
-    - Dotnet
-  License: No License
-  Link: https://github.com/thspinto/oss_inventory
-  Name: oss_inventory
-  Publisher: thspinto
-  Source: AI-Generated
-  Standards: []
-  Summary: 'Buffalo is a web development framework for Go that includes built-in support
-    for SBOM generation through FOSSA integration. The tool automatically tracks dependencies
-    and generates Software Bill of Materials (SBOM) during the build process. It features
-    a comprehensive database setup, automated binary rebuilding, and asset management
-    capabilities. FOSSA integration enables continuous monitoring of license compliance
-    and dependency tracking, providing up-to-date SBOM information for the project.
-    The framework supports automated SBOM creation as part of its development workflow,
-    making it suitable for projects requiring dependency transparency and compliance
-    documentation.
-
-
-    Note: Based on the provided text, the SBOM capabilities are primarily derived
-    from FOSSA integration. The summary focuses on this aspect while noting the general
-    framework features that support dependency management.'
-  Types:
-    - Source
+    - Build
 - Abilities:
     - Consume
+    - Generate
   Languages:
     - Npm
-    - Alpine
+    - Yarn
+    - Bower
+    - JavaScript
   License: Apache-2.0
   Link: https://github.com/sonatype-nexus-community/auditjs
   Name: auditjs
   Publisher: sonatype-nexus-community
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - SPDX
   Summary: 'AuditJS is a vulnerability scanning tool that analyzes JavaScript projects
@@ -1731,21 +1662,13 @@
 
 
     Key Features:
-
     - Supports npm, Angular, yarn, and bower package managers
-
     - Integrates with OSS Index and Nexus IQ Server for vulnerability data
-
     - Provides JSON and JUnit XML output formats
-
     - Includes vulnerability whitelisting capabilities
-
     - Supports proxy configurations
-
     - Offers CI/CD integration options
-
     - Caches scan results to optimize API usage
-
     - Command line and npm script usage options
 
 
@@ -1756,25 +1679,24 @@
 
 
     Technical Requirements:
-
     - Node.js LTS versions 8.x and above
-
     - Nexus IQ Server version 77+ for IQ scanning functionality
-
     - Network access to OSS Index API'
   Types:
-    - Design
     - Source
     - Build
+    - Analyze
 - Abilities:
     - Consume
+    - Generate
   Languages:
     - Gem
+    - Ruby
   License: Apache-2.0
   Link: https://github.com/sonatype-nexus-community/chelsea
   Name: chelsea
   Publisher: sonatype-nexus-community
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - SPDX
   Summary: 'Chelsea is a Ruby-based CLI tool for scanning RubyGem dependencies and
@@ -1784,19 +1706,12 @@
 
 
     Key Features:
-
     - Scans Gemfile.lock files for dependency vulnerabilities
-
     - Supports multiple report formats (text, JSON, XML/JUnit)
-
     - Provides reverse dependency tracking
-
     - Integrates with OSS Index for vulnerability data
-
     - Offers Nexus IQ Server integration for policy management
-
     - Includes caching mechanism to handle rate limiting
-
     - Allows vulnerability whitelist configuration
 
 
@@ -1898,32 +1813,6 @@
   Types:
     - Source
     - Build
-- Abilities:
-    - Consume
-  Languages:
-    - Apk
-    - Maven
-    - Npm
-  License: MIT
-  Link: https://github.com/valaatech/kernel
-  Name: kernel
-  Publisher: valaatech
-  Source: AI-Generated
-  Standards: []
-  Summary: "Summary of @valos/kernel SBOM Features:\n\n@valos/kernel is a distributed\
-    \ platform system that implements a package monorepo structure. The tool provides\
-    \ SBOM-relevant features through its package management and dependency tracking\
-    \ capabilities.\n\nKey SBOM-related features:\n- Manages dependencies across multiple\
-    \ @valos namespace packages\n- Tracks package relationships in a monorepo structure\
-    \ \n- Documents dependencies using yarn package management\n- Provides dependency\
-    \ information for core components like @valos/inspire, @valos/raem, @valos/script\n\
-    - Includes development dependencies through shared configurations\n- Contains\
-    \ license information (MIT) and attribution details\n\nThe tool primarily focuses\
-    \ on package management and dependency tracking within its ecosystem rather than\
-    \ explicit SBOM generation. It serves as a source for dependency information that\
-    \ can be used by dedicated SBOM generation tools."
-  Types:
-    - Source
 - Abilities:
     - Generate
     - Convert
@@ -2244,36 +2133,28 @@
     - Analyze
 - Abilities:
     - Generate
-    - Edit
+    - Consume
   Languages:
-    - Golang
+    - Gradle
     - Maven
+    - Java
   License: Apache-2.0
   Link: https://github.com/openrewrite/rewrite
   Name: rewrite
   Publisher: openrewrite
-  Source: AI-Generated
-  Standards: []
-  Summary: 'OpenRewrite SBOM Generator
-
-    -----------------------------------
-
-
-    OpenRewrite is an automated refactoring tool that includes SBOM (Software Bill
+  Source: AI & human reviewed
+  Standards:
+    - CycloneDX
+  Summary: 'OpenRewrite is an automated refactoring tool that includes SBOM (Software Bill
     of Materials) generation capabilities as part of its feature set. The tool generates
     SBOMs by analyzing project dependencies and source code during the build process.
 
 
     Key SBOM Features:
-
     - Integrates with Maven and Gradle build systems
-
     - Generates CycloneDX format SBOMs
-
     - Provides dependency analysis and tracking
-
     - Supports multi-module project structures
-
     - Enables automated SBOM generation as part of CI/CD pipelines
 
 
@@ -2413,13 +2294,15 @@
     - Npm
     - Pypi
     - Gem
+    - Rust
     - Clojars
-  License: No License
+  License: Apache-2.0
   Link: https://github.com/coinbase/salus
   Name: salus
   Publisher: coinbase
-  Source: AI-Generated
-  Standards: []
+  Source: AI & human reviewed
+  Standards: 
+    - CycloneDX
   Summary: 'Salus (Security Automation as a Lightweight Universal Scanner) is a container-based
     security scanning coordinator that includes SBOM generation capabilities through
     dependency tracking. The tool analyzes dependency files across multiple languages
@@ -2429,17 +2312,11 @@
 
 
     Key SBOM-related features:
-
     - Multi-language dependency tracking
-
     - Centralized scanning configuration
-
     - CVE detection through various package auditing tools
-
     - Customizable reporting formats
-
     - Integration with CI/CD workflows
-
     - Container-based deployment
 
 
@@ -2456,36 +2333,27 @@
   Link: https://github.com/sigstore/cosign
   Name: cosign
   Publisher: sigstore
-  Source: AI-Generated
-  Standards: []
+  Source: AI & human reviewed
+  Standards: 
+    - SPDX
+    - CycloneDX
   Summary: 'Cosign is a container signing, verification, and storage tool developed
     as part of the Sigstore project. While its primary focus is on container image
     signing, it includes SBOM-related capabilities:
 
 
     Key SBOM Features:
-
-    - Supports attaching and signing Software Bill of Materials (SBOMs) to container
-    images
-
+    - Supports attaching and signing Software Bill of Materials (SBOMs) to container images
     - Can store SBOMs in OCI registries alongside container images
-
     - Enables verification of SBOM signatures and attestations
-
     - Works with common SBOM formats like SPDX and CycloneDX
 
 
     Core Functionality:
-
     - Keyless signing using ephemeral keys and certificates
-
     - Hardware and KMS signing support
-
     - Container signing, verification and storage in OCI registries
-
-    - Support for multiple artifact types including containers, blobs, and Tekton
-    bundles
-
+    - Support for multiple artifact types including containers, blobs, and Tekton bundles
     - Integration with transparency logs for signature verification
 
 
@@ -2495,18 +2363,15 @@
 
 
     Target Users:
-
     - DevOps teams managing container deployments
-
     - Security teams implementing software supply chain security
-
     - Organizations requiring SBOM generation and verification capabilities
 
 
     The tool is actively maintained as part of the Sigstore project and has production-ready
     support for its core signing and verification features.'
   Types:
-    - Runtime
+    - Build
 - Abilities:
     - Generate
     - Convert
@@ -2580,11 +2445,11 @@
     - Pypi
     - Rpm
     - Swift
-  License: No License
+  License: Apache-2.0
   Link: https://github.com/nexB/scancode-toolkit
   Name: Scancode-Toolkit
   Publisher: nexB
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - SPDX
     - CycloneDX
@@ -2595,19 +2460,12 @@
 
 
     Key Features:
-
     - Advanced license detection through full text comparison
-
     - Package manifest parsing for multiple formats including npm, PyPI, Maven
-
     - Extensive package format support for dependency analysis
-
     - Multiple output formats (JSON, YAML, HTML, CycloneDX, SPDX)
-
     - Cross-platform compatibility (Windows, macOS, Linux)
-
     - Plugin architecture for extensibility
-
     - Integration capabilities with CI/CD pipelines
 
 
@@ -2626,7 +2484,7 @@
   Link: https://github.com/mattt/swift-package-sbom
   Name: swift-package-sbom
   Publisher: mattt
-  Source: AI-Generated
+  Source: AI & human reviewed
   Standards:
     - CycloneDX
   Summary: 'Swift Package SBOM is a command-line tool for generating CycloneDX-compliant
@@ -2639,15 +2497,10 @@
 
 
     Key features:
-
     - Generates CycloneDX-compliant SBOM
-
     - Maps Swift package components and dependencies
-
     - Provides cryptographic hashes for source files
-
     - Includes git commit information
-
     - Tracks transitive dependency relationships
 
 
@@ -2655,6 +2508,7 @@
     use.'
   Types:
     - Source
+    - Build
 - Abilities:
     - Convert
   Languages:
@@ -2771,16 +2625,20 @@
   Types:
     - Source
     - Build
+    - Analyze
 - Abilities:
     - Generate
+    - Consume
   Languages:
     - Pypi
+    - Docker
   License: Apache-2.0
   Link: https://github.com/bridgecrewio/checkov
   Name: checkov
   Publisher: bridgecrewio
   Source: AI-Generated
-  Standards: []
+  Standards: 
+    - CycloneDX
   Summary: 'Checkov - Security and Compliance Scanner with SBOM Generation
 
 
@@ -2790,17 +2648,11 @@
     and vulnerability information. Key SBOM-related features include:
 
 
-    - Software composition analysis scanning of open source packages and container
-    images
-
+    - Software composition analysis scanning of open source packages and container images
     - Detection of Common Vulnerabilities and Exposures (CVEs) in dependencies
-
     - CycloneDX SBOM output format support
-
     - Container image scanning with Dockerfile correlation
-
     - Package dependency scanning across multiple ecosystems
-
     - Integration with Prisma Cloud for enhanced vulnerability data
 
 
@@ -3135,18 +2987,24 @@
     - Runtime
 - Abilities:
     - Validate
+    - Generate
   Languages:
-    - Gem
-    - Alpm
-    - Autotools
-    - Clojars
-    - Generic
+    - Terraform
+    - OpenTofu
+    - Kubernetes
+    - Ansible
+    - Helm
+    - Azure
+    - Docker
+    - AWS
+    - OpenAPI
   License: Apache-2.0
   Link: https://github.com/Checkmarx/kics
   Name: kics
   Publisher: Checkmarx
-  Source: AI-Generated
-  Standards: []
+  Source: AI & human reviewed
+  Standards: 
+    - CycloneDX
   Summary: 'KICS (Keeping Infrastructure as Code Secure) is an open-source static
     analysis tool focused on validating security and compliance in Infrastructure
     as Code (IaC) files. The tool can generate CycloneDX SBOM documents for IaC resources,
@@ -3154,36 +3012,22 @@
 
 
     Key SBOM Features:
-
     - Supports generating CycloneDX SBOM format
-
     - Lists IaC resources and their relationships
-
     - Identifies dependencies across IaC files
-
     - Provides component metadata and version information
-
     - Integrates with CI/CD pipelines
 
 
     Supported IaC Technologies:
-
     - Terraform/OpenTofu
-
     - Kubernetes
-
     - Docker/Compose
-
     - CloudFormation
-
     - Ansible
-
     - Helm
-
     - Azure ARM/Bicep
-
     - CDK
-
     - Others (20+ platforms)
 
 
@@ -3811,7 +3655,7 @@
     - Consume
   Languages:
     - Generic
-  License: NOASSERTION
+  License: MIT
   Link: https://github.com/fortify-ps/fortify-ssc-parser-cyclonedx
   Name: fortify-ssc-parser-cyclonedx
   Publisher: fortify-ps
@@ -3905,21 +3749,21 @@
 
     - Offers file-based and STDIN/STDOUT operations'
   Types:
+    - Source
+    - Build
     - Analyze
 - Abilities:
     - Generate
   Languages:
-    - Golang
+    - SAP
   License: Apache-2.0
   Link: https://github.com/SAP/jenkins-library
   Name: jenkins-library
   Publisher: SAP
   Source: AI-Generated
-  Standards: []
-  Summary: 'Project Piper SBOM Generation Tool Summary:
-
-
-    Project Piper is a CI/CD pipeline tool that includes SBOM (Software Bill of Materials)
+  Standards:
+    - CycloneDX
+  Summary: 'Project Piper is a CI/CD pipeline tool that includes SBOM (Software Bill of Materials)
     generation capabilities as part of its build and deployment processes. The tool
     integrates with SAP systems and provides a shared library of steps for customizable
     pipeline creation. While the project is no longer accepting contributions, it
@@ -4071,7 +3915,7 @@
     - Consume
   Languages:
     - Pypi
-  License: No License
+  License: MIT
   Link: https://github.com/nyph-infosec/daggerboard
   Name: daggerboard
   Publisher: nyph-infosec
@@ -4212,7 +4056,7 @@
     - Generate
   Languages:
     - Generic
-  License: NOASSERTION
+  License: MIT
   Link: https://github.com/bgnetworks/meta-dependencytrack
   Name: meta-dependencytrack
   Publisher: bgnetworks
@@ -4856,59 +4700,7 @@
     is managed through a JSON file that supports custom file inclusion and license
     compliance rules.'
   Types:
-    - Source
-    - Build
-- Abilities:
-    - Generate
-  Languages:
-    - Apk
-    - Alpm
-    - Rpm
-    - Maven
-    - Pypi
-  License: GPL-3.0
-  Link: https://github.com/future-architect/vuls
-  Name: vuls
-  Publisher: future-architect
-  Source: AI-Generated
-  Standards: []
-  Summary: 'Vuls is a vulnerability scanner designed for Linux, FreeBSD, Windows,
-    and macOS systems. The tool operates agent-less and is written in Go. It provides
-    comprehensive vulnerability scanning capabilities through integration with multiple
-    vulnerability databases including NVD, JVN, and various vendor-specific security
-    advisories.
-
-
-    Key Features:
-
-    - Supports multiple operating systems and environments including cloud, on-premise,
-    and Docker containers
-
-    - Integrates with multiple vulnerability databases and security advisories
-
-    - Offers both remote and local scanning capabilities
-
-    - Provides SBOM functionality through package management system integration
-
-    - Supports scanning of non-OS packages including programming language libraries
-    and self-compiled software
-
-    - Includes CPE-based scanning capabilities
-
-    - Features automatic vulnerability detection and regular reporting
-
-    - Operates in multiple modes: Fast Scan (non-root), Fast Root Scan, Remote Scan,
-    and Local Scan
-
-
-    The tool is particularly useful for system administrators who need to maintain
-    security across multiple systems without implementing automatic updates. Vuls
-    focuses on vulnerability detection and reporting rather than remediation, making
-    it suitable for security assessment and compliance monitoring workflows.'
-  Types:
     - Analyze
-    - Deployment
-    - Runtime
 - Abilities:
     - Consume
     - Validate
@@ -4997,7 +4789,7 @@
     - Consume
   Languages:
     - Golang
-  License: NOASSERTION
+  License: No License
   Link: https://github.com/interlynk-io/sbomex
   Name: sbomex
   Publisher: interlynk-io
@@ -5383,7 +5175,7 @@
     - Npm
     - Nuget
     - Pypi
-  License: NOASSERTION
+  License: Apache-2.0
   Link: https://github.com/leanix/vsm-sbom-booster
   Name: vsm-sbom-booster
   Publisher: leanix
@@ -5441,7 +5233,7 @@
     - Generate
   Languages:
     - Generic
-  License: NOASSERTION
+  License: Apache-2.0
   Link: https://github.com/xeedio/asdf-cyclonedx
   Name: asdf-cyclonedx
   Publisher: xeedio
@@ -5476,8 +5268,10 @@
 - Abilities:
     - Consume
   Languages:
-    - Cargo
-    - Gem
+    - Maven
+    - Java
+    - Kotlin
+    - Gradle
   License: Apache-2.0
   Link: https://github.com/nscuro/cdx-central
   Name: cdx-central
@@ -5525,12 +5319,18 @@
     - Gem
     - Golang
     - Npm
+    - Yarn
+    - Maven
+    - Gradle
+    - Pypi
+    -
   License: UPL-1.0
   Link: https://github.com/oracle/macaron
   Name: macaron
   Publisher: oracle
   Source: AI-Generated
-  Standards: []
+  Standards: 
+    - CycloneDX
   Summary: 'Macaron is a supply chain security analysis tool developed by Oracle Labs
     that focuses on build integrity and artifact dependencies analysis. The tool implements
     checks based on the Supply chain Levels for Software Artifacts (SLSA) specification
@@ -5564,8 +5364,8 @@
     - Generate
   Languages:
     - Apk
-  License: No License
-  Link: https://github.com/ksoclabs/kbom
+  License: Apache-2.0
+  Link: https://github.com/rad-security/kbom
   Name: kbom
   Publisher: ksoclabs
   Source: AI-Generated
@@ -5577,10 +5377,7 @@
     environments. The tool is now maintained under the rad-security organization.
     KBOM enables users to create detailed inventories of software components and dependencies
     within Kubernetes clusters. Note: Further technical details and features are not
-    provided in the source material as the repository has been relocated.
-
-
-    Repository: https://github.com/rad-security/kbom'
+    provided in the source material as the repository has been relocated.'
   Types:
     - Container
 - Abilities:
@@ -6010,6 +5807,7 @@
     - Build
 - Abilities:
     - Generate
+    - Merge
   Languages:
     - Pypi
   License: MIT
@@ -6017,7 +5815,9 @@
   Name: Surfactant
   Publisher: LLNL
   Source: AI-Generated
-  Standards: []
+  Standards:
+    - SPDX
+    - CycloneDX
   Summary: 'Surfactant is a modular framework for SBOM generation and dependency analysis.
     The tool extracts surface-level metadata from recognized file types such as PE,
     ELF, and MSI files within a directory structure of extracted software packages.
@@ -6302,7 +6102,7 @@
   Languages:
     - Generic
     - Maven
-  License: NOASSERTION
+  License: EPL-2.0
   Link: https://github.com/eclipse-sw360/sw360
   Name: sw360
   Publisher: eclipse-sw360
@@ -6576,7 +6376,7 @@
     - Edit
   Languages:
     - Npm
-  License: NOASSERTION
+  License: GNU
   Link: https://github.com/scanoss/sbom-workbench
   Name: sbom-workbench
   Publisher: scanoss
@@ -6735,7 +6535,7 @@
     - Consume
   Languages:
     - Generic
-  License: No License
+  License: Apache-2.0
   Link: https://github.com/jenkinsci/nexus-platform-plugin
   Name: nexus-platform-plugin
   Publisher: jenkinsci
@@ -6781,7 +6581,7 @@
     - Npm
     - Nuget
     - Pypi
-  License: NOASSERTION
+  License: MIT
   Link: https://github.com/sw360/capycli
   Name: capycli
   Publisher: sw360
@@ -6979,7 +6779,8 @@
   Name: cbomkit
   Publisher: IBM
   Source: AI-Generated
-  Standards: []
+  Standards: 
+    - CycloneDX
   Summary: 'CBOMkit - Cryptography Bill of Materials Toolkit
 
 

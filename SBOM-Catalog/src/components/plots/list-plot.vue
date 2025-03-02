@@ -54,7 +54,12 @@ const filters = ref({
           <div class="flex">
             <div v-if="typeof slotProps.data[col.name] === 'string'">
               <div class="flex align-items-center">
-                <img :src="'logos/' + slotProps.data[col.name] + '.png'" class="responsive-image p-1" alt=""/>
+                <img 
+                  :src="'logos/' + slotProps.data[col.name] + '.png'" 
+                  class="responsive-image p-1" 
+                  alt="" 
+                  @error="(e) => e.target.src = `logos/${slotProps.data[col.name][0].toLowerCase()}-solid.svg`"
+                /> 
                 <div class="m-2">{{ slotProps.data[col.name] }}</div>
               </div>
             </div>
