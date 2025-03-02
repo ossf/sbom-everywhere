@@ -128,7 +128,6 @@
     of Materials (SBOM) in CycloneDX format. The tool supports both XML and JSON output
     formats compliant with the CycloneDX specification. It runs on .NET 8.0 and 9.0.
 
-
     Key Features:
 
     - Analyzes .NET solution files (.sln), project files (.csproj, .fsproj, .vbproj,
@@ -5323,7 +5322,6 @@
     - Maven
     - Gradle
     - Pypi
-    -
   License: UPL-1.0
   Link: https://github.com/oracle/macaron
   Name: macaron
