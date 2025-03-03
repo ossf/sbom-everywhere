@@ -33,6 +33,7 @@ const createGitHubIssue = () => {
         style="display: none"
         alt=""
         class="responsive-image p-1 block"
+        @error="(e) => e.target.src = `logos/${store.activeSelection[0].toLowerCase()}-solid.svg`"
       />
     </div>
   </div>
