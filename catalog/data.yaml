@@ -6904,3 +6904,74 @@
     SBOM data interpretation and supply chain transparency.'
   Types:
     - Analyze
+- Abilities:
+    - Consume
+    - Convert
+    - Edit
+    - Generate
+    - Validate
+  Languages:
+    - Clojure
+    - C
+    - "C++"
+    - Dart
+    - Dotnet
+    - Erlang
+    - Elixir
+    - Fortran
+    - Go
+    - Haskell
+    - Java
+    - Javascript
+    - Nim
+    - "Objective-C"
+    - Perl
+    - PHP
+    - Python
+    - R
+    - Ruby
+    - Rust
+    - Scala
+    - Swift
+    - Typescript
+  License: Proprietary
+  Link: https://fossa.com
+  Name: FOSSA
+  Publisher: FOSSA
+  Source: Human written
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summary: 'FOSSA is a software composition analysis (SCA) tool with robust SBOM management capabilities.
+    It empowers you to generate detailed, precise reports of all code dependencies for any version of your software, regardless of depth.
+    Additionally, FOSSA allows you to import external SBOMs, consolidating third-party license and security risks into a single, unified view.
+    With the flexibility to export SBOMs in multiple formats such as CycloneDX and SPDX, you can either download and distribute them yourself
+    or let FOSSA host them on your behalf. Moreover, its auto-update feature ensures that all SBOMs remain current, centralizing the management
+    of both internal and third-party components for seamless compliance and risk control.
+
+
+    Key Features:
+
+    - Supports CycloneDX and SPDX
+
+    - Exceeds U.S. government minimum SBOM requirements
+
+    - Utilizes multiple analysis techniques to produce an audit-grade component inventory
+
+    - Integrates locally or with version control systems
+
+    - Offers a powerful FOSSA CLI with comprehensive support for many languages and package managers, licensed under CPAL-1.0
+
+    - Generates SBOMs for any prior version of your software
+
+    - Can be customized for a range of security, regulatory compliance, and license compliance use cases
+
+    - Does not require source code access
+
+
+    This comprehensive approach enables seamless compliance and risk management across your software ecosystem.'
+  Types:
+    - Analyze
+    - Build
+    - Deployment
+    - Source
