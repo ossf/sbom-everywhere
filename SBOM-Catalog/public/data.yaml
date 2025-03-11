@@ -6938,7 +6938,7 @@
   Link: https://fossa.com
   Name: FOSSA
   Publisher: FOSSA
-  Source: Human reviewed
+  Source: Human written
   Standards:
     - SPDX
     - CycloneDX
@@ -6971,7 +6971,7 @@
 
     This comprehensive approach enables seamless compliance and risk management across your software ecosystem.'
   Types:
-    - Analyzed
+    - Analyze
     - Build
-    - Deployed
+    - Deployment
     - Source
