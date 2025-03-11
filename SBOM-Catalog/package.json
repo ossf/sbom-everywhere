@@ -13,7 +13,7 @@
     "typecheck": "vue-tsc --build"
   },
   "dependencies": {
-    "axios": "^1.7.3",
+    "axios": "^1.8.2",
     "d3": "^7.9.0",
     "highlight.js": "^11.9.0",
     "js-yaml": "^4.1.0",
