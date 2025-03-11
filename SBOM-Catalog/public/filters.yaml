@@ -1,6 +1,6 @@
 ---
 - name: Standards
-  enabled: true
+  enabled: false
   description: Filter to distinguish between SBOM standards like SPDX and CycloneDx
 
 - name: License

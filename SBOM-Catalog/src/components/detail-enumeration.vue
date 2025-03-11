@@ -42,9 +42,9 @@ const createGitHubIssue = () => {
   <div v-if="store.selectedObject">
     <div v-if="store.selectedObject" class="flex justify-content-between align-items-center m-2">
       <PButton
-          icon="pi pi-github"
+          icon="pi pi-github" outlined
           label="Suggest Fix"
-          class="p-button-sm p-button-text p-button-rounded"
+          class="p-button-sm p-button-rounded"
           @click="createGitHubIssue"
           severity="secondary"
       />
