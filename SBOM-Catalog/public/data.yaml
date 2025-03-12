@@ -6981,21 +6981,21 @@
    - C
    - "C++"
   License: Proprietary
-  Link: https://https://runsafesecurity.com/c-c-plus-plus-sbom/?utm_campaign=9722897-Software%20Tools&utm_source=Website&utm_medium=OpenSSF&utm_content=SBOM
-  Name: RunSafe C/C++ Build-time SBOM Generator
+  Link: https://runsafesecurity.com/c-c-plus-plus-sbom/?utm_campaign=9722897-Software%20Tools&utm_source=Website&utm_medium=OpenSSF&utm_content=SBOM
+  Name: RunSafe Build-time SBOM Generator
   Publisher: RunSafe Security
   Source: Human written
   Standards:
   - CycloneDX
   Summary: 'RunSafe Security generates a C/C++ SBOM at build-time without the need for a package manager.
     RunSafe works flexibly across build environments, reports on all library dependencies,
-    and is enriched with information about the final target.'
+    and is enriched with information about the final target.
     Key Features:
     - Supports CycloneDX standard
     - Offers complete fidelity into all the files used during a chosen build.
     - Does not require a package manager.
     - Enumerates all library dependencies, including supplier, author, license, and version information.
-    - Provides information about the final target with context, including hashes during compilation and file paths.
+    - Provides information about the final target with context, including hashes during compilation and file paths.'
   Types:
   - Build
 
