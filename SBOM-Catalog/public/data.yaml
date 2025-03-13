@@ -6982,7 +6982,7 @@
    - "C++"
   License: Proprietary
   Link: https://runsafesecurity.com/c-c-plus-plus-sbom/?utm_campaign=9722897-Software%20Tools&utm_source=Website&utm_medium=OpenSSF&utm_content=SBOM
-  Name: RunSafe Build-time SBOM Generator
+  Name: RunSafe-Build-time-SBOM-Generator
   Publisher: RunSafe Security
   Source: Human written
   Standards:
