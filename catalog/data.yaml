@@ -860,6 +860,7 @@
     - Convert
   Languages:
     - Composer
+    - Elixir
   License: BSD-3-Clause
   Link: https://github.com/voltone/rebar3_sbom
   Name: rebar3_sbom
@@ -1074,50 +1075,51 @@
     for embedded Linux systems built with Buildroot.'
   Types:
     - Build
-- Abilities:
-    - Generate
-    - Validate
-  Languages:
-    - Maven
-    - Gradle
-    - Java
-    - Kotlin
-  License: EPL-2.0
-  Link: https://github.com/eclipse/antenna
-  Name: antenna
-  Publisher: eclipse
-  Source: AI & human reviewed
-  Standards:
-    - CycloneDX
-  Summary: 'Eclipse SW360 Antenna - SBOM Generation and License Compliance Tool (Archived)
-
-
-    Eclipse SW360 Antenna is a software composition analysis tool designed to generate
-    Software Bill of Materials (SBOM) and ensure license compliance. The tool scans
-    project artifacts, analyzes dependencies, and produces comprehensive documentation
-    including third-party attribution documents, source code archives, and processing
-    reports.
-
-
-    Key SBOM Features:
-    - Dependency scanning and analysis
-    - Source code download and validation
-    - License identification and compliance checking
-    - Generation of third-party attribution documents
-    - Creation of source code archives
-    - Support for Maven and Gradle build environments
-    - Integration with SW360 for component management
-
-
-    The tool supports Java-based projects and can be implemented as a Maven plugin,
-    Gradle plugin, or standalone executable. While the project is now archived, it
-    represents a significant contribution to open-source SBOM generation tools.
-
-
-    Note: This project has been archived and is no longer actively maintained.'
-  Types:
-    - Source
-    - Build
+#This repository was archived by the owner on Mar 17, 2021. It is now read-only.
+#- Abilities:
+#    - Generate
+#    - Validate
+#  Languages:
+#    - Maven
+#    - Gradle
+#    - Java
+#    - Kotlin
+#  License: EPL-2.0
+#  Link: https://github.com/eclipse/antenna
+#  Name: antenna
+#  Publisher: eclipse
+#  Source: AI & human reviewed
+#  Standards:
+#    - CycloneDX
+#  Summary: 'Eclipse SW360 Antenna - SBOM Generation and License Compliance Tool (Archived)
+#
+#
+#    Eclipse SW360 Antenna is a software composition analysis tool designed to generate
+#    Software Bill of Materials (SBOM) and ensure license compliance. The tool scans
+#    project artifacts, analyzes dependencies, and produces comprehensive documentation
+#    including third-party attribution documents, source code archives, and processing
+#    reports.
+#
+#
+#    Key SBOM Features:
+#    - Dependency scanning and analysis
+#    - Source code download and validation
+#    - License identification and compliance checking
+#    - Generation of third-party attribution documents
+#    - Creation of source code archives
+#    - Support for Maven and Gradle build environments
+#    - Integration with SW360 for component management
+#
+#
+#    The tool supports Java-based projects and can be implemented as a Maven plugin,
+#    Gradle plugin, or standalone executable. While the project is now archived, it
+#    represents a significant contribution to open-source SBOM generation tools.
+#
+#
+#    Note: This project has been archived and is no longer actively maintained.'
+#  Types:
+#    - Source
+#    - Build
 - Abilities:
     - Generate
   Languages:
@@ -1275,41 +1277,42 @@
     cyclonedx-bom Python package for SBOM generation.'
   Types:
     - Source
-- Abilities:
-    - Generate
-  Languages:
-    - Hex
-  License: No License
-  Link: https://github.com/red-shirts/action-mix-sbom
-  Name: action-mix-sbom
-  Publisher: red-shirts
-  Source: AI-Generated
-  Standards:
-    - CycloneDX
-  Summary: 'The GitHub Action "Generate CycloneDX SBoM for mix project" is a specialized
-    tool for generating Software Bill of Materials (SBOM) for Elixir projects using
-    the mix build tool. The action produces CycloneDX-formatted SBOM files that document
-    project dependencies.
-
-
-    Key Features:
-
-    - Generates CycloneDX-compliant SBOM files for Elixir/mix projects
-
-    - Configurable output file naming (defaults to ''bom.xml'')
-
-    - Optional inclusion of development and test dependencies
-
-    - Runs in Docker containers with Elixir support
-
-    - Compatible with GitHub Actions workflow environment
-
-
-    The tool operates as a GitHub Action, making it suitable for integration into
-    automated CI/CD pipelines for Elixir projects requiring dependency documentation
-    and software supply chain transparency.'
-  Types:
-    - Build
+# Project not updated for 6 years. Looks abandoned
+#- Abilities:
+#    - Generate
+#  Languages:
+#    - Hex
+#  License: No License
+#  Link: https://github.com/red-shirts/action-mix-sbom
+#  Name: action-mix-sbom
+#  Publisher: red-shirts
+#  Source: AI-Generated
+#  Standards:
+#    - CycloneDX
+#  Summary: 'The GitHub Action "Generate CycloneDX SBoM for mix project" is a specialized
+#    tool for generating Software Bill of Materials (SBOM) for Elixir projects using
+#    the mix build tool. The action produces CycloneDX-formatted SBOM files that document
+#    project dependencies.
+#
+#
+#    Key Features:
+#
+#    - Generates CycloneDX-compliant SBOM files for Elixir/mix projects
+#
+#    - Configurable output file naming (defaults to ''bom.xml'')
+#
+#    - Optional inclusion of development and test dependencies
+#
+#    - Runs in Docker containers with Elixir support
+#
+#    - Compatible with GitHub Actions workflow environment
+#
+#
+#    The tool operates as a GitHub Action, making it suitable for integration into
+#    automated CI/CD pipelines for Elixir projects requiring dependency documentation
+#    and software supply chain transparency.'
+#  Types:
+#    - Build
 - Abilities:
     - Generate
     - Convert
@@ -2475,39 +2478,40 @@
   Types:
     - Source
     - Build
-- Abilities:
-    - Generate
-  Languages:
-    - Swift
-  License: No License
-  Link: https://github.com/mattt/swift-package-sbom
-  Name: swift-package-sbom
-  Publisher: mattt
-  Source: AI & human reviewed
-  Standards:
-    - CycloneDX
-  Summary: 'Swift Package SBOM is a command-line tool for generating CycloneDX-compliant
-    Software Bill of Materials (SBOM) for Swift packages. The tool analyzes Swift
-    packages and produces detailed component information including library and executable
-    products, source files with SHA256/384/512 checksums, git commit history, and
-    dependency relationships. It requires Swift 5.4+ and macOS 10.15+ with libgit2
-    installed. The output is provided in JSON format following the CycloneDX specification,
-    making it suitable for integration into software supply chain security workflows.
-
-
-    Key features:
-    - Generates CycloneDX-compliant SBOM
-    - Maps Swift package components and dependencies
-    - Provides cryptographic hashes for source files
-    - Includes git commit information
-    - Tracks transitive dependency relationships
-
-
-    The tool is currently under active development and not yet recommended for production
-    use.'
-  Types:
-    - Source
-    - Build
+#  This repository was archived by the owner on Oct 17, 2021. It is now read-only.
+#- Abilities:
+#    - Generate
+#  Languages:
+#    - Swift
+#  License: No License
+#  Link: https://github.com/mattt/swift-package-sbom
+#  Name: swift-package-sbom
+#  Publisher: mattt
+#  Source: AI & human reviewed
+#  Standards:
+#    - CycloneDX
+#  Summary: 'Swift Package SBOM is a command-line tool for generating CycloneDX-compliant
+#    Software Bill of Materials (SBOM) for Swift packages. The tool analyzes Swift
+#    packages and produces detailed component information including library and executable
+#    products, source files with SHA256/384/512 checksums, git commit history, and
+#    dependency relationships. It requires Swift 5.4+ and macOS 10.15+ with libgit2
+#    installed. The output is provided in JSON format following the CycloneDX specification,
+#    making it suitable for integration into software supply chain security workflows.
+#
+#
+#    Key features:
+#    - Generates CycloneDX-compliant SBOM
+#    - Maps Swift package components and dependencies
+#    - Provides cryptographic hashes for source files
+#    - Includes git commit information
+#    - Tracks transitive dependency relationships
+#
+#
+#    The tool is currently under active development and not yet recommended for production
+#    use.'
+#  Types:
+#    - Source
+#    - Build
 - Abilities:
     - Convert
   Languages:
@@ -2541,47 +2545,48 @@
     - Simple installation through pip package manager'
   Types:
     - Source
-- Abilities:
-    - Generate
-  Languages:
-    - Conan
-    - Pypi
-  License: Apache-2.0
-  Link: https://github.com/CycloneDX/cyclonedx-conan
-  Name: CycloneDX-conan
-  Publisher: CycloneDX
-  Source: AI-Generated
-  Standards:
-    - CycloneDX
-  Summary: 'CycloneDX Conan SBOM Generator is a command-line tool designed for generating
-    Software Bill of Materials (SBOM) in CycloneDX format for C/C++ projects using
-    Conan package manager. The tool supports Conan v1 and integrates with Conan v2
-    through official extensions.
-
-
-    Key Features:
-
-    - Generates CycloneDX JSON format SBOMs
-
-    - Creates complete dependency graphs including all project dependencies
-
-    - Supports excluding development dependencies
-
-    - Provides compatibility with standard Conan CLI options
-
-    - Allows configuration of build settings, profiles, and environment variables
-
-    - Offers flexible output options including file output and STDOUT
-
-    - Integrates with Conan remote repositories and lockfiles
-
-
-    The tool is available through PyPI and can be installed using standard Python
-    package managers. It is part of the CycloneDX ecosystem and adheres to the lightweight
-    BOM specification that emphasizes human-readability and ease of parsing.'
-  Types:
-    - Source
-    - Build
+#  This repository was archived by the owner on Oct 2, 2023. It is now read-only.
+#- Abilities:
+#    - Generate
+#  Languages:
+#    - Conan
+#    - Pypi
+#  License: Apache-2.0
+#  Link: https://github.com/CycloneDX/cyclonedx-conan
+#  Name: CycloneDX-conan
+#  Publisher: CycloneDX
+#  Source: AI-Generated
+#  Standards:
+#    - CycloneDX
+#  Summary: 'CycloneDX Conan SBOM Generator is a command-line tool designed for generating
+#    Software Bill of Materials (SBOM) in CycloneDX format for C/C++ projects using
+#    Conan package manager. The tool supports Conan v1 and integrates with Conan v2
+#    through official extensions.
+#
+#
+#    Key Features:
+#
+#    - Generates CycloneDX JSON format SBOMs
+#
+#    - Creates complete dependency graphs including all project dependencies
+#
+#    - Supports excluding development dependencies
+#
+#    - Provides compatibility with standard Conan CLI options
+#
+#    - Allows configuration of build settings, profiles, and environment variables
+#
+#    - Offers flexible output options including file output and STDOUT
+#
+#    - Integrates with Conan remote repositories and lockfiles
+#
+#
+#    The tool is available through PyPI and can be installed using standard Python
+#    package managers. It is part of the CycloneDX ecosystem and adheres to the lightweight
+#    BOM specification that emphasizes human-readability and ease of parsing.'
+#  Types:
+#    - Source
+#    - Build
 - Abilities:
     - Generate
   Languages:
@@ -2832,48 +2837,49 @@
   Types:
     - Source
     - Build
-- Abilities:
-    - Generate
-  Languages:
-    - Generic
-  License: No License
-  Link: https://github.com/spack/spack-sbom
-  Name: spack-sbom
-  Publisher: spack
-  Source: AI-Generated
-  Standards:
-    - CycloneDX
-  Summary: 'Spack SBOM Generator
-
-
-    The Spack SBOM Generator is a Python-based tool that creates Software Bill of
-    Materials (SBOM) in CycloneDX format for packages managed by the Spack package
-    manager. The tool generates detailed component metadata including package specifications,
-    build information, and dependency relationships.
-
-
-    Key Features:
-
-    - Generates CycloneDX-compliant SBOM documents (version 1.3)
-
-    - Includes package metadata such as version, architecture, and variants
-
-    - Captures build specifications and hash information
-
-    - Documents licensing information
-
-    - Provides external references to package sources
-
-    - Outputs JSON-formatted SBOM data
-
-
-    The tool integrates with existing Spack installations and can be executed using
-    the Spack Python interpreter to generate SBOMs for any installed or available
-    Spack package. Output includes comprehensive package metadata, making it suitable
-    for software supply chain documentation and compliance requirements.'
-  Types:
-    - Source
-    - Build
+# This project was not updated for the last 5 years and looks abadoned
+#- Abilities:
+#    - Generate
+#  Languages:
+#    - Generic
+#  License: No License
+#  Link: https://github.com/spack/spack-sbom
+#  Name: spack-sbom
+#  Publisher: spack
+#  Source: AI-Generated
+#  Standards:
+#    - CycloneDX
+#  Summary: 'Spack SBOM Generator
+#
+#
+#    The Spack SBOM Generator is a Python-based tool that creates Software Bill of
+#    Materials (SBOM) in CycloneDX format for packages managed by the Spack package
+#    manager. The tool generates detailed component metadata including package specifications,
+#    build information, and dependency relationships.
+#
+#
+#    Key Features:
+#
+#    - Generates CycloneDX-compliant SBOM documents (version 1.3)
+#
+#    - Includes package metadata such as version, architecture, and variants
+#
+#    - Captures build specifications and hash information
+#
+#    - Documents licensing information
+#
+#    - Provides external references to package sources
+#
+#    - Outputs JSON-formatted SBOM data
+#
+#
+#    The tool integrates with existing Spack installations and can be executed using
+#    the Spack Python interpreter to generate SBOMs for any installed or available
+#    Spack package. Output includes comprehensive package metadata, making it suitable
+#    for software supply chain documentation and compliance requirements.'
+#  Types:
+#    - Source
+#    - Build
 - Abilities:
     - Convert
   Languages:
@@ -5157,77 +5163,78 @@
     Documentation: https://festo-se.github.io/cyclonedx-editor-validator'
   Types:
     - Analyze
-- Abilities:
-    - Generate
-  Languages:
-    - Apk
-    - Autotools
-    - Cargo
-    - Clojars
-    - Composer
-    - Cran
-    - Dotnet
-    - Elixir
-    - Gem
-    - Golang
-    - Maven
-    - Npm
-    - Nuget
-    - Pypi
-  License: Apache-2.0
-  Link: https://github.com/leanix/vsm-sbom-booster
-  Name: vsm-sbom-booster
-  Publisher: leanix
-  Source: AI-Generated
-  Standards:
-    - CycloneDX
-  Summary: 'VSM SBOM Booster - SBOM Generation Tool
-
-
-    VSM SBOM Booster is an automated SBOM generation tool based on the OSS Review
-    Toolkit (ORT). The tool generates CycloneDX SBOMs by scanning repositories across
-    multiple Git providers including GitHub Cloud/Enterprise, GitLab Cloud/Self-Hosted,
-    and BitBucket Cloud.
-
-
-    Key Features:
-
-    - Centralized SBOM generation without CI/CD pipeline modifications
-
-    - Direct integration with Git provider APIs
-
-    - Automatic SBOM upload to VSM workspace
-
-    - Support for multiple package managers through ORT
-
-    - Parallel processing capabilities with configurable concurrency
-
-    - Configurable analysis timeouts and proxy settings
-
-    - Support for ORT configuration files
-
-
-    The tool achieves an 80% success rate in SBOM generation for service repositories
-    and operates using a docker-in-docker architecture. Configuration is handled through
-    environment variables, allowing customization of Git provider settings, LeanIX
-    workspace integration, and runtime parameters.
-
-
-    Limitations:
-
-    - Experimental prototype status
-
-    - No filtering of non-service repositories
-
-    - Basic repository scanning without build-time integration
-
-    - Sporadic maintenance schedule
-
-
-    License: [REUSE compliant]'
-  Types:
-    - Source
-    - Build
+#  This repository was archived by the owner on Mar 10, 2025. It is now read-only.
+#- Abilities:
+#    - Generate
+#  Languages:
+#    - Apk
+#    - Autotools
+#    - Cargo
+#    - Clojars
+#    - Composer
+#    - Cran
+#    - Dotnet
+#    - Elixir
+#    - Gem
+#    - Golang
+#    - Maven
+#    - Npm
+#    - Nuget
+#    - Pypi
+#  License: Apache-2.0
+#  Link: https://github.com/leanix/vsm-sbom-booster
+#  Name: vsm-sbom-booster
+#  Publisher: leanix
+#  Source: AI-Generated
+#  Standards:
+#    - CycloneDX
+#  Summary: 'VSM SBOM Booster - SBOM Generation Tool
+#
+#
+#    VSM SBOM Booster is an automated SBOM generation tool based on the OSS Review
+#    Toolkit (ORT). The tool generates CycloneDX SBOMs by scanning repositories across
+#    multiple Git providers including GitHub Cloud/Enterprise, GitLab Cloud/Self-Hosted,
+#    and BitBucket Cloud.
+#
+#
+#    Key Features:
+#
+#    - Centralized SBOM generation without CI/CD pipeline modifications
+#
+#    - Direct integration with Git provider APIs
+#
+#    - Automatic SBOM upload to VSM workspace
+#
+#    - Support for multiple package managers through ORT
+#
+#    - Parallel processing capabilities with configurable concurrency
+#
+#    - Configurable analysis timeouts and proxy settings
+#
+#    - Support for ORT configuration files
+#
+#
+#    The tool achieves an 80% success rate in SBOM generation for service repositories
+#    and operates using a docker-in-docker architecture. Configuration is handled through
+#    environment variables, allowing customization of Git provider settings, LeanIX
+#    workspace integration, and runtime parameters.
+#
+#
+#    Limitations:
+#
+#    - Experimental prototype status
+#
+#    - No filtering of non-service repositories
+#
+#    - Basic repository scanning without build-time integration
+#
+#    - Sporadic maintenance schedule
+#
+#
+#    License: [REUSE compliant]'
+#  Types:
+#    - Source
+#    - Build
 - Abilities:
     - Generate
   Languages:
@@ -5264,30 +5271,31 @@
     - Integration with ASDF version manager'
   Types:
     - Build
-- Abilities:
-    - Consume
-  Languages:
-    - Maven
-    - Java
-    - Kotlin
-    - Gradle
-  License: Apache-2.0
-  Link: https://github.com/nscuro/cdx-central
-  Name: cdx-central
-  Publisher: nscuro
-  Source: AI-Generated
-  Standards:
-    - CycloneDX
-  Summary: cdx-central is a command-line utility designed for downloading public CycloneDX
-    Software Bill of Materials (SBOMs) from Maven Central repository. The tool focuses
-    on retrieving SBOMs for the latest versions of artifacts and offers configurable
-    parameters for concurrent processing and filtering based on component count. Key
-    features include concurrent artifact processing with adjustable concurrency levels,
-    filtering capabilities based on minimum component thresholds, and customizable
-    output directory for downloaded SBOMs. Written in Go, the tool provides a streamlined
-    approach for bulk SBOM retrieval from Maven Central.
-  Types:
-    - Analyze
+#  This repository was archived by the owner on Oct 27, 2024. It is now read-only.
+#- Abilities:
+#    - Consume
+#  Languages:
+#    - Maven
+#    - Java
+#    - Kotlin
+#    - Gradle
+#  License: Apache-2.0
+#  Link: https://github.com/nscuro/cdx-central
+#  Name: cdx-central
+#  Publisher: nscuro
+#  Source: AI-Generated
+#  Standards:
+#    - CycloneDX
+#  Summary: cdx-central is a command-line utility designed for downloading public CycloneDX
+#    Software Bill of Materials (SBOMs) from Maven Central repository. The tool focuses
+#    on retrieving SBOMs for the latest versions of artifacts and offers configurable
+#    parameters for concurrent processing and filtering based on component count. Key
+#    features include concurrent artifact processing with adjustable concurrency levels,
+#    filtering capabilities based on minimum component thresholds, and customizable
+#    output directory for downloaded SBOMs. Written in Go, the tool provides a streamlined
+#    approach for bulk SBOM retrieval from Maven Central.
+#  Types:
+#    - Analyze
 - Abilities:
     - Compare
   Languages:
