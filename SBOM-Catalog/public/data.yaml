@@ -484,7 +484,7 @@
 - Abilities:
     - Generate
   Languages:
-    - Clojars
+    - Golang
   License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-gomod
   Name: CycloneDX-gomod
@@ -900,12 +900,12 @@
     - Clojars
   License: GPL-3.0
   Link: https://github.com/ozonru/cyclonedx-go
-  Name: CycloneDX-go
+  Name: Ozonru-go
   Publisher: ozonru
   Source: AI-Generated
   Standards:
     - CycloneDX
-  Summary: 'cyclonedx-go is a command-line tool for generating CycloneDX Software
+  Summary: 'Ozonru cyclonedx-go is a command-line tool for generating CycloneDX Software
     Bill of Materials (SBOM) from Go projects using modules. The tool produces XML-formatted
     BOMs compliant with the CycloneDX 1.1 specification. It automatically extracts
     dependency information from Go module files and generates component entries with
