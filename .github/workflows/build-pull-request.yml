@@ -38,6 +38,9 @@ jobs:
       - name: Run lint
         run: cd SBOM-Catalog && npm run lint
 
+      - name: Run Unit-Tests
+        run: cd SBOM-Catalog && npm run test
+
       - name: Run build
         run: cd SBOM-Catalog && npm run build
 
