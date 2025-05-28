@@ -1039,8 +1039,6 @@
 - Abilities:
     - Generate
   Languages:
-    - Maven
-    - Pypi
   License: Apache-2.0
   Link: https://github.com/CycloneDX/cyclonedx-buildroot
   Name: CycloneDX-buildroot
@@ -1052,8 +1050,7 @@
     Software Bill of Materials (SBOM) for Buildroot-generated projects. The tool processes
     Buildroot''s legal-info target output, specifically the manifest.csv file, to
     create comprehensive SBOMs in JSON or XML format compliant with CycloneDX schema
-    version 1.4.
-
+    version.
 
     Key features:
 
@@ -1065,7 +1062,7 @@
 
     - Command-line interface with configurable input/output paths
 
-    - Compatible with CycloneDX v1.4 schema
+    - Compatible with CycloneDX schema
 
     - Output formats in both JSON and XML
 
