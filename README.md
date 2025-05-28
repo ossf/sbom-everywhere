@@ -4,18 +4,19 @@ Home of the OpenSSF SBOM Everywhere SIG. We're glad you're here!
 
 ## Get Involved
 
-*   Official communications occur on the [openssf-sig-sbom](https://lists.openssf.org/g/openssf-sig-sbom) mailing list
-    * [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups)
-*   We have a [Slack Channel](https://openssf.slack.com/archives/C03GKSYFRC0) for discussion various SBOM related activities
+- Official communications occur on the [openssf-sig-sbom](https://lists.openssf.org/g/openssf-sig-sbom) mailing list
+  - [Manage your subscriptions to Open SSF mailing lists](https://lists.openssf.org/g/main/subgroups)
+- We have a [Slack Channel](https://openssf.slack.com/archives/C03GKSYFRC0) for discussion various SBOM related activities
 
 ### Meeting times
 
-*   Every other Tuesday @ 11:05am EST. The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
-*   [Meeting Minutes](https://docs.google.com/document/d/193ODRga1F49WKPYYR79SNi9b27mChBqpOf5iiWJcMso/edit#heading=h.xqitfd6hs1gc) can be found in this Google Document. Feel free to add agenda items, please put your name next to items you add.
+- Every other Tuesday @ 11:05am EST. The invite is available on the [OpenSSF Community Calendar](https://calendar.google.com/calendar/u/0/r?cid=czYzdm9lZmhwNWk5cGZsdGI1cTY3bmdwZXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+- [Meeting Minutes](https://docs.google.com/document/d/193ODRga1F49WKPYYR79SNi9b27mChBqpOf5iiWJcMso/edit#heading=h.xqitfd6hs1gc) can be found in this Google Document. Feel free to add agenda items, please put your name next to items you add.
 
 ## Current Projects
 
 ### SBOM Catalog
+
 To provide a better overview of the available tooling and their capabilities, this group maintains an SBOM Catalog which can be found under the following link:
 
 [https://sbom-catalog.openssf.org/](https://sbom-catalog.openssf.org/)
@@ -23,15 +24,17 @@ To provide a better overview of the available tooling and their capabilities, th
 If you want to get involved, please see the document [here](/SBOM-Catalog/contribute.md)
 
 #### TODO
+
 More data needs to be added to the catalog
 
 ### Establishing SBOM Best Practices for open source projects
 
 The goal of this project is to understand what open source projects need to start publishing SBOMs
 
-[https://docs.google.com/document/d/15_FKO8D03VSYDTNsMQZtn1aRfgVmModF-NM6VBnlrZA/](Draft document)
+- [Draft document](https://docs.google.com/document/d/15_FKO8D03VSYDTNsMQZtn1aRfgVmModF-NM6VBnlrZA/)
 
 #### TODO
+
 This document needs to be better defined to construct a plan to help open source projects
 
 ### Best Practices for Naming and Directory Conventions for SBOMs (Software Bill of Materials) in Open Source Projects
@@ -39,9 +42,10 @@ This document needs to be better defined to construct a plan to help open source
 This document describes where to put an SBOM to be distributed and how to name it. It currently has a very narrow scope.
 
 #### TODO
+
 It needs to be expanded to cover other use cases
 
-[https://github.com/ossf/sbom-everywhere/blob/main/reference/sbom_naming.md](Reference doument)
+- [Reference document](https://github.com/ossf/sbom-everywhere/blob/main/reference/sbom_naming.md)
 
 ## Motivation
 
@@ -50,6 +54,7 @@ It needs to be expanded to cover other use cases
 ## Objective
 
 ### The 3 overarching goals from the White House meeting
+
 - Securing OSS Production: focus on preventing security defects and
   vulnerabilities in code and open source packages in the first place
 - Improving Vulnerability Discovery & Remediation: improving the process
@@ -58,15 +63,13 @@ It needs to be expanded to cover other use cases
   distributing and implementing fixes.
 
 ### The goals for this group as defined in the mobilization plan
+
 - The requirements needed to build use cases using SBOMs are clearly
   understood, documented and implemented in current SBOM specifications
 - There are “friction free” open source tools that generate SBOMs that meet
   these requirements
 - There is readily accessible education, awareness and implementation
   guidance and 3rd party support
-
-
-
 
 ## Scope
 
@@ -75,8 +78,6 @@ _By focusing on tools and advocacy, we can remove the barriers to
 generation, consumption, and overall adoption of SBOMs everywhere, we can
 improve the security posture of the entire open source ecosystem:
 producers, consumers, and maintainers._
-
-
 
 ### Formatting Specifications
 
@@ -115,9 +116,10 @@ The Federal Government exists at every point of the Software Delivery Lifecycle,
   - ![](https://www.nist.gov/sites/default/files/styles/2800_x_2800_limit/public/images/2021/07/09/software-verification-timeline.png)
   - [Minimum Standards for Federal Government End Users](https://www.nist.gov/itl/executive-order-improving-nations-cybersecurity/recommended-minimum-standard-vendor-or-developer)
 
-
 ## Prior Work
+
 ### NTIA
+
 - [NTIA SBOM Resources](https://ntia.gov/SBOM)
 - [Software Bill of Materials Elements and Considerations](https://www.regulations.gov/docket/NTIA-2021-0001/document)
 - [Plan to Congress on Declassification and Clearances related to The Communications Supply Chain Risk Information Partnership](https://ntia.gov/files/ntia/publications/ntia_plan_on_declassification_and_clearances_re_c-scrip.pdf)
@@ -125,15 +127,18 @@ The Federal Government exists at every point of the Software Delivery Lifecycle,
 NTIA's legwork has been a guiding source having done the most comprehensive research to date.
 
 ### CISA
- - [CISA SBOM Resources](https://www.cisa.gov/sbom)
+
+- [CISA SBOM Resources](https://www.cisa.gov/sbom)
 
 ### OWASP SCVS
- - [OWASP SCVS Resources](https://owasp.org/scvs)
 
-  #### Tickets related to BOM Maturity model:
-  - [OWASP/Software-Component-Verification-Standard#34](https://github.com/OWASP/Software-Component-Verification-Standard/issues/34)
-  - [OWASP/Software-Component-Verification-Standard#35](https://github.com/OWASP/Software-Component-Verification-Standard/issues/35)
-  - [OWASP/Software-Component-Verification-Standard#36](https://github.com/OWASP/Software-Component-Verification-Standard/issues/36)
+- [OWASP SCVS Resources](https://owasp.org/scvs)
+
+#### Tickets related to BOM Maturity model
+
+- [OWASP/Software-Component-Verification-Standard#34](https://github.com/OWASP/Software-Component-Verification-Standard/issues/34)
+- [OWASP/Software-Component-Verification-Standard#35](https://github.com/OWASP/Software-Component-Verification-Standard/issues/35)
+- [OWASP/Software-Component-Verification-Standard#36](https://github.com/OWASP/Software-Component-Verification-Standard/issues/36)
 
 ## Governance
 
