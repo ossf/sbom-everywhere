@@ -7006,4 +7006,89 @@
     - Provides information about the final target with context, including hashes during compilation and file paths.'
   Types:
   - Build
+- Abilities:
+    - Consume
+    - Convert
+    - Edit
+    - Generate
+    - Merge
+    - Sign
+    - Validate
+  Languages:
+    - Alpine
+    - Apk
+    - C
+    - C++
+    - Cargo
+    - Composer
+    - Deb
+    - Docker
+    - Dotnet
+    - Gem
+    - Generic
+    - Go
+    - Golang
+    - Gradle
+    - Java
+    - JavaScript
+    - Maven
+    - Npm
+    - Nuget
+    - PHP
+    - Pkg
+    - Ppkg
+    - Pypi
+    - Python
+    - Rpm
+    - Ruby
+    - Rust
+  License: Proprietary
+  Link: https://www.securitypattern.com
+  Name: ARIANNA
+  Publisher: Security Pattern
+  Source: AI & human reviewed
+  Standards:
+    - CycloneDX
+    - SPDX
+  Summary: 'ARIANNA is a product security management platform built for connected devices and systems across industries 
+    such as automotive, consumer electronics, industrial automation, and medical technology.
+    It supports compliance with major cybersecurity standards and regulations including ISO/SAE 21434, ETSI EN 303 645, 
+    IEC 62443, RED DA, CRA, and FDA requirements.
+    Developed by the experts at Security Pattern, ARIANNA empowers device manufacturers to implement sustainable 
+    security processes by identifying, triaging, addressing, and reporting vulnerabilities efficiently.
+    The platform integrates a robust vulnerability management process, offering continuous monitoring, exploit 
+    intelligence, and remediation guidance. 
+    ARIANNA enables users to maintain detailed software and hardware component inventories (SBOM/HBOM), prioritize 
+    vulnerabilities based on exploitability, and share results in machine-readable vformats. Its focus on automation 
+    and compliance helps organizations streamline their security workflows and maintain a strong cybersecurity posture 
+    throughout the product lifecycle.
 
+
+    Key Features:
+
+    - SBOM and HBOM creation and management
+
+    - Vulnerability Identification
+
+    - Vulnerability triaging and prioritization
+
+    - Mitigation and remediation guidance
+
+    - Extensive up-to-date vulnerability intelligence (including daily monitoring of security advisories issued by hardware manufacturers such as Intel)
+
+    - Exploit maturity intelligence, including CISA KEV
+
+    - Continuous vulnerability monitoring
+
+    - Machine-readable export formats (CycloneDX, SPDX, VEX)
+
+    - Compliance reports for major standards and regulations
+
+    - Tailored solutions for build systems such as: Buildroot, Espressif, KEIL, Microchip, NXP, OpenWRT, Siliconlabs Gecko, STM32Cube, TI, Yocto and Zephyr, to generate the most accurate device model possible.'
+  Types:
+    - Analyze
+    - Build
+    - Container
+    - Deployment
+    - Design
+    - Source
