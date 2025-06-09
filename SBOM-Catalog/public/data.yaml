@@ -7074,7 +7074,7 @@
 
     - Mitigation and remediation guidance
 
-    - Extensive up-to-date vulnerability intelligence (including daily monitoring of security advisories issued by hardware manufacturers such as Intel)
+    - Extensive up-to-date vulnerability intelligence
 
     - Exploit maturity intelligence, including CISA KEV
 
@@ -7084,7 +7084,7 @@
 
     - Compliance reports for major standards and regulations
 
-    - Tailored solutions for build systems such as: Buildroot, Espressif, KEIL, Microchip, NXP, OpenWRT, Siliconlabs Gecko, STM32Cube, TI, Yocto and Zephyr, to generate the most accurate device model possible.'
+    - Tailored solutions for common embedded software SDKs and development frameworks
   Types:
     - Analyze
     - Build
