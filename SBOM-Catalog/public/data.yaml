@@ -7011,7 +7011,6 @@
     - Convert
     - Edit
     - Generate
-    - Merge
     - Sign
     - Validate
   Languages:
@@ -7019,15 +7018,11 @@
     - Apk
     - C
     - C++
-    - Cargo
     - Composer
     - Deb
     - Docker
     - Dotnet
-    - Gem
     - Generic
-    - Go
-    - Golang
     - Gradle
     - Java
     - JavaScript
@@ -7035,13 +7030,9 @@
     - Npm
     - Nuget
     - PHP
-    - Pkg
-    - Ppkg
     - Pypi
     - Python
     - Rpm
-    - Ruby
-    - Rust
   License: Proprietary
   Link: https://www.securitypattern.com
   Name: ARIANNA
@@ -7084,11 +7075,8 @@
 
     - Compliance reports for major standards and regulations
 
-    - Tailored solutions for common embedded software SDKs and development frameworks
+    - Tailored solutions for common embedded software SDKs and development frameworks'
   Types:
     - Analyze
     - Build
-    - Container
-    - Deployment
-    - Design
     - Source
