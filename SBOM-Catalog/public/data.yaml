@@ -7077,4 +7077,70 @@
     - Analyze
     - Build
     - Source
+- Abilities:
+    - Consume
+    - Convert
+    - Edit
+    - Validate
+    - Merge
+    - Compare
+  Languages:
+    - C
+    - "C++"
+    - Dotnet
+    - Erlang
+    - Elixir
+    - Fortran
+    - Go
+    - Haskell
+    - Java
+    - Javascript
+    - Nim
+    - "Objective-C"
+    - Perl
+    - PHP
+    - Python
+    - R
+    - Ruby
+    - Rust
+    - Scala
+    - Swift
+    - Typescript
+  License: Proprietary
+  Link: https://rearmhq.com
+  Name: ReARM
+  Publisher: Reliza
+  Source: Human written
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summary: 'ReARM is an abbreviation for "Reliza''s Artifact and Release Management". It is a DevSecOps
+    and Supply Chain Security tool to organize product releases with their metadata, including various
+    Bills of Materials (SBOMs / xBOMs). ReARM maintains xBOM documents per each release and supports
+    Transparency Exchange API (TEA).
 
+    ReARM Community Edition is available under AGPL-3.0-only and hosted at https://github.com/relizaio/rearm.
+
+
+    Capabilities:
+
+    - Storage and retrieval of SBOMs / xBOMs for software and hardware, per release, including signatures and signing details
+    
+    - Maintaining representation of organization''s products and components with branches and releases
+    
+    - Automated creation of release versions and changelogs between releases
+
+    - Close integration with Dependency-Track for analysis of vulnerabilities and policies, including license policy
+    
+    - Integration with various CI systems (including GitHub Actions, Azure DevOps, Jenkins, GitLab CI and others) to produce BOMs and upload them with other release metadata to ReARM
+    
+    - Release approval logic (Commercial Edition only)
+
+    - Marketing release workflow (Commercial Edition only)'
+  Types:
+    - Design
+    - Source
+    - Build
+    - Analyze
+    - Deployment
+    - Container
