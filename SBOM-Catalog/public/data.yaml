@@ -7179,3 +7179,67 @@
     - Analyze
     - Deployment
     - Container
+- Abilities:
+    - Validate
+    - Sign
+  Languages:
+    - C
+    - "C++"
+    - Dotnet
+    - Erlang
+    - Elixir
+    - Fortran
+    - Go
+    - Haskell
+    - Java
+    - Javascript
+    - Nim
+    - "Objective-C"
+    - Perl
+    - PHP
+    - Python
+    - R
+    - Ruby
+    - Rust
+    - Scala
+    - Swift
+    - Typescript
+  License: Proprietary
+  Link: https://shiftleftcyber.io/securesbom
+  Name: SecureSBOM
+  Publisher: ShiftLeftCyber
+  Source: Human written
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summary: 'SecureSBOM is ShiftLeftCybers enterprise-grade cryptographic API for software supply chain security. It 
+    provides scalable signing and verification capabilities for Software Bills of Materials (SBOMs), enabling
+    organizations to establish trust and integrity in their software supply chains through cryptographic authentication.
+
+    SecureSBOM is available as a cloud-based API service and accessible at https://shiftleftcyber.io/securesbom/.
+
+    Capabilities:
+
+    - Cryptographic signing of SBOMs using industry-standard algorithms (RSA, ECDSA) with secure cloud-based key management
+
+    - Signature verification to validate SBOM authenticity and detect tampering during transit or storage
+
+    - Support for CycloneDX 1.6 standard signature format with SPDX detached signature support (coming soon)
+
+    - RESTful API architecture enabling seamless integration with CI/CD pipelines, DevSecOps workflows, and existing toolchains
+
+    - Enterprise-scale performance with configurable retry logic, timeout handling, and batch processing capabilities
+
+    - Secure key lifecycle management including generation, rotation, and access control through API-based administration
+
+    - Integration support for popular CI systems including GitHub Actions, Jenkins, GitLab CI, and Azure DevOps for automated SBOM signing workflows
+
+    - Audit trail and compliance reporting for regulatory requirements and supply chain governance
+  Types:
+    - Design
+    - Source
+    - Build
+    - Analyze
+    - Deployment
+    - Runtime
+    - Container
