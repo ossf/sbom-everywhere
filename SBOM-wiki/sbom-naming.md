@@ -30,7 +30,7 @@ Following [guidance](https://slsa.dev/spec/v1.0/distributing-provenance#relation
 | SPDX JSON | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.json |
 | SPDX XML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.xml |
 | SPDX YAML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.yml (or .yaml) |
-| SPDX RDF XML | artifact-1.0.0.tar.gz | Artifact-1.0.0.tar.gz.spdx.rdf (or .rdf.xml)
+| SPDX RDF XML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.rdf (or .rdf.xml)
 
 The .spdx.* and .cdx.* extensions are sourced from the [CycloneDX](https://cyclonedx.org/guides/sbom/extensibility/) and [SPDX](https://spdx.github.io/spdx-ntia-sbom-howto/) guidance on filename extensions for SBOM documents of the corresponding standard and format.
 
