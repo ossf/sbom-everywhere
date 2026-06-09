@@ -4739,6 +4739,30 @@
   Types:
     - Analyze
 - Abilities:
+    - Generate
+  Languages:
+    - Nix
+  License: Apache-2.0
+  Link: https://github.com/tiiuae/sbomnix
+  Name: sbomnix
+  Publisher: Technology Innovation Institute
+  Source: Human written
+  Standards:
+    - SPDX
+    - CycloneDX
+  Summary: 'sbomnix is an open-source command-line tool for generating Software Bills
+    of Materials (SBOMs) for Nix-based software. It accepts Nix derivations, store
+    paths, result symlinks, and flake references as targets, and emits both SPDX
+    and CycloneDX JSON output.
+
+
+    By default, sbomnix generates SBOMs for runtime dependencies discovered from
+    realized build outputs. With `--buildtime`, it can instead generate SBOMs for
+    the buildtime dependency closure without requiring the target to be built.'
+  Types:
+    - Build
+    - Analyze
+- Abilities:
     - Consume
     - Validate
   Languages:
