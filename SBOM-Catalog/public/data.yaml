@@ -7179,3 +7179,47 @@
     - Analyze
     - Deployment
     - Container
+- Abilities:
+    - Generate
+  Languages:
+    - Python
+  License: Apache-2.0
+  Link: https://github.com/bact/pitloom
+  Name: Pitloom
+  Publisher: Arthit Suriyawongkul
+  Source: AI & human reviewed
+  Standards:
+    - SPDX
+  Summary: 'Pitloom - SBOM generator for AI models and Python projects
+
+    Pitloom is a command-line tool, a library, and a GitHub Action that
+    generates SPDX 3 SBOMs for AI models and Python projects.
+
+    It reads metadata directly from Python packages, build information, and
+    AI models (FastText, GGUF, ONNX, PyTorch, Safetensors), producing
+    standardized SPDX 3 JSON artifacts.
+    It runs on any system that support Python 3.10 or later.
+
+    When used as a Hatchling build hook, it embeds the generated SBOM
+    directly into the Python distribution package (wheel).
+
+    Key Features:
+
+    - Gerenates SBOMs including project dependencies and license information
+
+    - Generates SBOMs of AI model from AI model file
+
+    - Generates SBOMs of AI model from Hugging Face Hub URL/ID
+
+    - Generates SBOMs of a Python project and embed the SBOM into the Python
+      wheel (PEP 770), using Hatchling dynamic build information
+
+    - Generates SBOMs of a Python project from command line interface and
+      from programmatic Python API
+
+    The tool is available as a PyPI package installable via pip and also
+    available as GitHub Action for integration into CI/CD pipelines.
+    It generates SPDX 3 JSON which can be consume by any JSON-LD processor.'
+  Types:
+    - Source
+    - Build
