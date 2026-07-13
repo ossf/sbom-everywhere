@@ -7180,7 +7180,7 @@
     - Deployment
     - Container
 - Name: BomLens
-  Link: https://github.com/sktelecom/sbom-tools
+  Link: https://github.com/sktelecom/bomlens
   Publisher: SK Telecom
   Summary: 'BomLens is an open-source SBOM generator and analyzer that runs locally
     as a single Docker image, with a CLI, a web UI, and a desktop app. It generates
