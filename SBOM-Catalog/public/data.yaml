@@ -7179,3 +7179,42 @@
     - Analyze
     - Deployment
     - Container
+- Name: BomLens
+  Link: https://github.com/sktelecom/bomlens
+  Publisher: SK Telecom
+  Summary: 'BomLens is an open-source SBOM generator and analyzer that runs locally
+    as a single Docker image, with a CLI, a web UI, and a desktop app. It generates
+    CycloneDX SBOMs from source code, container images, binaries, and firmware, and
+    CycloneDX 1.7 ML-BOMs for HuggingFace AI models with a G7 minimum-elements
+    conformance report. It can also consume supplier-provided CycloneDX or SPDX
+    documents, validate them, convert SPDX to CycloneDX, merge multiple SBOMs, and
+    produce open source NOTICE files plus license and known-vulnerability reports.'
+  License: Apache-2.0
+  Standards:
+    - CycloneDX
+    - SPDX
+  Source: AI & human reviewed
+  Abilities:
+    - Consume
+    - Convert
+    - Generate
+    - Merge
+    - Sign
+    - Validate
+  Types:
+    - Source
+    - Build
+    - Analyze
+    - Container
+  Languages:
+    - C
+    - "C++"
+    - Cargo
+    - Composer
+    - Dotnet
+    - Gem
+    - Go
+    - Java
+    - Npm
+    - Python
+    - Swift
