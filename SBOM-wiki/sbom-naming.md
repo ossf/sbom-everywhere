@@ -22,17 +22,23 @@ For SBOMs which are distributed with source tarballs or pre-built binaries as a 
 
 Following [guidance](https://slsa.dev/spec/v1.0/distributing-provenance#relationship-between-artifacts-and-attestations) from SLSA provenance attestations of appending a corresponding extension to the filename of the artifact that is being described. For the [CycloneDX](https://cyclonedx.org/specification/overview/) and [SPDX](https://spdx.github.io/spdx-spec/v2.3/conformance/#44-standard-data-format-requirements) SBOM standards and their file extension formats the guidance is as follows:
 
-| Standard + Format | Artifact Filename | SBOM Filename |
-|-------------------|-------------------|---------------|
-| CycloneDX JSON    | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.cdx.json|
-| CycloneDX XML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.cdx.xml |
-| SPDX TAG:VALUE | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx |
-| SPDX JSON | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.json |
-| SPDX XML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.xml |
-| SPDX YAML | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.yml (or .yaml) |
-| SPDX RDF XML | artifact-1.0.0.tar.gz | Artifact-1.0.0.tar.gz.spdx.rdf (or .rdf.xml)
+| Standard + Format | Artifact Filename     | SBOM Filename |
+|-------------------|-----------------------|---------------|
+| CycloneDX JSON    | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.cdx.json |
+| CycloneDX XML     | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.cdx.xml |
+| SPDX TAG:VALUE    | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx |
+| SPDX JSON         | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.json |
+| SPDX XML          | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.xml |
+| SPDX YAML         | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.yml (or .yaml) |
+| SPDX RDF XML      | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx.rdf |
+| SPDX 3 JSON       | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx3.json |
+| SPDX 3 RDF XML    | artifact-1.0.0.tar.gz | artifact-1.0.0.tar.gz.spdx3.rdf |
 
-The .spdx.* and .cdx.* extensions are sourced from the [CycloneDX](https://cyclonedx.org/guides/sbom/extensibility/) and [SPDX](https://spdx.github.io/spdx-ntia-sbom-howto/) guidance on filename extensions for SBOM documents of the corresponding standard and format.
+The .cdx.\*, .spdx.\*, and .spdx3.\* extensions are sourced from
+the [CycloneDX](https://cyclonedx.org/guides/sbom/extensibility/),
+the [SPDX 2](https://spdx.github.io/spdx-spec/v2.3/conformance/#44-standard-data-format-requirements), and
+the [SPDX 3](https://spdx.github.io/spdx-spec/v3.1/serializations/#file-naming)
+guidance on filename extensions for SBOM documents of the corresponding standard and format.
 
 The JSON format files should be considered a mandatory requirement and are always available. The tool support for JSON documents is considered to be better than the other file format options. If other formats are desired, the JSON SBOM should also be available.
 
