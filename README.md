@@ -29,7 +29,7 @@ More data needs to be added to the catalog
 
 The goal of this project is to understand what open source projects need to start publishing SBOMs
 
-[https://docs.google.com/document/d/15_FKO8D03VSYDTNsMQZtn1aRfgVmModF-NM6VBnlrZA/](Draft document)
+[Draft document](https://docs.google.com/document/d/15_FKO8D03VSYDTNsMQZtn1aRfgVmModF-NM6VBnlrZA/)
 
 #### TODO
 This document needs to be better defined to construct a plan to help open source projects
@@ -41,7 +41,7 @@ This document describes where to put an SBOM to be distributed and how to name i
 #### TODO
 It needs to be expanded to cover other use cases
 
-[https://github.com/ossf/sbom-everywhere/blob/main/reference/sbom_naming.md](Reference doument)
+[Reference document](https://github.com/ossf/sbom-everywhere/blob/main/reference/sbom_naming.md)
 
 ## Motivation
 
